@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liyan Zhao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="text scrollbar size1 name-column" id="left">Liyan Zhao
+      <div>Documentarian/Storm tracker</div>
+      <br>
+      <div class="ital"><a href="mailto:heyliyanzhao@gmail.com" class="email-link">heyliyanzhao@gmail.com</a></div>
+      <div class="ital">956.624.8061</div>
+      <br>
+    </div>
+
+    <div class="text scrollbar size2 weather-column" id="mid">
+      <div>[Weather Diary]</div>
+      <button class="button weather-button" onclick="showWeather(1)">5.22.22&#8212;Sunny, 89&deg;F</button>
+      <div class="ital weather-data" id="weather-data-1"><a href="javascript:;" id="image-link-1" onclick="showImage(event, 1)" class="image-link">Clear skies this morning.</a> The city finally feels like it’s officially in spring—flowers in bloom, trees budding, and pigeons marching about. Dom and I took a walk to the promenade and had lunch facing the water. We had just looked through <a href="http://rinkokawauchi.com/en/works/194/" target="_blank" rel="noopener noreferrer" class="url-link">Rinko Kawauchi’s Illuminance</a> and the soft light bouncing off the surface of the water brought to my mind her photo of three pigeons suspended against a backdrop of illuminated water.<br><br>Since <a href="javascript:;" id="video-link-1" onclick="showVideo(event, 1)" class="video-link">birds</a> are built to detect the slightest changes in air pressure, they make quite reliable storm forecasters. In New York, storms will often push <a href="javascript:;" id="sound-link-1" onclick="showSound(event, 1)" class="sound-link">rare migratory birds</a> to fly inland so birders have learned to anticipate storms.</div>
+      <image onclick="showImage(event, 1)" class="weather-image" id="weather-image-1" src="https://drive.google.com/uc?export=view&id=1JFwZWWScS6fzpEam6lTiMO8aWGqcClzx" alt="cloudy sky" />
+      <!-- <span id="demo"></span> -->
+      <video autoplay loop muted onclick="showVideo(event, 1)" class="weather-video" id="weather-video-1"><source src="https://drive.google.com/uc?export=view&id=1h1TAB2vJAY8VmuSJ6PRDF_bd_lL7ChZ5" type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 1)" class="weather-sound" id="weather-sound-1"><source src="https://drive.google.com/uc?export=view&id=1ZGpU_iM1iFKR570kXS5jgFtzkdL_b9-n" type="audio/wav">Your browser does not support the audio element.</audio>
+      <br>
+      
+      <button class="button weather-button" onclick="showWeather(2)">5.21.22&#8212;Sunny, 88&deg;F</button>
+      <div class="ital weather-data" id="weather-data-2"><a href="javascript:;" id="image-link-2" onclick="showImage(event, 2)" class="image-link">Blue skies early in the morning</a> that quickly disappeared under thick clouds. Another day at the Red Cross, trying to rack up some hours before I leave for Austin on Monday. Mauricio stopped by to check on Jim and me and mentioned that the number of fires should be going down with the warmer weather. He said that winter storms always bring the worst fires.</div>
+      <image onclick="showImage(event, 2)" class="weather-image" id="weather-image-2" src="./test_sky.jpg" alt="cloudy sky 2" />
+
+      <br>
+      <button class="button weather-button" onclick="showWeather(3)">5.20.22&#8212;Mostly cloudy, 68&deg;F</button>
+      <div class="ital weather-data" id="weather-data-3"><a href="javascript:;" id="image-link-3" onclick="showImage(event, 3)" class="image-link">Fast moving clouds in the sky this morning.</a> I went out with Jerry on my Red Cross shift, and he told me about the time they responded to the 2009 Hudson River plane crash. The passengers were split up between the ferry dock and a casino cruise ship where they were given food and blankets. After Hurricane Sandy, he went out the next day to assess flood damage in the Rockaways. They measured exterior water lines on the houses and sent the damage assessment to Red Cross HQ.</div>
+      <image onclick="showImage(event, 3)" class="weather-image" id="weather-image-3" src="./test_sky.jpg" alt="cloudy sky 3" />
+      <br>
+      5.19.22&#8212;Cloudy, 59&deg;F<br>
+      5.18.22&#8212;Mostly sunny, 59&deg;F<br>
+      5.17.22&#8212;Partly cloudy, 78&deg;F<br>
+      5.16.22&#8212;Mostly cloudy, 70&deg;F<br>
+      5.15.22&#8212;Mostly cloudy, 66&deg;F<br>
+      5.14.22&#8212;Partly cloudy, 71&deg;F<br>
+      5.13.22&#8212;Cloudy, 68&deg;F<br>
+      5.12.22&#8212;Cloudy, 62&deg;F<br>
+      5.11.22&#8212;Mostly cloudy, 70&deg;F<br>
+      5.10.22&#8212;Mostly cloudy, 92&deg;F<br>
+      5.9.22&#8212;Partly cloudy, 92&deg;F<br>
+      5.8.22&#8212;Sunny, 93&deg;F<br>
+      5.7.22&#8212;Partly cloudy, 88&deg;F<br>
+      5.6.22&#8212;Sunny, 91&deg;F<br>
+      5.5.22&#8212;Cloudy, 80&deg;F<br>
+      5.4.22&#8212;Cloudy, 82&deg;F<br>
+      5.3.22&#8212;Mostly cloudy, 85&deg;F<br>
+      5.2.22&#8212;Cloudy, 80&deg;F<br>
+      5.1.22&#8212;Mostly cloudy, 86&deg;F<br>
+      4.30.22&#8212;Partly cloudy, 89&deg;F<br>
+      4.29.22&#8212;Cloudy, 85&deg;F<br>
+      4.28.22&#8212;Mostly cloudy, 82&deg;F<br>
+      4.27.22&#8212;Partly cloudy, 70&deg;F<br>
+      4.26.22&#8212;Mostly cloudy, 72&deg;F<br>
+      4.25.22&#8212;Cloudy, 52&deg;F<br>
+      4.24.22&#8212;Partly cloudy, 58&deg;F<br>
+      4.23.22&#8212;Cloudy, 58&deg;F<br>
+      4.22.22&#8212;Mostly sunny, 65&deg;F<br>
+      4.21.22&#8212;Mostly cloudy, 53&deg;F<br>
+      4.20.22&#8212;Partly cloudy, 45&deg;F<br>
+      4.19.22&#8212;Mostly cloudy, 49&deg;F<br>
+      <!-- <img src="test_sky.jpg" width="100%"><br><br> -->
+      <!-- <div class="ital">Cloudy most of today with some light drizzle in the evening. I FaceTimed my dad to show him the oyster mushrooms I’ve been growing. I set them up in the living room facing my humidifier so that they sit in a steady cloud of mist.<br><br>Thinking about ideas for this flood project, I remembered that my grandmother’s fortune teller had predicted I would drown before I turned 10. My dad confirmed the story but I stopped him before he said much more since I’ll be home next week and could potentially record the story to use for the film.</div> -->
+      <!-- <br> -->
+      4.18.22&#8212;Mostly sunny, 51&deg;F<br>
+      <!-- <img src="test_sky.jpg" width="100%"><br><br> -->
+      <!-- <div class="ital">Checked the weather this morning as usual and completely missed the storm forecast for the evening. A bit embarrassing since I’ve been keeping this weather diary for almost a week now. Luca told me there was a flood watch and coastal flood warning starting at 10p and that hopefully I could get a head start home if we didn’t get any late fires to respond to.</div> -->
+      <!-- <br> -->
+      4.17.22&#8212;Sunny, 46&deg;F<br>
+      <!-- <img src="test_sky.jpg" width="100%"><br><br> -->
+      <!-- <div class="ital">A chilly day with deceptively sunny skies. Matthew suggested meeting up at Pier 42 to explore the shoreline along lower Manhattan. Neither of us expected the entire eastern side to be fenced off for some massive development project. It wasn’t until I noticed handwritten signs on the fences in front of fresh wood chip mounds that I remembered seeing Instagram stories about locals fighting the destruction of their beloved cherry trees.<br><br>Stumbled onto Water Street while trying to get to the actual water and found it solidly buffered from the East River by the FDR expressway.</div> -->
+      <!-- <br> -->
+      4.16.22&#8212;Partly cloudy, 60&deg;F<br>
+      <!-- <img src="test_sky.jpg" width="100%"><br><br> -->
+      <!-- <div class="ital">Predictions of rain today but it ended up being a gorgeously sunny day. Went with Pete to explore Marine Park in the morning. We met Octavio walking his dog Ronin who talked to us about survivalist plans—his friend’s armed bunker in North Carolina and his own plan to drive his diesel vehicle to Amish country before joining up with Mennonites out west when doomsday finally comes. We asked him about the best trail to take to get to the water and he gave us directions to an illusory whale skeleton that we never managed to find.</div> -->
+      <!-- <br> -->
+      4.15.22&#8212;Mostly sunny, 64&deg;F<br>
+      <!-- <div class="ital">After last night’s rain, the sky was quite clear today. Dom sent me Sam’s images from our weekend trip to Montauk—such a wonderful surprise. I particularly loved the image of a tiny dead skate we’d found lying on a bed of rocks against a backdrop of crashing waves. The skate looked almost in motion, reanimated, on the cusp of flying off into the deep blue sky.</div> -->
+      4.14.22&#8212;Scattered thunderstorms, 68&deg;F<br>
+       <!-- <div class="ital">The forecast said scattered thunderstorms today but the sky was unexpectedly clear this morning. A few wispy clouds hanging about, maybe heavier clouds to come in the afternoon. Warmer temperatures in New York finally, left me drenched in sweat and with a parched throat by the time I finished running across the five avenues to make my Red Cross shift. Feeling simultaneously wet and dry, perhaps an apt embodiment of the day to come. <br><br>Alan assigned us a few vacates to do from a basement in the Bronx. He said that over 50 people drowned in illegal basement units during Ida last year so the city has been cracking down on basement code violations. </div> -->
+      4.13.22&#8212;Partly sunny, 65&deg;F<br>
+      <!-- <div class="ital">Clear skies but an absolute media storm at the 36th St station in the early afternoon. There was even an official Channel 4 storm chaser van parked on the corner. They finally caught the subway shooter today—the mayor held a big press conference to announce the news and unveiled plans to install metal detectors in all the station.</div> -->
+      <br>
+    </div>
+
+    <div class="text scrollbar size1 work-column" id="right">
+      [Work]<br> 
+      <div>
+      <button class="button work-button" onclick="showWork(1)">1&#8212;The Visitors</button>
+      <div class="ital work-data" id="work-data-1"><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/447597973?h=68c002924d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;" title="The Visitors"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script><br>[2020, video, 9:16]<br>A close look at the domestic lives of different beings during quarantine. An immersive mapping of shared life, media consumption and lifeforms under lockdown.</div>
+      <br> 
+      <button class="button work-button" onclick="showWork(2)">2&#8212;House of One's Own</button>
+      <div class="ital work-data" id="work-data-2"><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/328568165?h=2504f6c75c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;" title="A House of One&amp;#039;s Own"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script><br>[2019, video, 16:00]<br>The story of my parents' move to America, and how their dreams and aspirations have been channeled through the spaces of their suburban house. The film explores rituals of assimilation and alienation and the lines between real and imagined.</div>
+      <br><br>
+     </div>
+   </div>
+  </div>
+</body>
+</html>
