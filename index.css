@@ -197,4 +197,13 @@ body {
   .button {
     font-size: 22px;
   }
+  .weather-image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .weather-video {
+    max-width: 150px;
+    max-height: 150px;
+  }
 }
