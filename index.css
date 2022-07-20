@@ -198,12 +198,11 @@ body {
     font-size: 22px;
   }
   .weather-image {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 200px;
+    max-height: 200px;
   }
-
   .weather-video {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 200px;
+    max-height: 200px;
   }
 }
