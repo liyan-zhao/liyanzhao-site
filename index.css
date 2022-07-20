@@ -139,6 +139,10 @@ body {
   color: red;
 }
 
+.email-link:visited {
+  color: black;
+}
+
 .url-link {
   color: black;
   text-decoration: underline dotted;
