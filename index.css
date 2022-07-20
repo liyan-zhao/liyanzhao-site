@@ -8,6 +8,7 @@ body {
 .text {
   font-family: Times;
   font-size: 26px;
+  color: black;
 }
 
 .ital {
@@ -34,14 +35,14 @@ body {
 
 .size2 {
   flex: 4;
-  min-width: 472px;
+  min-width: 40vw;
   margin-right: 30px;
   margin-left: 10px;
 }
 
 .size3 { 
   flex: 3;
-  min-width: 270px;
+  min-width: 20vw;
   margin-right: 30px;
   margin-left: 10px;
 }
