@@ -5,13 +5,13 @@ body {
   /*overflow-y: hidden;*/
 }
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
   .text {
   font-family: Times;
   font-size: 10px;
   color: black;
   }
-}
+}*/
 
 .text {
   font-family: Times;
