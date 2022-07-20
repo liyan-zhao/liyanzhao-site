@@ -136,6 +136,11 @@ body {
   color: black;
 }
 
+.phone-link {
+  color: black;
+  text-decoration: none;
+}
+
 .url-link {
   color: black;
   text-decoration: underline dotted;
@@ -186,10 +191,10 @@ body {
 @media only screen and (max-width: 768px) {
   .text {
     font-family: Times;
-    font-size: 20px;
+    font-size: 22px;
     color: black;
   }
   .button {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
