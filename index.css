@@ -10,6 +10,7 @@ body {
   font-family: Times;
   font-size: 20px;
   color: black;
+  }
 }
 
 .text {
@@ -35,7 +36,7 @@ body {
 
 .size1 { 
   flex: 2;
-  min-width: 333px;
+  min-width: calc(24vw + 41px);
   margin-right: 30px;
   margin-left: 10px;
 }
@@ -49,7 +50,7 @@ body {
 
 .size3 { 
   flex: 3;
-  min-width: 20vw;
+  min-width: calc(18vw + 30px);
   margin-right: 30px;
   margin-left: 10px;
 }
@@ -88,6 +89,7 @@ body {
   display: inline-block;
   font-size: 26px;
   font-family: Times;
+  color: black;
   cursor: pointer;
 }
 
