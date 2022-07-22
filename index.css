@@ -141,6 +141,14 @@ body {
   text-decoration: none;
 }
 
+.phone-link:hover {
+  color: red;
+}
+
+.phone-link:visited {
+  color: black;
+}
+
 .url-link {
   color: black;
   text-decoration: underline dotted;
