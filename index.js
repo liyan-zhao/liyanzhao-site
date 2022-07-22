@@ -98,26 +98,26 @@ function showSound(event, identifier) {
 }
 
 
-window.onload=function(){
-  var allLinks = document.getElementsByClassName("image-link");
-  for (var i = 0; i < allLinks.length; i++) {
-    allLinks[i].addEventListener('click', function (e) {
-      var rect = e.target.getBoundingClientRect();
-      var x = e.clientX - rect.left; //x position within the element.
+// window.onload=function(){
+//   var allLinks = document.getElementsByClassName("image-link");
+//   for (var i = 0; i < allLinks.length; i++) {
+//     allLinks[i].addEventListener('click', function (e) {
+//       var rect = e.target.getBoundingClientRect();
+//       var x = e.clientX - rect.left; //x position within the element.
 
-      // var images = document.getElementsByClassName("weather-image");
-      // for (var i = 0; i < images.length; i++) {
-      //   var leftPosition = images[i].style.left;
-      //   var slice = parseInt(leftPosition.slice(0,leftPosition.length - 2))
-      //   images[i].style.left = (slice + x) + 'px'
-      // }
+//       // var images = document.getElementsByClassName("weather-image");
+//       // for (var i = 0; i < images.length; i++) {
+//       //   var leftPosition = images[i].style.left;
+//       //   var slice = parseInt(leftPosition.slice(0,leftPosition.length - 2))
+//       //   images[i].style.left = (slice + x) + 'px'
+//       // }
 
-      // var videos = document.getElementsByClassName("weather-video");
-      // for (var i = 0; i < videos.length; i++) {
-      //   var leftPosition = videos[i].style.left;
-      //   var slice = parseInt(leftPosition.slice(0,leftPosition.length - 2))
-      //   videos[i].style.left = (slice + x) + 'px'
-      // }
-    });
-  }
-}
+//       // var videos = document.getElementsByClassName("weather-video");
+//       // for (var i = 0; i < videos.length; i++) {
+//       //   var leftPosition = videos[i].style.left;
+//       //   var slice = parseInt(leftPosition.slice(0,leftPosition.length - 2))
+//       //   videos[i].style.left = (slice + x) + 'px'
+//       // }
+//     });
+//   }
+// }
