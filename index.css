@@ -212,7 +212,7 @@ body {
 
 @media only screen and (max-width: 480px) {
   body {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   .text {
     font-family: Times;
