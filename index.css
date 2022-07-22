@@ -189,16 +189,15 @@ body {
   .weather-image {
     display: none;
     position: fixed;
-    max-width: 30vw;
-    max-height: 30vw;
+    max-width: calc(20vw + 100px);
+    max-height: calc(20vw + 100px);
     z-index: 1;
   }
-
   .weather-video {
     display: none;
     position: fixed;
-    max-width: 30vw;
-    max-height: 30vw;
+    max-width: calc(20vw + 100px);
+    max-height: calc(20vw + 100px);
     z-index: 1;
   }
 }
@@ -212,12 +211,18 @@ body {
   .button {
     font-size: 22px;
   }
-/*  .weather-image {
-    max-width: 200px;
-    max-height: 200px;
+  /*.weather-image {
+    display: none;
+    position: fixed;
+    max-width: 40vw;
+    max-height: 40vw;
+    z-index: 1;
   }
   .weather-video {
-    max-width: 200px;
-    max-height: 200px;
+    display: none;
+    position: fixed;
+    max-width: 40vw;
+    max-height: 40vw;
+    z-index: 1;
   }*/
 }
