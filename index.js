@@ -17,7 +17,6 @@ function showWeather(identifier) {
         weatherData.style.display = "none"
       }
     }
-
   var otherData = document.getElementsByClassName("weather-video");
     for (var data in otherData) {
       if (!isNaN(parseInt(data))) {
@@ -25,7 +24,6 @@ function showWeather(identifier) {
         weatherData.style.display = "none"
       }
     }
-
   var otherData = document.getElementsByClassName("weather-sound");
     for (var data in otherData) {
       if (!isNaN(parseInt(data))) {

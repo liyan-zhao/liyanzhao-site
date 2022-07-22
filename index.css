@@ -213,11 +213,11 @@ body {
 @media only screen and (max-width: 480px) {
   .text {
     font-family: Times;
-    font-size: 18px;
+    font-size: 16px;
     color: black;
   }
   .button {
-    font-size: 18px;
+    font-size: 16px;
   }
   /*.weather-image {
     display: none;
