@@ -202,14 +202,14 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .text {
     font-family: Times;
-    font-size: 22px;
+    font-size: 20px;
     color: black;
   }
   .button {
-    font-size: 22px;
+    font-size: 20px;
   }
   /*.weather-image {
     display: none;
