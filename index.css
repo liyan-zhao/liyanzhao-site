@@ -152,6 +152,7 @@ body {
 .url-link {
   color: black;
   text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
 }
 
 .url-link:hover {
@@ -162,6 +163,7 @@ body {
   background-color: none;
   color: black;
   text-decoration: underline line;
+  -webkit-text-decoration: underline line;
 }
 
 .image-link:hover { 
@@ -171,6 +173,7 @@ body {
 .video-link {
   color: black;
   text-decoration: underline dashed;
+  -webkit-text-decoration: underline dashed;
 }
 
 .video-link:hover {
@@ -180,6 +183,7 @@ body {
 .sound-link {
   color: black;
   text-decoration: underline wavy;
+  -webkit-text-decoration: underline wavy;
 }
 
 .sound-link:hover {
