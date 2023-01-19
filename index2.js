@@ -1272,7 +1272,7 @@ button1.addEventListener("click", addEntry1);
 
 
 
-
+//
 
 
 function showWeather(identifier) {
@@ -1339,6 +1339,20 @@ function showImageR(event, identifier) {
   return false;
 }
 
+function showImageS(event, identifier) {
+  var image = document.getElementById("weather-imageS-" + identifier);
+  var hyperlink = document.getElementById("image-linkS-" + identifier);
+
+  if (image.style.display === "block") {
+    image.style.display = "none";
+  } else {
+    image.style.display = "block";
+    image.style.top = event.clientY + "px";
+    image.style.left = event.clientX + "px";
+  }
+  return false;
+}
+
 function showVideo(event, identifier) {
   var video = document.getElementById("weather-video-" + identifier);
   var hyperlink = document.getElementById("video-link-" + identifier);
@@ -1356,6 +1370,20 @@ function showVideo(event, identifier) {
 function showVideoR(event, identifier) {
   var video = document.getElementById("weather-videoR-" + identifier);
   var hyperlink = document.getElementById("video-linkR-" + identifier);
+
+  if (video.style.display === "block") {
+    video.style.display = "none";
+  } else {
+    video.style.display = "block";
+    video.style.top = event.clientY + "px";
+    video.style.left = event.clientX + "px";
+  }
+  return false;
+}
+
+function showVideoS(event, identifier) {
+  var video = document.getElementById("weather-videoS-" + identifier);
+  var hyperlink = document.getElementById("video-linkS-" + identifier);
 
   if (video.style.display === "block") {
     video.style.display = "none";
@@ -1399,33 +1427,87 @@ function showSoundR(event, identifier) {
   return false;
 }
 
+function showSoundS(event, identifier) {
+  var sound = document.getElementById("weather-soundS-" + identifier);
+  var hyperlink = document.getElementById("sound-linkS-" + identifier);
 
-
-function printDiv(divName) {
-    // var printContents = document.getElementById(divName).innerHTML;
-    // var originalContents = document.body.innerHTML;
-
-    // document.body.innerHTML = printContents;
-
-    const test1 = document.querySelector('.weather-column');
-    test1.style.display = "none";
-
-    const test2 = document.querySelector('.inputsection');
-    test2.style.display = "none";
-
-    const test3 = document.querySelector('.size3');
-    // test3.style.backgroundColor = "yellow"
-    test3.style.width = "calc(100vw - 80px)";
-    test3.style.fontSize = "25px";
-
-    window.print();
-
-    test1.style.display = "block";
-    test2.style.display = "block";
-    test3.style.width = "calc(50vw - 55px)";
-
-    // document.body.innerHTML = originalContents;
+  if (sound.style.display === "block") {
+    sound.style.display = "none";
+    sound.pause();
+  } else {
+    sound.style.display = "block";
+    sound.style.top = event.clientY + "px";
+    sound.style.left = event.clientX + "px";
+    sound.play();
+  }
+  return false;
 }
+
+//
+
+function showNotes(identifier) {
+  var x = document.getElementById("notes-data-" + identifier);
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    var otherData = document.getElementsByClassName("notes-data");
+    for (var i = 0; i < otherData.length; i++) {
+      var notesData = otherData[i];
+      notesData.style.display = "none";
+    }
+    x.style.display = "block";
+  }
+  var otherData = document.getElementsByClassName("notes-image");
+  for (var data in otherData) {
+    if (!isNaN(parseInt(data))) {
+      var notesData = otherData[data];
+      notesData.style.display = "none";
+    }
+  }
+  var otherData = document.getElementsByClassName("notes-video");
+  for (var data in otherData) {
+    if (!isNaN(parseInt(data))) {
+      var notesData = otherData[data];
+      notesData.style.display = "none";
+    }
+  }
+  var otherData = document.getElementsByClassName("notes-sound");
+  for (var data in otherData) {
+    if (!isNaN(parseInt(data))) {
+      var notesData = otherData[data];
+      notesData.style.display = "none";
+    }
+  }
+}
+
+//
+
+
+// function printDiv(divName) {
+//     // var printContents = document.getElementById(divName).innerHTML;
+//     // var originalContents = document.body.innerHTML;
+
+//     // document.body.innerHTML = printContents;
+
+//     const test1 = document.querySelector('.weather-column');
+//     test1.style.display = "none";
+
+//     const test2 = document.querySelector('.inputsection');
+//     test2.style.display = "none";
+
+//     const test3 = document.querySelector('.size3');
+//     // test3.style.backgroundColor = "yellow"
+//     test3.style.width = "calc(100vw - 80px)";
+//     test3.style.fontSize = "25px";
+
+//     window.print();
+
+//     test1.style.display = "block";
+//     test2.style.display = "block";
+//     test3.style.width = "calc(50vw - 55px)";
+
+//     // document.body.innerHTML = originalContents;
+// }
 
 // window.onload=function(){
 //   var allLinks = document.getElementsByClassName("image-link");
