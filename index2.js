@@ -1256,19 +1256,19 @@ button2211017.addEventListener("click", addEntry2211017);
 
 //
 
-const button1 = document.getElementById("add1");
-const addEntry1 = (e) => {
-  e.preventDefault();
-  const content = `clear sky with a few small wisps of clouds scattered about 
-  (<button class="button weather-button" onclick="showWeather(220802)">8.2.22</button> 
-  <a href="javascript:;" id="image-linkR-2208021" onclick="showImageR(event, 2208021)" class="image-linkR">
-  image</a>) 
-  <image onclick="showImageR(event, 2208021)" class="weather-imageR" id="weather-imageR-2208021" 
-  src="https://drive.google.com/uc?export=view&id=1VN9r3cE8ZAmknuhcWsbqhq2v4UE54G30" alt="sky" />`;
-  // Insert the HTML into the div
-  notesColumn.insertAdjacentHTML("beforeend", content);
-};
-button1.addEventListener("click", addEntry1);
+// const button1 = document.getElementById("add1");
+// const addEntry1 = (e) => {
+//   e.preventDefault();
+//   const content = `clear sky with a few small wisps of clouds scattered about 
+//   (<button class="button weather-button" onclick="showWeather(220802)">8.2.22</button> 
+//   <a href="javascript:;" id="image-linkR-2208021" onclick="showImageR(event, 2208021)" class="image-linkR">
+//   image</a>) 
+//   <image onclick="showImageR(event, 2208021)" class="weather-imageR" id="weather-imageR-2208021" 
+//   src="https://drive.google.com/uc?export=view&id=1VN9r3cE8ZAmknuhcWsbqhq2v4UE54G30" alt="sky" />`;
+//   // Insert the HTML into the div
+//   notesColumn.insertAdjacentHTML("beforeend", content);
+// };
+// button1.addEventListener("click", addEntry1);
 
 
 
