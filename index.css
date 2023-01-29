@@ -19,69 +19,61 @@ body {
   display: none;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 1.2;
+}
+
+.size1 { 
+  flex: 2;
+  min-width: calc(24vw + 0px);
+  margin-right: 30px;
+  margin-left: 10px;
+}
 
 .size2 {
-  /*flex: 1;*/
-  width: calc(50vw - 55px);
-  margin-right: 40px;
+  flex: 4;
+  min-width: calc(40vw - 35px);
+  margin-right: 60px;
   margin-left: 10px;
 }
 
 .size3 { 
-  /*flex: 2;*/
-  width: calc(50vw - 55px);
-  margin-right: 30px;
-/*  margin-left: 10px;*/
-/*  background-color: yellow;*/
+  flex: 3;
+  min-width: calc(16vw - 0px);
+  max-width: calc(21vw - 0px);
+  margin-right: 50px;
+  margin-left: 10px;
 }
 
-.newclass {
-  background-color: red;
+.name-column {
+  order: 1;
+  height:calc(100vh - 10px);
+  overflow: auto;
+  padding-top: 10px;
+  /*background-color: red;*/
 }
 
 .weather-column {
-  float: left;
+  order: 3;
   height:calc(100vh - 10px);
   overflow: auto;
   padding-top: 10px;
   /*background-color: yellow;*/
 }
 
-.notes-column {
-  /*order: 2;*/
-  float: left;
-/*  height:calc(100vh - 10px);*/
-  overflow: auto;
-  padding-top: 10px;
-  padding-bottom: 2px;
-/*  background-color: cyan;*/
-}
-
-#submissions {
-  width: calc(50vw - 55px);
-  margin-right: 30px;
-  float: left;
-  overflow: auto;
-}
-
-#printside {
-  /*order: 2;*/
-  float: left;
-/*  height:calc(100vh - 10px);*/
-  overflow: auto;
-/*  padding-top: 10px;*/
-  padding-left: 0px;
-  /*background-color: cyan;*/
-}
-
-#rightside {
-  float: left;
+.work-column {
+  order: 4;
   height:calc(100vh - 10px);
   overflow: auto;
+  padding-top: 10px;
+  /*background-color: blue;*/
 }
 
 .button {
-  background-color: transparent;
+  background-color: white;
   border: none;
   color: none;
   padding: 0px 0px;
@@ -106,27 +98,7 @@ body {
   display: none;
 }
 
-.notes-data {
-  display: none;
-}
-
 .weather-image {
-  display: none;
-  position: fixed;
-  max-width: 20vw;
-  max-height: 20vw;
-  z-index: 1;
-}
-
-.weather-imageR {
-  display: none;
-  position: fixed;
-  max-width: 20vw;
-  max-height: 20vw;
-  z-index: 1;
-}
-
-.notes-image {
   display: none;
   position: fixed;
   max-width: 20vw;
@@ -142,35 +114,7 @@ body {
   z-index: 1;
 }
 
-.weather-videoR {
-  display: none;
-  position: fixed;
-  max-width: 20vw;
-  max-height: 20vw;
-  z-index: 1;
-}
-
-.notes-video {
-  display: none;
-  position: fixed;
-  max-width: 20vw;
-  max-height: 20vw;
-  z-index: 1;
-}
-
 .weather-sound {
-  display: none;
-  position: fixed;
-  z-index: 1;
-}
-
-.weather-soundR {
-  display: none;
-  position: fixed;
-  z-index: 1;
-}
-
-.notes-sound {
   display: none;
   position: fixed;
   z-index: 1;
@@ -206,11 +150,6 @@ body {
   color: black;
 }
 
-.date-link:hover {
-  color: blue;
-  cursor: pointer;
-}
-
 .url-link {
   color: black;
   text-decoration: underline dotted;
@@ -219,7 +158,6 @@ body {
 
 .url-link:hover {
   color: blue;
-  cursor: pointer;
 }
 
 .image-link {
@@ -231,20 +169,6 @@ body {
 
 .image-link:hover { 
   color: blue; 
-  cursor: pointer;
-  text-decoration: underline line;
-  -webkit-text-decoration: underline line;
-}
-
-.image-linkR {
-  background-color: none;
-  color: black;
-  text-decoration: underline line;
-  -webkit-text-decoration: underline line;
-}
-
-.image-linkR:hover { 
-  color: blue; 
 }
 
 .video-link {
@@ -254,17 +178,6 @@ body {
 }
 
 .video-link:hover {
-  color: blue;
-  cursor: pointer;
-}
-
-.video-linkR {
-  color: black;
-  text-decoration: underline dashed;
-  -webkit-text-decoration: underline dashed;
-}
-
-.video-linkR:hover {
   color: blue;
 }
 
@@ -278,97 +191,58 @@ body {
   color: blue;
 }
 
-.sound-linkR {
-  color: black;
-  text-decoration: underline wavy;
-  -webkit-text-decoration: underline wavy;
+
+@media only screen and (max-width: 1210px) {
+  .work-column {
+    order:  1;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .weather-image {
+    display: none;
+    position: fixed;
+    max-width: calc(20vw + 100px);
+    max-height: calc(20vw + 100px);
+    z-index: 1;
+  }
+  .weather-video {
+    display: none;
+    position: fixed;
+    max-width: calc(20vw + 100px);
+    max-height: calc(20vw + 100px);
+    z-index: 1;
+  }
+  .size3 { 
+    min-width: calc(20vw + 200px);
+  } 
 }
 
-.sound-linkR:hover {
-  color: blue;
-}
+@media only screen and (max-width: 550px) {
+  body {
+    padding-top: 20px;
+  }
+  .text {
+    font-family: Times;
+    font-size: 20px;
+    color: black;
+  }
+  .button {
+    font-size: 20px;
+  }
 
-.margin-bottom {
-  150px;
-}
-
-.comment {
-  display: block;
-  transition: all 1s;
-}
-
-.commentClicked {
-  min-height: 0px;
-}
-
-textarea {
-  /*margin-left: 0px;*/
-  width: calc(50vw - 82px);
-  border: 1px solid black;
-  padding: 5px 10px;
-  height: 50%;
-  border-radius: 5px;
-  transition: all 0.5s;
-  margin-top: 10px;
-  /*margin-bottom: 20px;*/
-  font-family: times;
-  font-size: 25px;
-}
-
-button.plus {
-  background: none;
-  color: black;
-  padding: 0px 6px 0px 6px;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-family: arial;
-  font-size: 20px;
-  font-style: bold;
-}
-
-button.plus:hover{
-/*  color: blue;*/
-  border: 1px solid blue;
-  color: white;
-  background-color: blue;
-  cursor: pointer;
-}
-
-button.primaryContained {
-  background: none;
-  color: black;
-  padding: 1px 10px;
-  border: 1px solid black;
-  margin-top: 10px;
-  /*margin-left: -10px;*/
-  /*transition: 1s all;*/
-  border-radius: 5px;
-  font-family: times;
-  font-size: 25px;
-}
-
-button.primaryContained:hover{
-  border: 1px solid blue;
-  color: white;
-  background-color: blue;
-  cursor: pointer;
-}
-
-input {
-  background: none;
-  color: black;
-  padding: 1px 10px;
-  border: 1px solid black;
-  margin-top: 10px;
-  /*transition: 1s all;*/
-  border-radius: 5px;
-  font-family: times;
-  font-size: 25px;
-}
-
-input:hover{
-  border: 1px solid blue;
-  color: white;
-  background-color: blue;
-  cursor: pointer;
+  /*.weather-image {
+    display: none;
+    position: fixed;
+    max-width: 40vw;
+    max-height: 40vw;
+    z-index: 1;
+  }
+  .weather-video {
+    display: none;
+    position: fixed;
+    max-width: 40vw;
+    max-height: 40vw;
+    z-index: 1;
+  }*/
 }

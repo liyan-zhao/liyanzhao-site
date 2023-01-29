@@ -1,53 +1,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Weather Diary</title>
+  <title>Liyan Zhao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
   <link rel="shortcut icon" href="favicon_b.png"/>
   <meta name="format-detection" content="telephone=no" />
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script type="text/javascript">
-  jQuery(function($){
-    var $sleeper = $('<div style="display: none; width: 100%; height: 100%; background-color: white; z-index: 2; position: fixed; top: 0; left: 0;">' +
-      '<img src="sky.jpg" style="width: 100%; height: 100%; display: block;" width="100%" height="100%" alt="Sky" title="Move mouse to read"></div>')
-      .appendTo(document.body), timer;
-    if($sleeper.offset().top){
-      $sleeper.css({position: 'absolute'});
-    }
-    $(document).bind('mousemove click keydown scroll', function(){
-      clearTimeout(timer);
-      preparetosleep();
-      if($sleeper.css('display') !== 'none'){
-        $sleeper.stop(true, true).fadeOut(0);
-        $('html, body').css({width: '', height: '', margin: '', padding: ''});
-      }
-    });
-    function preparetosleep(){
-      timer = setTimeout(function(){
-        $('html, body').css({width: '100%', height: '100%'});
-        $sleeper.stop(true, true).fadeIn(2000);
-      }, 5000000);
-    }
-    preparetosleep();
-  });
-  </script>
 </head>
 
 <body>
-    <div class="text scrollbar size2 weather-column" id="col1">
+  <div class="container">
+    <div class="text scrollbar size1 name-column" id="left">Liyan Zhao
+      <div>Documentarian/Sky watcher</div>
+      <br>
+      <div class="ital"><a href="mailto:heyliyanzhao@gmail.com" class="email-link">heyliyanzhao@gmail.com</a></div>
+      <a class="ital phone-link" tabIndex="-1" href="tel:9177738737">917.773.8737</a>
+      <br><br>
+    </div>
+
+    <div class="text scrollbar size2 weather-column" id="mid">
       <div>[Weather Diary]</div>
+
+      <button class="button weather-button" onclick="showWeather(230129)">1.29.23&#8212;___, XX&deg;F</button>
+      <div class="ital weather-data" id="weather-data-230129">
+        <a href="javascript:;" id="image-link-2301291" onclick="showImage(event, 2301291)" class="image-link">Riverwest, Milwaukee, WI&#8212;X:XXPM.</a> 
+        <br><br>
+        *Daily weather news alerts*<br>
+        <br>
+        *Daily bird alerts*<br>
+      </div>
+      <br>
+      <image onclick="showImage(event, 2301281)" class="weather-image" id="weather-image-2301281" src="https://drive.google.com/uc?export=view&id=1lOXoJIg74zmK1HFk4B99CDmNESmWsizy"/>
+      <image onclick="showImage(event, 2301282)" class="weather-image" id="weather-image-2301282" src="https://drive.google.com/uc?export=view&id=1p2tC-oJd3pHJ6EfPp473OtUo-Wsd4T16"/>
+
+      <button class="button weather-button" onclick="showWeather(230128)">1.28.23&#8212;Snow, 25&deg;F</button>
+      <div class="ital weather-data" id="weather-data-230128">
+        <a href="javascript:;" id="image-link-2301281" onclick="showImage(event, 2301281)" class="image-link">Riverwest, Milwaukee, WI&#8212;4:04PM.</a> Winter storm warning in effect until Sunday morning. “Total snow accumulations of 6 to 10 inches. Greatest snow amounts near the lake.”
+        <br><br>
+        *Daily weather news alerts*<br>
+        <a href="javascript:;" id="image-link-2301282" onclick="showImage(event, 2301282)" class="image-link">A bear in Colorado found a wildlife camera and left behind hundreds of selfies.</a> Boulder Open Space & Mountain Parks said on Monday that "of the 580 photos captured, about 400 were bear selfies."
+      </div>
+      <br>
+      <image onclick="showImage(event, 2301281)" class="weather-image" id="weather-image-2301281" src="https://drive.google.com/uc?export=view&id=1lOXoJIg74zmK1HFk4B99CDmNESmWsizy"/>
+      <image onclick="showImage(event, 2301282)" class="weather-image" id="weather-image-2301282" src="https://drive.google.com/uc?export=view&id=1p2tC-oJd3pHJ6EfPp473OtUo-Wsd4T16"/>
+
+      <button class="button weather-button" onclick="showWeather(230127)">1.27.23&#8212;Cloudy with snow showers, 25&deg;F</button>
+      <div class="ital weather-data" id="weather-data-230127">
+        <a href="javascript:;" id="image-link-2301271" onclick="showImage(event, 2301271)" class="image-link">Riverwest, Milwaukee, WI&#8212;10:00AM.</a> Fell down a rabbit hole on YouTube after dinner. <a href="javascript:;" id="video-link-2301271" onclick="showVideo(event, 2301271)" class="video-link">Pigeons fitted with cameras.</a> <a href="javascript:;" id="video-link-2301272" onclick="showVideo(event, 2301272)" class="video-link">Wild creatures making off with unattended GoPros.</a> <a href="javascript:;" id="sound-link-2301271" onclick="showSound(event, 2301271)" class="sound-link">Eerily musical emergency alert system alarms.</a> 
+        <br><br>
+        *Daily weather news alerts*<br>
+        <a href="https://www.nytimes.com/2023/01/27/world/asia/asia-extreme-cold-weather.html?smid=url-share" target="_blank" rel="noopener noreferrer" class="url-link"/>Asia has had a really cold month, courtesy of the polar vortex.</a>
+        <br><br>
+        <a href="javascript:;" id="video-link-2301273" onclick="showVideo(event, 2301273)" class="video-link">New Zealand flooding: three dead and one missing as Auckland hit by record rainfall.</a> Emergency services facing huge number of callouts as wild weather sparks landslides and forces closure of country’s largest airport.
+        <br><br>
+        A state of emergency was declared in Auckland following torrential rain and flooding. <a href="javascript:;" id="video-link-2301274" onclick="showVideo(event, 2301274)" class="video-link">Floodwaters inside Auckland Airport.</a>
+        <br><br>
+        <a href="javascript:;" id="video-link-2301275" onclick="showVideo(event, 2301275)" class="video-link">Intense lake effect snow in the South Haven, Michigan area along Lake Michigan.</a>
+        <br><br>
+        <a href="javascript:;" id="video-link-2301276" onclick="showVideo(event, 2301276)" class="video-link">The Sahara Desert in Africa covered in frost after snow fell this week.</a>
+      </div>
+      <br>
+      <image onclick="showImage(event, 2301271)" class="weather-image" id="weather-image-2301271" src="https://drive.google.com/uc?export=view&id=1vvbOe-ESwqT8RsMPdrBs-qcljkI64rdD"/>
+      <video autoplay loop muted onclick="showVideo(event, 2301271)" class="weather-video" id="weather-video-2301271"><source src="https://drive.google.com/uc?export=view&id=1ET4qjyQZprLKLagwdSZhVC8fsC7dN8yO" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301272)" class="weather-video" id="weather-video-2301272"><source src="https://drive.google.com/uc?export=view&id=1dpoKDG6BKLk2H8z2N5hEfdVY2wzUcyOV" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301273)" class="weather-video" id="weather-video-2301273"><source src="https://drive.google.com/uc?export=view&id=1-h7_YQJZYw6PA2FIOqKhC9XtDHLE9KQR" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301274)" class="weather-video" id="weather-video-2301274"><source src="https://drive.google.com/uc?export=view&id=1S0UG-jIgWCyklIZl-6fUEw2AepS_76vE" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301275)" class="weather-video" id="weather-video-2301275"><source src="https://drive.google.com/uc?export=view&id=1nm8T1VWNICDyx_yGTT4vTTCM06dQWS1Q" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301276)" class="weather-video" id="weather-video-2301276"><source src="https://drive.google.com/uc?export=view&id=1WJxgoA7VAd3SfIeZMT3s1aj-9sbHgDae" type="video/mp4"></video>
+      <audio controls onclick="showSound(event, 2301271)" class="weather-sound" id="weather-sound-2301271"><source src="https://drive.google.com/uc?export=view&id=14E-2mwToe0sC9m2XYZm15K2engLBTJ7L" type="audio/wav"></audio>
+
+      <button class="button weather-button" onclick="showWeather(230126)">1.26.23&#8212;Snow showers, 31&deg;F</button>
+      <div class="ital weather-data" id="weather-data-230126">
+        <a href="javascript:;" id="image-link-2301261" onclick="showImage(event, 2301261)" class="image-link">Riverwest, Milwaukee, WI&#8212;2:52PM.</a> B sent me <a href="https://harpers.org/archive/2023/01/boomtown-beatty-nevada-solar-farms-death-valley/" target="_blank" rel="noopener noreferrer" class="url-link"/>Hillary Angelo’s Harper’s piece on an old gold rush area in Nye County, Nevada.</a> “[The valley is] so big you can see the weather: rain slashing the vaulted sky, the shadows of clouds moving across the mountains. The landscape creates a vacuum of sound, the wind sweeping all noise up into a cinematic void.”
+        <br><br>
+        Rewatched <a href="javascript:;" id="video-link-2301261" onclick="showVideo(event, 2301261)" class="video-link">Leviathan</a> in the afternoon. It’s a film that makes me feel resentful in the best ways. Teleporting into different bodies, animate and inanimate. Leveling the field. S asked, “Can’t we say alien is just another animal?”
+        <br><br>
+        *Daily weather news alerts*<br>
+        <a href="javascript:;" id="video-link-2301262" onclick="showVideo(event, 2301262)" class="video-link">Lenticular clouds over California’s Mount Shasta.</a>
+        <br><br>
+        A security camera in Deer Park, Texas captured <a href="javascript:;" id="video-link-2301263" onclick="showVideo(event, 2301263)" class="video-link">the moment a tornado tore through the Houston suburb.</a>      
+        <br><br>
+        *Daily bird alerts* <br>
+        Dennis Casper, Milwaukee, WI&#8212;<a href="https://calendar.urbanecologycenter.org" target="_blank" rel="noopener noreferrer" class="url-link"/>Urban Ecology Center bird walk</a> / 32 degrees / Cloudy / 11 birders / Total Species: 19.
+      </div>
+      <br>
+      <image onclick="showImage(event, 2301261)" class="weather-image" id="weather-image-2301261" src="https://drive.google.com/uc?export=view&id=193QVmRT-pPVSd-CBoayJ9YPqnJOZpUav"/>
+      <video autoplay loop muted onclick="showVideo(event, 2301261)" class="weather-video" id="weather-video-2301261"><source src="https://drive.google.com/uc?export=view&id=1SLWOn0AUN21Qa7tPDA0dzg_fUlDacx92" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301262)" class="weather-video" id="weather-video-2301262"><source src="https://drive.google.com/uc?export=view&id=1t9eLDumbix0U2sQxsdVwAKHBrdNmPmZ-" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301263)" class="weather-video" id="weather-video-2301263"><source src="https://drive.google.com/uc?export=view&id=1zRUgTUQV3tGbctFwq9vjnuRVI2Hyuovh" type="video/mp4"></video>
+
+      <button class="button weather-button" onclick="showWeather(230125)">1.25.23&#8212;Cloudy with snow showers, 33&deg;F</button>
+      <div class="ital weather-data" id="weather-data-230125">
+        <a href="javascript:;" id="image-link-2301251" onclick="showImage(event, 2301251)" class="image-link">Riverwest, Milwaukee, WI&#8212;2:39PM.</a> First snow since coming back to Milwaukee. The calmness that descends right after snowfall. M sent me a picture of <a href="javascript:;" id="image-link-2301252" onclick="showImage(event, 2301252)" class="image-link">snow-covered branches</a> around noon.
+        <br><br>
+        J showed us <a href="javascript:;" id="video-link-2301251" onclick="showVideo(event, 2301251)" class="video-link">Luke Fowler’s Electro-Pythagoras</a> in the evening, a delight in accumulation. Making films with a sense of play and joy, delirious abandon.
+        <br><br>
+        *Daily weather news alerts*<br>
+        <a href="javascript:;" id="video-link-2301252" onclick="showVideo(event, 2301252)" class="video-link">Thousands stranded in Japan as cold snap engulfs Asia.</a> Weather authorities in Japan and the Korean peninsula have issued warnings over freezing temperatures and gales that have killed at least one person and left thousands of people stranded. Severe cold weather has caused havoc across the region in the past fortnight. At least 124 people have died in Afghanistan,and temperatures in north-eastern China fell to -53&deg;C.
+        <br><br>
+        <a href="javascript:;" id="video-link-2301253" onclick="showVideo(event, 2301253)" class="video-link">Significant damage following severe weather in Pasadena, Texas.</a>
+        <br><br>
+        <a href="javascript:;" id="video-link-2301254" onclick="showVideo(event, 2301254)" class="video-link">Tornado damage in Deer Park, Texas.</a>
+        <br><br>
+        <a href="javascript:;" id="video-link-2301255" onclick="showVideo(event, 2301255)" class="video-link">A couple in Orange, Texas forced to run from their RV and dive into a ditch with their dogs to shelter as a tornado touched down nearby.</a>
+      </div>
+      <br>
+      <image onclick="showImage(event, 2301251)" class="weather-image" id="weather-image-2301251" src="https://drive.google.com/uc?export=view&id=1Gn4x2g4TwPj0bNbSCrINARcyR30EKOhF"/>
+      <image onclick="showImage(event, 2301252)" class="weather-image" id="weather-image-2301252" src="https://drive.google.com/uc?export=view&id=1TdZgjrAHvYXSM9cp8w6URnA2mvf0mg8f"/>
+      <video autoplay loop muted onclick="showVideo(event, 2301251)" class="weather-video" id="weather-video-2301251"><source src="https://drive.google.com/uc?export=view&id=10bei7Pz-KWmD-tBNU1uTgcb5dlkm4OOF" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301252)" class="weather-video" id="weather-video-2301252"><source src="https://drive.google.com/uc?export=view&id=1Ud6twaYGcXFjRIWPUFZV5O4YYDPkSgKZ" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301253)" class="weather-video" id="weather-video-2301253"><source src="https://drive.google.com/uc?export=view&id=1Y0N14hIEp2YwjNq8eCI1XoScReQ5TnN7" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301254)" class="weather-video" id="weather-video-2301254"><source src="https://drive.google.com/uc?export=view&id=1zfqOUJ9vHDvJKLJvrCyyIMbJukcIX6D3" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301255)" class="weather-video" id="weather-video-2301255"><source src="https://drive.google.com/uc?export=view&id=14rxoYGfw9ledDX6dF3XpjWkJfhwBuRkB" type="video/mp4"></video>
+
+      <button class="button weather-button" onclick="showWeather(230124)">1.24.23&#8212;Cloudy, 35&deg;F</button>
+      <div class="ital weather-data" id="weather-data-230124">
+        <a href="javascript:;" id="image-link-2301241" onclick="showImage(event, 2301241)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:40PM.</a> Just missed a small bird flying overhead as I took my photo of the sky...maybe a sparrow, too fleeting to identify. Dynamic sky today, overcast clouds that opened up every now and then to reveal a glimpse of blue, a flash of light.
+        <br><br>
+        S ended class with <a href="javascript:;" id="video-link-2301241" onclick="showVideo(event, 2301241)" class="video-link">Nancy Holt’s Utah Sequences.</a> A deep sense of time. An inventory of salt encrusted corpses in different stages of decay. A sudden cut to a sheep herd making their way across a road. It reminded me of an Instagram video in my morning feed showing <a href="javascript:;" id="video-link-2301242" onclick="showVideo(event, 2301242)" class="video-link">hundreds of millipedes moving on asphalt in a swarm,</a> moving as a single collective body.
+        <br><br>
+        *Daily weather news alerts*<br>
+        Severe storms in the South Tuesday and Tuesday night will be capable of damaging wind gusts and several tornadoes, a few of which could be EF-2 or stronger.
+        <br><br>
+        <a href="javascript:;" id="video-link-2301243" onclick="showVideo(event, 2301243)" class="video-link">Multiple trucks parked next to each other broke through the ice on Lake Pepin in Minnesota on Saturday.</a> The sheriff's office said nobody was injured and the vehicles were able to be towed out of the lake.
+        <br><br>
+        <a href="javascript:;" id="video-link-2301244" onclick="showVideo(event, 2301244)" class="video-link">A waterfall flowing backwards.</a> The winds were gusting so strong that it forced the waterfall to reverse direction. Wind gusts in Ivins, UT were estimated at 60mph.
+      </div>
+      <br>
+      <image onclick="showImage(event, 2301241)" class="weather-image" id="weather-image-2301241" src="https://drive.google.com/uc?export=view&id=1873MwKlE1HPvfj6YGwDrE3Kdq6Lt6Ok3"/>
+      <video autoplay loop muted onclick="showVideo(event, 2301241)" class="weather-video" id="weather-video-2301241"><source src="https://drive.google.com/uc?export=view&id=1m899CqVz3aY2O6uPggr_rFlBiDK8KX8I" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301242)" class="weather-video" id="weather-video-2301242"><source src="https://drive.google.com/uc?export=view&id=18oTEt-EWmhlGitLsTkRtZwZoNr4ojSly" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301243)" class="weather-video" id="weather-video-2301243"><source src="https://drive.google.com/uc?export=view&id=1mfFBc8tsxMHML8jEr0nQZnsu64qUw6ON" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301244)" class="weather-video" id="weather-video-2301244"><source src="https://drive.google.com/uc?export=view&id=1OECNV-DBgofkQ9rOqAUCeQcGhn5W0f-5" type="video/mp4"></video>
+
+      <button class="button weather-button" onclick="showWeather(230123)">1.23.23&#8212;Partly cloudy, 29&deg;F</button>
+      <div class="ital weather-data" id="weather-data-230123">
+        <a href="javascript:;" id="image-link-2301231" onclick="showImage(event, 2301231)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:30PM.</a> First clear blue sky since coming back to Milwaukee. <a href="javascript:;" id="image-link-2301232" onclick="showImage(event, 2301232)" class="image-link">The late morning sun on the breakfast table</a> made me pause in wonder.
+        <br><br>
+        We read aloud with L about the Smooth and the Striated, the Smooth as a disorienting boundary-blurring field of close-looking. L showed us the films she’d posted to the class site. I was embarrassed to admit I hadn’t seen much of Peggy Ahwesh’s work, made a mental note to watch <a href="javascript:;" id="video-link-2301231" onclick="showVideo(event, 2301231)" class="video-link">Strange Weather</a> when I got home that night. The meandering camera blending body parts and meteorological elements, inner and outer landscapes densely folding into Laura Marx’s quantum strudel.
+        <br><br>
+        *Daily weather news alerts*<br>
+        Drone video captured <a href="javascript:;" id="video-link-2301232" onclick="showVideo(event, 2301232)" class="video-link">the moment a moose shed its antlers in a Canada forest.</a> The man who captured the video called it a "once-in-a-lifetime moment."
+        <br><br>
+        <a href="https://www.theguardian.com/environment/2023/jan/23/weather-tracker-storm-cheneso-brings-flooding-risk-to-madagascar" target="_blank" rel="noopener noreferrer" class="url-link"/>Storm Cheneso brings flooding risk to Madagascar.</a>
+        <br><br>
+        *Daily bird alerts* <br>
+        Greg Seegert, Beaver Dam, WI&#8212;On Saturday, Margie Amato and I went to look for some of the good birds reported along the shoreline of L Michigan by Sheboygan. We found 2 male <a href="javascript:;" id="sound-link-2301231" onclick="showSound(event, 2301231)" class="sound-link">harlequin ducks</a> at the end of one of the jetties between the harbor and N Pt. On one of the jetties there was an adult <a href="javascript:;" id="sound-link-2301232" onclick="showSound(event, 2301232)" class="sound-link">glaucous gull.</a> There were 2 <a href="javascript:;" id="sound-link-2301233" onclick="showSound(event, 2301233)" class="sound-link">LT ducks</a> between the N Pt parking lot and the gazebo on N Pt. There were also 2 <a href="javascript:;" id="sound-link-2301234" onclick="showSound(event, 2301234)" class="sound-link">black ducks</a> in this area. We went to Manitowoc next but it was dead. On the way to Sheboygan we checked the wood duck houses along CTH B just before its terminus at Hi 33 on the edge of Beaver Dam to see if the <a href="javascript:;" id="sound-link-2301235" onclick="showSound(event, 2301235)" class="sound-link">screech owl</a> reported a few days earlier was around. It wasn't, however, when we returned about 4 pm it was looking out of one of the houses. Yesterday, I went fishing on Breyer's Cove on Big Green L. I noticed some bird activity as I pulled into the parking lot at the boat launch. I was surprised to see 2 <a href="javascript:;" id="sound-link-2301236" onclick="showSound(event, 2301236)" class="sound-link">yellow-rumped warblers.</a> On the way home, the <a href="javascript:;" id="sound-link-2301237" onclick="showSound(event, 2301237)" class="sound-link">screech owl</a> was again visible in one of the wood duck houses described above.
+        <br><br>
+        Spence Stehno, Waukesha, WI&#8212;Oconomowoc LaBelle cemetery. Currently there is a <a href="javascript:;" id="sound-link-2301238" onclick="showSound(event, 2301238)" class="sound-link">Ross's goose</a> in the river where the bridge crosses from Land into the LaBelle cemetery, the bird is on the West shore near a red and blue kayak. Just off of Grove Street in the Oconomowoc River.
+      </div>
+      <br>
+      <image onclick="showImage(event, 2301231)" class="weather-image" id="weather-image-2301231" src="https://drive.google.com/uc?export=view&id=1UxVYqfrBrZX_KiDbfRMD2vX72Hn74_qi"/>
+      <image onclick="showImage(event, 2301232)" class="weather-image" id="weather-image-2301232" src="https://drive.google.com/uc?export=view&id=1EE67bLKNQZ-0u0G-wXq28TiokCMyOOf-"/>
+      <video autoplay loop muted onclick="showVideo(event, 2301231)" class="weather-video" id="weather-video-2301231"><source src="https://drive.google.com/uc?export=view&id=1yVtrm1ODDHi33wlaSIHQPX32S__nDkHh" type="video/mp4"></video>
+      <video autoplay loop muted onclick="showVideo(event, 2301232)" class="weather-video" id="weather-video-2301232"><source src="https://drive.google.com/uc?export=view&id=1N1DqlQsat3w5IHbyN4ereAjAWIDosxys" type="video/mp4"></video>
+      <audio controls onclick="showSound(event, 2301231)" class="weather-sound" id="weather-sound-2301231"><source src="https://drive.google.com/uc?export=view&id=12REXlX3Dg9oYaELTjVgpTNGSr69Hlpna" type="audio/wav"></audio>
+      <audio controls onclick="showSound(event, 2301232)" class="weather-sound" id="weather-sound-2301232"><source src="https://drive.google.com/uc?export=view&id=11mvBzrs0TXiJNMzb7ya-CMlCRFM7ZQ3i" type="audio/wav"></audio>
+      <audio controls onclick="showSound(event, 2301233)" class="weather-sound" id="weather-sound-2301233"><source src="https://drive.google.com/uc?export=view&id=1ck7OAI5R-VYYki5_6wALfeoxERg-fbuh" type="audio/wav"></audio>
+      <audio controls onclick="showSound(event, 2301234)" class="weather-sound" id="weather-sound-2301234"><source src="https://drive.google.com/uc?export=view&id=1l52jYymrXBsAyOfrtgjClnDfHPl78rSE" type="audio/wav"></audio>
+      <audio controls onclick="showSound(event, 2301235)" class="weather-sound" id="weather-sound-2301235"><source src="https://drive.google.com/uc?export=view&id=1BNYu2y4OXiYIKz5kOHcVXiI2Byjz0CU9" type="audio/wav"></audio>
+      <audio controls onclick="showSound(event, 2301236)" class="weather-sound" id="weather-sound-2301236"><source src="https://drive.google.com/uc?export=view&id=1W_Ts9Ivg7RsK41xsr1sxNO10v-LkEUEu" type="audio/wav"></audio>
+      <audio controls onclick="showSound(event, 2301237)" class="weather-sound" id="weather-sound-2301237"><source src="https://drive.google.com/uc?export=view&id=1SWPlyLnK1dwh1mQIfMkTMDjo5g8e7097" type="audio/wav"></audio>
+      <audio controls onclick="showSound(event, 2301238)" class="weather-sound" id="weather-sound-2301238"><source src="https://drive.google.com/uc?export=view&id=17K06q1qcNYd-8wu1dQvLEb6umJYDLzUR" type="audio/wav"></audio>
 
       <button class="button weather-button" onclick="showWeather(221215)">12.15.22&#8212;Cloudy, 36&deg;F</button>
       <div class="ital weather-data" id="weather-data-221215">
-        <a href="javascript:;" id="image-link-2212151" onclick="showImage(event, 2212151)" class="image-link">Riverwest, Milwaukee, WI&#8212;10:42AM.</a> <button id="add2212151" class="plus">+</button> Stopped at a red light and watched the sky as a low-flying plane materialized and quickly disappeared back into the clouds. 
+        <a href="javascript:;" id="image-link-2212151" onclick="showImage(event, 2212151)" class="image-link">Riverwest, Milwaukee, WI&#8212;10:42AM.</a> Stopped at a red light and watched the sky as a low-flying plane materialized and quickly disappeared back into the clouds. 
         <br><br>
-        Cleared out my SD cards in the afternoon and found some old test footage of an <a href="javascript:;" id="video-link-2212151" onclick="showVideo(event, 2212151)" class="video-link">underwater video filmed through a glass.</a> <button id="add2212152" class="plus">+</button> An unexpected digital complement to the <a href="javascript:;" id="video-link-2212152" onclick="showVideo(event, 2212152)" class="video-link">camera tests filming through water</a> <button id="add2212153" class="plus">+</button> D and I have been doing. Thinking about iteration and evocation. 
+        Cleared out my SD cards in the afternoon and found some old test footage of an <a href="javascript:;" id="video-link-2212151" onclick="showVideo(event, 2212151)" class="video-link">underwater video filmed through a glass.</a> An unexpected digital complement to the <a href="javascript:;" id="video-link-2212152" onclick="showVideo(event, 2212152)" class="video-link">camera tests filming through water</a> D and I have been doing. Thinking about iteration and evocation. 
         <br><br>
-        Daily weather news alerts:<br>
-        More footage of the <a href="javascript:;" id="video-link-2212153" onclick="showVideo(event, 2212153)" class="video-link">tornado that tore through New Orleans</a> <button id="add2212154" class="plus">+</button> yesterday.
+        *Daily weather news alerts*<br>
+        More footage of the <a href="javascript:;" id="video-link-2212153" onclick="showVideo(event, 2212153)" class="video-link">tornado that tore through New Orleans</a> yesterday.
         <br><br>
-        Daily bird alerts: <br>Dennis Casper, Milwaukee, WI&#8212;<a href="https://calendar.urbanecologycenter.org" target="_blank" rel="noopener noreferrer" class="url-link"/>Urban Ecology Center bird walk</a> <button id="add2212155" class="plus">+</button> / 34 degrees / Mostly cloudy / 10 birders / Total Species: 16.
+        *Daily bird alerts* <br>Dennis Casper, Milwaukee, WI&#8212;<a href="https://calendar.urbanecologycenter.org" target="_blank" rel="noopener noreferrer" class="url-link"/>Urban Ecology Center bird walk</a> / 34 degrees / Mostly cloudy / 10 birders / Total Species: 16.
       </div>
       <br>
       <image onclick="showImage(event, 2212151)" class="weather-image" id="weather-image-2212151" src="https://drive.google.com/uc?export=view&id=1U8Mz1axVx4D998XWXlfZErUH8WpaB3DC"/>
@@ -57,16 +183,16 @@
 
       <button class="button weather-button" onclick="showWeather(221214)">12.14.22&#8212;Cloudy with rain, 40&deg;F</button>
       <div class="ital weather-data" id="weather-data-221214">
-        <a href="javascript:;" id="image-link-2212141" onclick="showImage(event, 2212141)" class="image-link">Riverwest, Milwaukee, WI&#8212;2:32PM.</a> <button id="add2212141" class="plus">+</button> Dark skies all day. Saw a <a href="javascript:;" id="image-link-2212143" onclick="showImage(event, 2212143)" class="image-link">bunny sitting in the cold rain</a> <button id="add2212146" class="plus">+</button> on my way to class tonight.
+        <a href="javascript:;" id="image-link-2212141" onclick="showImage(event, 2212141)" class="image-link">Riverwest, Milwaukee, WI&#8212;2:32PM.</a> Dark skies all day. Saw a <a href="javascript:;" id="image-link-2212143" onclick="showImage(event, 2212143)" class="image-link">bunny sitting in the cold rain</a> on my way to class tonight.
         <br><br>
-        Read a passage in The Weather Experiment about John Constable and the importance of the sky and clouds in his paintings. He liked cumulus clouds for their chiaroscuro effect on the landscape: <a href="javascript:;" id="image-link-2212142" onclick="showImage(event, 2212142)" class="image-link">“Madam, I never saw an ugly thing in my life, but light, shade, or perspective would always make it beautiful.”</a> <button id="add2212142" class="plus">+</button> Made me think of the John Cage quote: “If something is boring after two minutes, try it for four. If still boring, then eight. Then sixteen. Then thirty-two. Eventually one discovers that it is not boring at all.” Duration and close-looking. 
+        Read a passage in The Weather Experiment about John Constable and the importance of the sky and clouds in his paintings. He liked cumulus clouds for their chiaroscuro effect on the landscape: <a href="javascript:;" id="image-link-2212142" onclick="showImage(event, 2212142)" class="image-link">“Madam, I never saw an ugly thing in my life, but light, shade, or perspective would always make it beautiful.”</a> Made me think of the John Cage quote: “If something is boring after two minutes, try it for four. If still boring, then eight. Then sixteen. Then thirty-two. Eventually one discovers that it is not boring at all.” Duration and close-looking. 
         <br><br>
-        Daily weather news alerts:<br>
-        <a href="https://www.theguardian.com/world/2022/dec/13/floods-and-landslides-kill-people-kinshasa-heavy-rain-congo" target="_blank" rel="noopener noreferrer" class="url-link">Floods and landslides kill scores of people in Kinshasa.</a> <button id="add2212143" class="plus">+</button> Dozens of people injured after heavy rain destroys houses and ruins roads in DRC’s capital.
+        *Daily weather news alerts*<br>
+        <a href="https://www.theguardian.com/world/2022/dec/13/floods-and-landslides-kill-people-kinshasa-heavy-rain-congo" target="_blank" rel="noopener noreferrer" class="url-link">Floods and landslides kill scores of people in Kinshasa.</a> Dozens of people injured after heavy rain destroys houses and ruins roads in DRC’s capital.
         <br><br>
-        <a href="javascript:;" id="video-link-2212141" onclick="showVideo(event, 2212141)" class="video-link">Strong wind creating ground blizzard conditions in Lusk, Wyoming</a> <button id="add2212144" class="plus">+</button> along Highway 20.
+        <a href="javascript:;" id="video-link-2212141" onclick="showVideo(event, 2212141)" class="video-link">Strong wind creating ground blizzard conditions in Lusk, Wyoming</a> along Highway 20.
         <br><br>
-        <a href="javascript:;" id="video-link-2212142" onclick="showVideo(event, 2212142)" class="video-link">A tornado was spotted crossing a highway in New Iberia, Louisiana.</a> <button id="add2212145" class="plus">+</button> Rescue efforts underway in the area.
+        <a href="javascript:;" id="video-link-2212142" onclick="showVideo(event, 2212142)" class="video-link">A tornado was spotted crossing a highway in New Iberia, Louisiana.</a> Rescue efforts underway in the area.
       </div>
       <br>
       <image onclick="showImage(event, 2212141)" class="weather-image" id="weather-image-2212141" src="https://drive.google.com/uc?export=view&id=1Z5Ar9KirCF09aDa9oI8BYq03QepNN9LM"/>
@@ -77,21 +203,21 @@
 
       <button class="button weather-button" onclick="showWeather(221213)">12.13.22&#8212;Cloudy, 37&deg;F</button>
       <div class="ital weather-data" id="weather-data-221213">
-        <a href="javascript:;" id="image-link-2212131" onclick="showImage(event, 2212131)" class="image-link">Lower East Side, Milwaukee, WI&#8212;12:32PM.</a> <button id="add2212131" class="plus">+</button> Met with P and M in the afternoon. P told me about her <a href="http://www.melanieariens.com/" target="_blank" rel="noopener noreferrer" class="url-link"/>artist friend who goes to document Lake Michigan everyday.</a> <button id="add2212132" class="plus">+</button> Many parallels with my sky photos. P said she would put us in touch. Talked with M about filmic strategies for capturing the extinct passenger pigeon&#8212;working against the perfect image, losing control, embracing failure, grasping for the an image that's no longer possible.
+        <a href="javascript:;" id="image-link-2212131" onclick="showImage(event, 2212131)" class="image-link">Lower East Side, Milwaukee, WI&#8212;12:32PM.</a> Met with P and M in the afternoon. P told me about her <a href="http://www.melanieariens.com/" target="_blank" rel="noopener noreferrer" class="url-link"/>artist friend who goes to document Lake Michigan everyday.</a> Many parallels with my sky photos. P said she would put us in touch. Talked with M about filmic strategies for capturing the extinct passenger pigeon&#8212;working against the perfect image, losing control, embracing failure, grasping for the an image that's no longer possible.
         <br><br>
-        Daily weather news alerts:
+        *Daily weather news alerts*
         <br>
-        <a href="javascript:;" id="video-link-2212131" onclick="showVideo(event, 2212131)" class="video-link">A tornado spotted in Fort Worth, Texas</a> <button id="add2212133" class="plus">+</button> this morning.
+        <a href="javascript:;" id="video-link-2212131" onclick="showVideo(event, 2212131)" class="video-link">A tornado spotted in Fort Worth, Texas</a> this morning.
         <br><br>
-        <a href="javascript:;" id="video-link-2212132" onclick="showVideo(event, 2212132)" class="video-link">A man found himself in the path of an apparent tornado near Grapevine, Texas.</a> <button id="add2212134" class="plus">+</button>
+        <a href="javascript:;" id="video-link-2212132" onclick="showVideo(event, 2212132)" class="video-link">A man found himself in the path of an apparent tornado near Grapevine, Texas.</a>
         <br><br>
-        <a href="javascript:;" id="video-link-2212133" onclick="showVideo(event, 2212133)" class="video-link">Powerful, severe winds in Forney, Texas.</a> <button id="add2212135" class="plus">+</button>
+        <a href="javascript:;" id="video-link-2212133" onclick="showVideo(event, 2212133)" class="video-link">Powerful, severe winds in Forney, Texas.</a>
         <br><br>
-        <a href="javascript:;" id="video-link-2212134" onclick="showVideo(event, 2212134)" class="video-link">Heavy snow and wind making for near whiteout conditions on Colorado’s northeastern Plains.</a> <button id="add2212136" class="plus">+</button>
+        <a href="javascript:;" id="video-link-2212134" onclick="showVideo(event, 2212134)" class="video-link">Heavy snow and wind making for near whiteout conditions on Colorado’s northeastern Plains.</a>
         <br><br>
-        Daily bird alerts: <br>Jeremy Meyer, Franklin, Milwaukee, WI&#8212;Good afternoon. There are several thousand geese off both sides of Braun Rd by Foxconn. While driving, I saw at least 1 <a href="javascript:;" id="sound-link-2212131" onclick="showSound(event, 2212131)" class="sound-link">Snow Goose,</a> <button id="add2212137" class="plus">+</button> in a field on the east side of Foxconn. I don't have the time to stop and look through them, but with that impressive of numbers, could be other geese mixed in as well. Good luck!
+        *Daily bird alerts* <br>Jeremy Meyer, Franklin, Milwaukee, WI&#8212;Good afternoon. There are several thousand geese off both sides of Braun Rd by Foxconn. While driving, I saw at least 1 <a href="javascript:;" id="sound-link-2212131" onclick="showSound(event, 2212131)" class="sound-link">Snow Goose,</a> in a field on the east side of Foxconn. I don't have the time to stop and look through them, but with that impressive of numbers, could be other geese mixed in as well. Good luck!
         <br><br>
-        Sandy U.C. Petersen, rural Stoughton, WI&#8212;<a href="javascript:;" id="sound-link-2212132" onclick="showSound(event, 2212132)" class="sound-link">Swans</a> <button id="add2212138" class="plus">+</button> are resting on the ice on the north side of Lake Kegonsa north of Stoughton. I can hear their conversation and planning. A long way to go I guess.
+        Sandy U.C. Petersen, rural Stoughton, WI&#8212;<a href="javascript:;" id="sound-link-2212132" onclick="showSound(event, 2212132)" class="sound-link">Swans</a> are resting on the ice on the north side of Lake Kegonsa north of Stoughton. I can hear their conversation and planning. A long way to go I guess.
       </div>
       <br>
       <image onclick="showImage(event, 2212131)" class="weather-image" id="weather-image-2212131" src="https://drive.google.com/uc?export=view&id=1nBwWOJ0FBRgyePzP6C6yTtSQj8vnPBv7"/>
@@ -104,12 +230,12 @@
 
       <button class="button weather-button" onclick="showWeather(221212)">12.12.22&#8212;Cloudy, 38&deg;F</button>
       <div class="ital weather-data" id="weather-data-221212">
-        <a href="javascript:;" id="image-link-2212121" onclick="showImage(event, 2212121)" class="image-link">Lower East Side, Milwaukee, WI&#8212;12:59PM.</a> <button id="add2212121" class="plus">+</button> Read about cloud classification in the morning. Studied the <a href="javascript:;" id="image-link-2212122" onclick="showImage(event, 2212122)" class="image-link">illustrations of cumulus clouds from Thomas Forster’s book</a> <button id="add2212122" class="plus">+</button> and looked out my window to see low hanging nimbus clouds in the sky.
+        <a href="javascript:;" id="image-link-2212121" onclick="showImage(event, 2212121)" class="image-link">Lower East Side, Milwaukee, WI&#8212;12:59PM.</a> Read about cloud classification in the morning. Studied the <a href="javascript:;" id="image-link-2212122" onclick="showImage(event, 2212122)" class="image-link">illustrations of cumulus clouds from Thomas Forster’s book</a> and looked out my window to see low hanging nimbus clouds in the sky.
         <br><br>
-        Daily weather news alerts:<br>
-        <a href="javascript:;" id="video-link-2212121" onclick="showVideo(event, 2212121)" class="video-link">Tornado sweeps through New Orleans</a> <button id="add2212123" class="plus">+</button> as death toll from storms reaches 3. A tornado killed a person west of New Orleans on Wednesday as violent storms continued east into Mississippi and Alabama.
+        *Daily weather news alerts*<br>
+        <a href="javascript:;" id="video-link-2212121" onclick="showVideo(event, 2212121)" class="video-link">Tornado sweeps through New Orleans</a> as death toll from storms reaches 3. A tornado killed a person west of New Orleans on Wednesday as violent storms continued east into Mississippi and Alabama.
         <br><br>
-        Daily bird alerts: <br>Werner Fritz, Cedar Grove, WI&#8212;Saw my first <a href="javascript:;" id="sound-link-2212121" onclick="showSound(event, 2212121)" class="sound-link">Northern Shrike</a> <button id="add2212124" class="plus">+</button> of the winter this afternoon at Harrington Beach State Park, just south of the park entrance center. If anyone is looking for a <a href="javascript:;" id="sound-link-2212122" onclick="showSound(event, 2212122)" class="sound-link">Peregrine Falcon</a> <button id="add2212125" class="plus">+</button> this winter, a single bird has been hanging in or around the WE Energies power plant nest box Port Washington for the past 4 weeks or so.
+        *Daily bird alerts* <br>Werner Fritz, Cedar Grove, WI&#8212;Saw my first <a href="javascript:;" id="sound-link-2212121" onclick="showSound(event, 2212121)" class="sound-link">Northern Shrike</a> of the winter this afternoon at Harrington Beach State Park, just south of the park entrance center. If anyone is looking for a <a href="javascript:;" id="sound-link-2212122" onclick="showSound(event, 2212122)" class="sound-link">Peregrine Falcon</a> this winter, a single bird has been hanging in or around the WE Energies power plant nest box Port Washington for the past 4 weeks or so.
       </div>
       <br>
       <image onclick="showImage(event, 2212121)" class="weather-image" id="weather-image-2212121" src="https://drive.google.com/uc?export=view&id=1z_CSseJI4UqNVzA9Kc_FH41UAuo2RHL2"/>
@@ -121,14 +247,14 @@
 
       <button class="button weather-button" onclick="showWeather(221211)">12.11.22&#8212;Cloudy, 37&deg;F</button>
       <div class="ital weather-data" id="weather-data-221211">
-        <a href="javascript:;" id="image-link-2212111" onclick="showImage(event, 2212111)" class="image-link">Riverwest, Milwaukee, WI&#8212;11:37AM.</a> <button id="add2212111" class="plus">+</button> Headed out to Vernon Wildlife Area with L to shoot some footage in the early evening. No wildlife sightings but we heard a few owls and a few howls that could have been human or animal. 
+        <a href="javascript:;" id="image-link-2212111" onclick="showImage(event, 2212111)" class="image-link">Riverwest, Milwaukee, WI&#8212;11:37AM.</a> Headed out to Vernon Wildlife Area with L to shoot some footage in the early evening. No wildlife sightings but we heard a few owls and a few howls that could have been human or animal. 
         <br><br>
-        Finished listening to an <a href="javascript:;" id="sound-link-2212111" onclick="showSound(event, 2212111)" class="sound-link">Audio Long Read episode on flood resilience.</a> <button id="add2212112" class="plus">+</button> Slow water that lingers and gives life. Local water. Indigenous beliefs that water and natural entities are kin, living beings entitled to rights. Made me think of a <a href="https://www.nationalgeographic.com/travel/article/these-rivers-are-now-considered-people-what-does-that-mean-for-travelers" target="_blank" rel="noopener noreferrer" class="url-link"/>National Geographic article about a Canadian river being granted legal personhood</a> <button id="add2212113" class="plus">+</button> that I read in the summer. It mentioned that these Indigenous-led conservation tactics are part of a global rights of nature movement. If corporations are considered people, why not rivers?
+        Finished listening to an <a href="javascript:;" id="sound-link-2212111" onclick="showSound(event, 2212111)" class="sound-link">Audio Long Read episode on flood resilience.</a> Slow water that lingers and gives life. Local water. Indigenous beliefs that water and natural entities are kin, living beings entitled to rights. Made me think of a <a href="https://www.nationalgeographic.com/travel/article/these-rivers-are-now-considered-people-what-does-that-mean-for-travelers" target="_blank" rel="noopener noreferrer" class="url-link"/>National Geographic article about a Canadian river being granted legal personhood</a> that I read in the summer. It mentioned that these Indigenous-led conservation tactics are part of a global rights of nature movement. If corporations are considered people, why not rivers?
         <br><br>
-        Daily weather news alerts:<br>
-        <a href="javascript:;" id="video-link-2212111" onclick="showVideo(event, 2212111)" class="video-link">Concerns of more landslides in Southern California after portion of cliff collapses onto beach.</a> <button id="add2212114" class="plus">+</button> The landslide, at 10AM local time, forced the closure of the beach and comes as an atmospheric river event, a plume of moisture streaming in from the Pacific Ocean, brings heavy rain up and down the West Coast over the weekend.
+        *Daily weather news alerts*<br>
+        <a href="javascript:;" id="video-link-2212111" onclick="showVideo(event, 2212111)" class="video-link">Concerns of more landslides in Southern California after portion of cliff collapses onto beach.</a> The landslide, at 10AM local time, forced the closure of the beach and comes as an atmospheric river event, a plume of moisture streaming in from the Pacific Ocean, brings heavy rain up and down the West Coast over the weekend.
         <br><br>
-        Daily bird alerts: <br>P. A. White, Shorewood, WI&#8212;We arrived on the scene on Saturday afternoon (10 Dec 2022) at about 2:55pm. A couple from Neenah said they'd just seen and photographed the <a href="javascript:;" id="sound-link-2212112" onclick="showSound(event, 2212112)" class="sound-link">Kittiwake,</a> <button id="add2212115" class="plus">+</button> and then it had headed east towards open water. We finally gave up at about 4:30pm when it started seriously spitting a very cold rain. There were ~29 sightings posted on eBird on Saturday, none of them as yet confirmed, and several from the same individual throughout the day - clearly a hardier soul than us! The last one was posted at 3:20pm, but it said they "last saw the bird flying off toward the lake at 335 and have pics." A little space-time continuum hiccup there? Good hunting to anyone going to look for this bird today!
+        *Daily bird alerts* <br>P. A. White, Shorewood, WI&#8212;We arrived on the scene on Saturday afternoon (10 Dec 2022) at about 2:55pm. A couple from Neenah said they'd just seen and photographed the <a href="javascript:;" id="sound-link-2212112" onclick="showSound(event, 2212112)" class="sound-link">Kittiwake,</a> and then it had headed east towards open water. We finally gave up at about 4:30pm when it started seriously spitting a very cold rain. There were ~29 sightings posted on eBird on Saturday, none of them as yet confirmed, and several from the same individual throughout the day - clearly a hardier soul than us! The last one was posted at 3:20pm, but it said they "last saw the bird flying off toward the lake at 335 and have pics." A little space-time continuum hiccup there? Good hunting to anyone going to look for this bird today!
       </div>
       <br>
       <image onclick="showImage(event, 2212111)" class="weather-image" id="weather-image-2212111" src="https://drive.google.com/uc?export=view&id=10FE75xVRZLBQBWvwYpKhtb9JKZDegqrB"/>
@@ -138,13 +264,13 @@
 
       <button class="button weather-button" onclick="showWeather(221210)">12.10.22&#8212;Cloudy with rain and snow, 37&deg;F</button>
       <div class="ital weather-data" id="weather-data-221210">
-        <a href="javascript:;" id="image-link-2212101" onclick="showImage(event, 2212101)" class="image-link">Riverwest, Milwaukee, WI&#8212;10:41AM.</a> <button id="add2212101" class="plus">+</button> Light drizzle throughout the day. Stopped by Colectivo before J and I drove to Vernon Wildlife Area and noticed <a href="javascript:;" id="image-link-2212102" onclick="showImage(event, 2212102)" class="image-link">two more small bird feeders installed outside&#8212;one made out of an old prescription bottle.</a> <button id="add2212102" class="plus">+</button> Heavy fog at Vernon, low visibility. We were all surprised when R flushed a large <a href="javascript:;" id="sound-link-2212101" onclick="showSound(event, 2212101)" class="sound-link">ring-necked pheasant</a> <button id="add2212103" class="plus">+</button> out of the tall grasses.
+        <a href="javascript:;" id="image-link-2212101" onclick="showImage(event, 2212101)" class="image-link">Riverwest, Milwaukee, WI&#8212;10:41AM.</a> Light drizzle throughout the day. Stopped by Colectivo before J and I drove to Vernon Wildlife Area and noticed <a href="javascript:;" id="image-link-2212102" onclick="showImage(event, 2212102)" class="image-link">two more small bird feeders installed outside&#8212;one made out of an old prescription bottle.</a> Heavy fog at Vernon, low visibility. We were all surprised when R flushed a large <a href="javascript:;" id="sound-link-2212101" onclick="showSound(event, 2212101)" class="sound-link">ring-necked pheasant</a> out of the tall grasses.
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="video-link-2212101" onclick="showVideo(event, 2212101)" class="video-link">Winter weather havoc is expected to make a cross-country run.</a> <button id="add2212104" class="plus">+</button> A “major storm system” is forecast to rumble across the U.S., bringing feet of snow to the West, blizzard conditions in the Northern Plains and tornadoes across the South.
+        *Daily weather news alerts*<br><a href="javascript:;" id="video-link-2212101" onclick="showVideo(event, 2212101)" class="video-link">Winter weather havoc is expected to make a cross-country run.</a> A “major storm system” is forecast to rumble across the U.S., bringing feet of snow to the West, blizzard conditions in the Northern Plains and tornadoes across the South.
         <br><br>
-        Daily bird alerts: <br>Kris Jungbluth, Port Washington, WI&#8212;The <a href="javascript:;" id="sound-link-2212102" onclick="showSound(event, 2212102)" class="sound-link">Black-legged Kittiwake</a> <button id="add2212105" class="plus">+</button> is still actively flying around the harbor.
+        *Daily bird alerts* <br>Kris Jungbluth, Port Washington, WI&#8212;The <a href="javascript:;" id="sound-link-2212102" onclick="showSound(event, 2212102)" class="sound-link">Black-legged Kittiwake</a> is still actively flying around the harbor.
         <br><br>
-        Pat Ready, Madison, WI&#8212;I joined some birding friends from Madison this morning to check out Lake Michigan for waterfowl etc. We did see the <a href="javascript:;" id="sound-link-2212103" onclick="showSound(event, 2212103)" class="sound-link">Kittiwake</a> <button id="add2212106" class="plus">+</button> at Coal Dock Park in Port Washington around 9:30. It was flying back & fourth toward the west end near the fisherman for about 20 minutes. Then it was gone. Looked around some but never located it again but it probably will return.
+        Pat Ready, Madison, WI&#8212;I joined some birding friends from Madison this morning to check out Lake Michigan for waterfowl etc. We did see the <a href="javascript:;" id="sound-link-2212103" onclick="showSound(event, 2212103)" class="sound-link">Kittiwake</a> at Coal Dock Park in Port Washington around 9:30. It was flying back & fourth toward the west end near the fisherman for about 20 minutes. Then it was gone. Looked around some but never located it again but it probably will return.
         <image onclick="showImage(event, 2212101)" class="weather-image" id="weather-image-2212101" src="https://drive.google.com/uc?export=view&id=1j2SzOnSbvfKR-4RW8BMlq2ewLeWQBIp4" alt="sky" />
         <image onclick="showImage(event, 2212102)" class="weather-image" id="weather-image-2212102" src="https://drive.google.com/uc?export=view&id=1E0x-roML1StB0lZzRrUMjp454Eclrj42"/>
         <audio controls onclick="showSound(event, 2212101)" class="weather-sound" id="weather-sound-2212101"><source src="https://drive.google.com/uc?export=view&id=1DaEr72nc1QzEuURnd3NZqqyjfLtdk9Sm" type="audio/wav"></audio>
@@ -156,16 +282,16 @@
 
       <button class="button weather-button" onclick="showWeather(221209)">12.9.22&#8212;Snow, 35&deg;F</button>
       <div class="ital weather-data" id="weather-data-221209">
-        <a href="javascript:;" id="image-link-2212091" onclick="showImage(event, 2212091)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:28PM.</a> <button id="add2212091" class="plus">+</button> Heavy snow all morning. I stayed bundled up at home, but J braved the cold and sent me a video of <a href="javascript:;" id="video-link-2212091" onclick="showVideo(event, 2212091)" class="video-link">R at the dog park.</a> <button id="add2212092" class="plus">+</button> Do dogs feel the cold as humans do?
+        <a href="javascript:;" id="image-link-2212091" onclick="showImage(event, 2212091)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:28PM.</a> Heavy snow all morning. I stayed bundled up at home, but J braved the cold and sent me a video of <a href="javascript:;" id="video-link-2212091" onclick="showVideo(event, 2212091)" class="video-link">R at the dog park.</a> Do dogs feel the cold as humans do?
         <br><br>
-        Daily weather news alerts:<br>
-        <a href="javascript:;" id="video-link-2212092" onclick="showVideo(event, 2212092)" class="video-link">Montana community rescues horses trapped in deep, icy pond.</a> <button id="add2212095" class="plus">+</button> First responders initially tried constructing a ramp and digging a bank in the ice for the horses to climb out, but they were unsuccessful. Eventually, a tractor was used to pull all the horses out of the water.
+        *Daily weather news alerts*<br>
+        <a href="javascript:;" id="video-link-2212092" onclick="showVideo(event, 2212092)" class="video-link">Montana community rescues horses trapped in deep, icy pond.</a> First responders initially tried constructing a ramp and digging a bank in the ice for the horses to climb out, but they were unsuccessful. Eventually, a tractor was used to pull all the horses out of the water.
         <br><br>
-        <a href="https://www.sciencedaily.com/releases/2022/12/221208085829.htm" target="_blank" rel="noopener noreferrer" class="url-link">Fleeing from hurricanes, Americans are flocking to fire, a study finds.</a> <button id="add2212094" class="plus">+</button> The 10-year national study from the University of Vermont looks at how climate change and other factors have been driving American migration. As people seek refuge from hurricane zones, they are moving to regions with the greatest risk of wildfires and significant summer heat. Concerning since wildfire and rising temperatures are projected to worsen with climate change.
+        <a href="https://www.sciencedaily.com/releases/2022/12/221208085829.htm" target="_blank" rel="noopener noreferrer" class="url-link">Fleeing from hurricanes, Americans are flocking to fire, a study finds.</a> The 10-year national study from the University of Vermont looks at how climate change and other factors have been driving American migration. As people seek refuge from hurricane zones, they are moving to regions with the greatest risk of wildfires and significant summer heat. Concerning since wildfire and rising temperatures are projected to worsen with climate change.
         <br><br>
-        Daily bird alerts:<br>Tom Erdman, Pensaukee, WI&#8212;Four <a href="javascript:;" id="sound-link-2212091" onclick="showSound(event, 2212091)" class="sound-link">Snowy Owls</a> <button id="add2212096" class="plus">+</button> spotted at Oconto, the first of the year. A couple hundred <a href="javascript:;" id="sound-link-2212092" onclick="showSound(event, 2212092)" class="sound-link">Tundra Swans</a> <button id="add2212097" class="plus">+</button> with a few <a href="javascript:;" id="sound-link-2212093" onclick="showSound(event, 2212093)" class="sound-link">Trumpeters</a> <button id="add2212098" class="plus">+</button> and three <a href="javascript:;" id="sound-link-2212094" onclick="showSound(event, 2212094)" class="sound-link">Mute Swans</a> <button id="add2212099" class="plus">+</button> scattered along the west shoreline south to Pensaukee and Little Suamico.
+        *Daily bird alerts*<br>Tom Erdman, Pensaukee, WI&#8212;Four <a href="javascript:;" id="sound-link-2212091" onclick="showSound(event, 2212091)" class="sound-link">Snowy Owls</a> spotted at Oconto, the first of the year. A couple hundred <a href="javascript:;" id="sound-link-2212092" onclick="showSound(event, 2212092)" class="sound-link">Tundra Swans</a> with a few <a href="javascript:;" id="sound-link-2212093" onclick="showSound(event, 2212093)" class="sound-link">Trumpeters</a> and three <a href="javascript:;" id="sound-link-2212094" onclick="showSound(event, 2212094)" class="sound-link">Mute Swans</a> scattered along the west shoreline south to Pensaukee and Little Suamico.
         <br><br>
-        Pam Skaar, Madison, WI&#8212;About 10 or more years ago it seemed like any Scoter was a rarity on any of Madison's lakes. For the last 5 or so years, Scoters are reported in multiple locations around Madison. When talking with a local fisherman about the scoters and their location in Lake Monona, he indicated that there were invasive clams in that area. This year, there are quite a few <a href="javascript:;" id="sound-link-2212095" onclick="showSound(event, 2212095)" class="sound-link">Long-tailed Ducks</a> <button id="add22120910" class="plus">+</button> along with many <a href="javascript:;" id="sound-link-2212096" onclick="showSound(event, 2212096)" class="sound-link">Scoters.</a> <button id="add22120911" class="plus">+</button> Do others think this might be an unexpected benefit to birders from the invasive bivalves?
+        Pam Skaar, Madison, WI&#8212;About 10 or more years ago it seemed like any Scoter was a rarity on any of Madison's lakes. For the last 5 or so years, Scoters are reported in multiple locations around Madison. When talking with a local fisherman about the scoters and their location in Lake Monona, he indicated that there were invasive clams in that area. This year, there are quite a few <a href="javascript:;" id="sound-link-2212095" onclick="showSound(event, 2212095)" class="sound-link">Long-tailed Ducks</a> along with many <a href="javascript:;" id="sound-link-2212096" onclick="showSound(event, 2212096)" class="sound-link">Scoters.</a> Do others think this might be an unexpected benefit to birders from the invasive bivalves?
         <image onclick="showImage(event, 2212091)" class="weather-image" id="weather-image-2212091" src="https://drive.google.com/uc?export=view&id=1-PZIjy47O1LCMAfToOKBBxvJsUwv_EnE" alt="sky" />
         <video autoplay loop muted onclick="showVideo(event, 2212091)" class="weather-video" id="weather-video-2212091"><source src="https://drive.google.com/uc?export=view&id=1DvGFHkaWCDWgcgVjqWVZ2hr-25Hagbi0" type="video/mp4"></video>
         <video autoplay loop muted onclick="showVideo(event, 2212092)" class="weather-video" id="weather-video-2212092"><source src="https://drive.google.com/uc?export=view&id=1CvHkIMQfJg2Zw-vIgvhzkM_emNsXBHe1" type="video/mp4"></video>
@@ -180,13 +306,13 @@
 
       <button class="button weather-button" onclick="showWeather(221208)">12.8.22&#8212;Cloudy, 36&deg;F</button>
       <div class="ital weather-data" id="weather-data-221208">
-        <a href="javascript:;" id="image-link-2212081" onclick="showImage(event, 2212081)" class="image-link">Riverwest, Milwaukee, WI&#8212;2:49PM.</a> <button id="add2212081" class="plus">+</button> Late start to the day, finally caught up on some much needed sleep. Saw that L had sent me <a href="javascript:;" id="video-link-2212081" onclick="showVideo(event, 2212081)" class="video-link">a short Guardian doc on teenage birders in the UK.</a> <button id="add2212082" class="plus">+</button> “I record bird [sounds], knowing I might not see them again... For me, a screaming swift is the sound of the summer.”
+        <a href="javascript:;" id="image-link-2212081" onclick="showImage(event, 2212081)" class="image-link">Riverwest, Milwaukee, WI&#8212;2:49PM.</a> Late start to the day, finally caught up on some much needed sleep. Saw that L had sent me <a href="javascript:;" id="video-link-2212081" onclick="showVideo(event, 2212081)" class="video-link">a short Guardian doc on teenage birders in the UK.</a> “I record bird [sounds], knowing I might not see them again... For me, a screaming swift is the sound of the summer.”
         <br><br>
-        I watched <a href="javascript:;" id="video-link-2212082" onclick="showVideo(event, 2212082)" class="video-link">Jacqueline Goss’s There There Square</a> <button id="add2212083" class="plus">+</button> in the afternoon on C’s recommendation, and saw on her site that she has another film, <a href="javascript:;" id="video-link-2212083" onclick="showVideo(event, 2212083)" class="video-link">The Observers&#8212;based on the work of the crew of the Mount Washington Weather Observatory in New Hampshire,</a> <button id="add2212084" class="plus">+</button> one of the oldest weather stations in the world where staff members have taken hourly readings of the wind speed and temperature since 1932. In 1938, a 236 mph wind hit the summit: a world record for wind speed recorded by a human being. Pull quote from NYT: "Ms. Goss’s film suggests a lament for a time...when perhaps it was possible to record the weather in this place and feel as if you were the last human on earth."
+        I watched <a href="javascript:;" id="video-link-2212082" onclick="showVideo(event, 2212082)" class="video-link">Jacqueline Goss’s There There Square</a> in the afternoon on C’s recommendation, and saw on her site that she has another film, <a href="javascript:;" id="video-link-2212083" onclick="showVideo(event, 2212083)" class="video-link">The Observers&#8212;based on the work of the crew of the Mount Washington Weather Observatory in New Hampshire,</a> one of the oldest weather stations in the world where staff members have taken hourly readings of the wind speed and temperature since 1932. In 1938, a 236 mph wind hit the summit: a world record for wind speed recorded by a human being. Pull quote from NYT: "Ms. Goss’s film suggests a lament for a time...when perhaps it was possible to record the weather in this place and feel as if you were the last human on earth."
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="video-link-2212084" onclick="showVideo(event, 2212084)" class="video-link">Large tornado swirls through Qatar desert ahead of the World Cup quarter-finals.</a> <button id="add2212085" class="plus">+</button> The twister, of the “stovepipe” variety, accompanied by hailstones happened near the city of Ras Laffan, about 50 miles north of the capital of Doha. Tornadoes are rarely seen in the desert landscapes of the Middle East&#8212;perhaps an ominous sign for the games ahead.
+        *Daily weather news alerts*<br><a href="javascript:;" id="video-link-2212084" onclick="showVideo(event, 2212084)" class="video-link">Large tornado swirls through Qatar desert ahead of the World Cup quarter-finals.</a> The twister, of the “stovepipe” variety, accompanied by hailstones happened near the city of Ras Laffan, about 50 miles north of the capital of Doha. Tornadoes are rarely seen in the desert landscapes of the Middle East&#8212;perhaps an ominous sign for the games ahead.
         <br><br>
-        Daily bird alerts: <br>Dennis Casper, Milwaukee, WI&#8212;<a href="https://calendar.urbanecologycenter.org" target="_blank" rel="noopener noreferrer" class="url-link"/>Urban Ecology Center bird walk</a> <button id="add2212086" class="plus">+</button> / 34 degrees / Cloudy / 8 birders / Total Species: 19.
+        *Daily bird alerts* <br>Dennis Casper, Milwaukee, WI&#8212;<a href="https://calendar.urbanecologycenter.org" target="_blank" rel="noopener noreferrer" class="url-link"/>Urban Ecology Center bird walk</a> / 34 degrees / Cloudy / 8 birders / Total Species: 19.
         <image onclick="showImage(event, 2212081)" class="weather-image" id="weather-image-2212081" src="https://drive.google.com/uc?export=view&id=17V8884rl6qleePCTdZ_3nxGzfldTtor4" alt="sky" />
         <video autoplay loop muted onclick="showVideo(event, 2212081)" class="weather-video" id="weather-video-2212081"><source src="https://drive.google.com/uc?export=view&id=1yvHRXM5u6F8JaSkHz0OXoKX86bcXCu4j" type="video/mp4"></video>
         <video autoplay loop muted onclick="showVideo(event, 2212082)" class="weather-video" id="weather-video-2212082"><source src="https://drive.google.com/uc?export=view&id=1kFP-odX6_J26wNa2Ua2t4CSvJxf3_cgY" type="video/mp4"></video>
@@ -197,11 +323,11 @@
 
       <button class="button weather-button" onclick="showWeather(221207)">12.7.22&#8212;Cloudy, 34&deg;F</button>
       <div class="ital weather-data" id="weather-data-221207">
-        <a href="javascript:;" id="image-link-2212071" onclick="showImage(event, 2212071)" class="image-link">Riverwest, Milwaukee, WI&#8212;11:56AM.</a> <button id="add2212071" class="plus">+</button> Met R for coffee in the morning and noticed <a href="javascript:;" id="image-link-2212072" onclick="showImage(event, 2212072)" class="image-link">a small bird feeder newly installed outside Colectivo.</a> <button id="add2212072" class="plus">+</button> A wonderfully meandering studio chat with C and L in the afternoon. Once again <a href="javascript:;" id="video-link-2212071" onclick="showVideo(event, 2212071)" class="video-link">The Birdpeople</a> <button id="add2212073" class="plus">+</button> came up; thoughts around instability, resistance to capture and fixity; nascent ponderings on the marvelous, the agency of the other-than-human on film.
+        <a href="javascript:;" id="image-link-2212071" onclick="showImage(event, 2212071)" class="image-link">Riverwest, Milwaukee, WI&#8212;11:56AM.</a> Met R for coffee in the morning and noticed <a href="javascript:;" id="image-link-2212072" onclick="showImage(event, 2212072)" class="image-link">a small bird feeder newly installed outside Colectivo.</a> A wonderfully meandering studio chat with C and L in the afternoon. Once again <a href="javascript:;" id="video-link-2212071" onclick="showVideo(event, 2212071)" class="video-link">The Birdpeople</a> came up; thoughts around instability, resistance to capture and fixity; nascent ponderings on the marvelous, the agency of the other-than-human on film.
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="video-link-2212072" onclick="showVideo(event, 2212072)" class="video-link">A massive flock of birds took to the sky near the National Weather Service office in Indianapolis</a> <button id="add2212074" class="plus">+</button> and was so large it appeared on radar.
+        *Daily weather news alerts*<br><a href="javascript:;" id="video-link-2212072" onclick="showVideo(event, 2212072)" class="video-link">A massive flock of birds took to the sky near the National Weather Service office in Indianapolis</a> and was so large it appeared on radar.
         <br><br>
-        <a href="javascript:;" id="video-link-221273" onclick="showVideo(event, 2212073)" class="video-link">A rogue wave slammed into a cruise ship in the Drake Passage,</a> <button id="add2212075" class="plus">+</button> causing a passenger death and several injuries.
+        <a href="javascript:;" id="video-link-221273" onclick="showVideo(event, 2212073)" class="video-link">A rogue wave slammed into a cruise ship in the Drake Passage,</a> causing a passenger death and several injuries.
       </div>
       <br>
       <image onclick="showImage(event, 2212071)" class="weather-image" id="weather-image-2212071" src="https://drive.google.com/uc?export=view&id=1GodLz6QM65_KMb9u3VWq5fYeBNnSpuyk"/>
@@ -212,11 +338,11 @@
 
       <button class="button weather-button" onclick="showWeather(221206)">12.6.22&#8212;Cloudy with rain, 40&deg;F</button>
       <div class="ital weather-data" id="weather-data-221206">
-        <a href="javascript:;" id="image-link-2212061" onclick="showImage(event, 2212061)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:19PM.</a> <button id="add2212061" class="plus">+</button> A delirious 6AM arrival back in Milwaukee. Snuck in a few hours of sleep before a studio chat with J in the early afternoon. J mentioned <a href="javascript:;" id="video-link-2212061" onclick="showVideo(event, 2212061)" class="video-link">Michael Gitlin’s The Birdpeople,</a> <button id="add2212062" class="plus">+</button> recalling her visceral anxiety at the sight of the unfertilized eggs of an extinct woodpecker being handled. A promising lead from J: giant condor-like birds spotted hanging around the Haribo building near Kenosha.
+        <a href="javascript:;" id="image-link-2212061" onclick="showImage(event, 2212061)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:19PM.</a> A delirious 6AM arrival back in Milwaukee. Snuck in a few hours of sleep before a studio chat with J in the early afternoon. J mentioned <a href="javascript:;" id="video-link-2212061" onclick="showVideo(event, 2212061)" class="video-link">Michael Gitlin’s The Birdpeople,</a> recalling her visceral anxiety at the sight of the unfertilized eggs of an extinct woodpecker being handled. A promising lead from J: giant condor-like birds spotted hanging around the Haribo building near Kenosha.
         <br><br>
-        A mesmerizing film program by S in the evening. Images from <a href="javascript:;" id="video-link-2212062" onclick="showVideo(event, 2212062)" class="video-link">Denys Colomb de Daunant’s Dream of the Wild Horses</a> <button id="add2212063" class="plus">+</button> in my mind as I drifted off to sleep.
+        A mesmerizing film program by S in the evening. Images from <a href="javascript:;" id="video-link-2212062" onclick="showVideo(event, 2212062)" class="video-link">Denys Colomb de Daunant’s Dream of the Wild Horses</a> in my mind as I drifted off to sleep.
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="video-link-2212063" onclick="showVideo(event, 2212063)" class="video-link">An Australian couple finds a stowaway snake</a> <button id="add2212064" class="plus">+</button> as they drive along a highway in New South Wales.
+        *Daily weather news alerts*<br><a href="javascript:;" id="video-link-2212063" onclick="showVideo(event, 2212063)" class="video-link">An Australian couple finds a stowaway snake</a> as they drive along a highway in New South Wales.
       </div>
       <br>
       <image onclick="showImage(event, 2212061)" class="weather-image" id="weather-image-2212061" src="https://drive.google.com/uc?export=view&id=1P586BAXXpXTWjSEz-bi1TBsJxC6GSFny"/>
@@ -226,11 +352,11 @@
 
       <button class="button weather-button" onclick="showWeather(221205)">12.5.22&#8212;Partly cloudy, 47&deg;F</button>
       <div class="ital weather-data" id="weather-data-221205">
-        <a href="javascript:;" id="image-link-2212051" onclick="showImage(event, 2212051)" class="image-link">Prospect Lefferts Garden, Brooklyn, NY&#8212;1:30PM.</a> <button id="add2212051" class="plus">+</button> Caught up with D over breakfast in Brooklyn Heights, heard all about his recent trip. He and P stayed in a house with no electricity and heat in Bulgaria. D said he fell sick immediately. I was glad to see that he seemed fully restored by the Turkish leg of their trip. The healing powers of the seaside. 
+        <a href="javascript:;" id="image-link-2212051" onclick="showImage(event, 2212051)" class="image-link">Prospect Lefferts Garden, Brooklyn, NY&#8212;1:30PM.</a> Caught up with D over breakfast in Brooklyn Heights, heard all about his recent trip. He and P stayed in a house with no electricity and heat in Bulgaria. D said he fell sick immediately. I was glad to see that he seemed fully restored by the Turkish leg of their trip. The healing powers of the seaside. 
         <br><br>
         L and I hit the road in the late afternoon. The skies were already dark. Drove through the night into early morning.
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="video-link-2212051" onclick="showVideo(event, 2212051)" class="video-link">Ice researchers in Antarctica capture intense wind blasting through Allan Hills.</a> <button id="add2212052" class="plus">+</button>
+        *Daily weather news alerts*<br><a href="javascript:;" id="video-link-2212051" onclick="showVideo(event, 2212051)" class="video-link">Ice researchers in Antarctica capture intense wind blasting through Allan Hills.</a>
       </div>
       <br>
       <image onclick="showImage(event, 2212051)" class="weather-image" id="weather-image-2212051" src="https://drive.google.com/uc?export=view&id=1qFQOicHZwogr0QkNjDjwFYY4ENOW-xtO"/>
@@ -238,11 +364,11 @@
 
       <button class="button weather-button" onclick="showWeather(221204)">12.4.22&#8212;Partly cloudy, 45&deg;F</button>
       <div class="ital weather-data" id="weather-data-221204">
-        <a href="javascript:;" id="image-link-2212041" onclick="showImage(event, 2212041)" class="image-link">Sunset Park, Brooklyn, NY&#8212;1:51PM.</a> <button id="add2212041" class="plus">+</button> B, L and I slept in until noon. We ate a slow brunch of cannellini beans, bread, and olive oil before heading to MoMA to see the Wolfgang Tillmans show. Brazen maximalism&#8212;overwhelmed by the sheer number of images. Felt myself drawn to the <a href="javascript:;" id="image-link-2212042" onclick="showImage(event, 2212042)" class="image-link">small and elemental photos,</a> <button id="add2212042" class="plus">+</button> <a href="javascript:;" id="image-link-2212043" onclick="showImage(event, 2212043)" class="image-link">images that pointed skyward.</a> <button id="add2212043" class="plus">+</button>
+        <a href="javascript:;" id="image-link-2212041" onclick="showImage(event, 2212041)" class="image-link">Sunset Park, Brooklyn, NY&#8212;1:51PM.</a> B, L and I slept in until noon. We ate a slow brunch of cannellini beans, bread, and olive oil before heading to MoMA to see the Wolfgang Tillmans show. Brazen maximalism&#8212;overwhelmed by the sheer number of images. Felt myself drawn to the <a href="javascript:;" id="image-link-2212042" onclick="showImage(event, 2212042)" class="image-link">small and elemental photos,</a> <a href="javascript:;" id="image-link-2212043" onclick="showImage(event, 2212043)" class="image-link">images that pointed skyward.</a>
         <br><br>
         Dinner with J and M. We distressed over the turmoil in Iran and China before M put on a nature doc on the endangered Sichuan takin. 
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="video-link-2212041" onclick="showVideo(event, 2212041)" class="video-link">Lightning flashes inside the erupting Stromboli Volcano's ash plume</a> <button id="add2212044" class="plus">+</button> in Italy off the coast of Sicily. Stromboli is considered one of the most active volcanoes on Earth and has continuously erupted since 1932. Scientists believe volcanic lightning is created by static electricity that results from particles within the ash plume rubbing against each other.
+        *Daily weather news alerts*<br><a href="javascript:;" id="video-link-2212041" onclick="showVideo(event, 2212041)" class="video-link">Lightning flashes inside the erupting Stromboli Volcano's ash plume</a> in Italy off the coast of Sicily. Stromboli is considered one of the most active volcanoes on Earth and has continuously erupted since 1932. Scientists believe volcanic lightning is created by static electricity that results from particles within the ash plume rubbing against each other.
       </div>
       <br>
       <image onclick="showImage(event, 2212041)" class="weather-image" id="weather-image-2212041" src="https://drive.google.com/uc?export=view&id=18kp-XvKr2k_q9N_nNU9vnLwUFh71mQL2"/>
@@ -252,11 +378,11 @@
 
       <button class="button weather-button" onclick="showWeather(221203)">12.3.22&#8212;Rain, 56&deg;F</button>
       <div class="ital weather-data" id="weather-data-221203">
-        <a href="javascript:;" id="image-link-2212031" onclick="showImage(event, 2212031)" class="image-link">Sunset Park, Brooklyn, NY&#8212;12:24PM.</a> <button id="add2212031" class="plus">+</button> L and I got into Brooklyn around 4AM. A few hours of sleep before we headed out to meet H for lunch. It drizzled all day and I was glad to have packed an extra umbrella.
+        <a href="javascript:;" id="image-link-2212031" onclick="showImage(event, 2212031)" class="image-link">Sunset Park, Brooklyn, NY&#8212;12:24PM.</a> L and I got into Brooklyn around 4AM. A few hours of sleep before we headed out to meet H for lunch. It drizzled all day and I was glad to have packed an extra umbrella.
         <br><br>
-        Daily weather news alerts:<br>The National Weather Service issued a <a href="javascript:;" id="video-link-2212031" onclick="showVideo(event, 2212031)" class="video-link">Dust Storm Warning for areas of Colorado, Nebraska and Kansas</a> <button id="add2212032" class="plus">+</button> as the system moved through.
+        *Daily weather news alerts*<br>The National Weather Service issued a <a href="javascript:;" id="video-link-2212031" onclick="showVideo(event, 2212031)" class="video-link">Dust Storm Warning for areas of Colorado, Nebraska and Kansas</a> as the system moved through.
         <br><br>
-        <a href="javascript:;" id="image-link-2212032" onclick="showImage(event, 2212032)" class="image-link">A buck in Colorado crashed through a window and landed in a Colorado Springs basement office.</a> <button id="add2212033" class="plus">+</button> Colorado Parks and Wildlife officer Travis Sauder noted that in mating season, bucks sharpen their antlers on trees and spar violently with rival bucks. Perhaps the buck saw its reflection in the basement window, mistaking it for another.
+        <a href="javascript:;" id="image-link-2212032" onclick="showImage(event, 2212032)" class="image-link">A buck in Colorado crashed through a window and landed in a Colorado Springs basement office.</a> Colorado Parks and Wildlife officer Travis Sauder noted that in mating season, bucks sharpen their antlers on trees and spar violently with rival bucks. Perhaps the buck saw its reflection in the basement window, mistaking it for another.
       </div>
       <br>
       <image onclick="showImage(event, 2212031)" class="weather-image" id="weather-image-2212031" src="https://drive.google.com/uc?export=view&id=1FVtxyug5I_UBvFEWRYsCg9wmFtrMbV-3"/>
@@ -265,13 +391,13 @@
 
       <button class="button weather-button" onclick="showWeather(221202)">12.2.22&#8212;Mostly sunny, 48&deg;F</button>
       <div class="ital weather-data" id="weather-data-221202">
-        <a href="javascript:;" id="image-link-2212021" onclick="showImage(event, 2212021)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:45PM.</a> <button id="add2212021" class="plus">+</button> Read a <a href="https://99percentinvisible.org/article/stepping-up-bermuda-roofs-rebuff-hurricanes-collect-water-cool-homes/" target="_blank" rel="noopener noreferrer" class="url-link">99pi article on Bermuda rooftops designed to withstand hurricanes and collect fresh rainwater,</a> <button id="add2212022" class="plus">+</button> and how they’re now being imported into other storm-prone areas. Listened to more of <a href="javascript:;" id="sound-link-2212021" onclick="showSound(event, 2212021)" class="sound-link">Rising: Chapter 2 on Isle de Jean Charles, Louisiana</a> <button id="add2212023" class="plus">+</button> &#8212;stories of people who stay behind, who hold on fiercely to the place they’ve lived in their entire lives.
+        <a href="javascript:;" id="image-link-2212021" onclick="showImage(event, 2212021)" class="image-link">Riverwest, Milwaukee, WI&#8212;12:45PM.</a> Read a <a href="https://99percentinvisible.org/article/stepping-up-bermuda-roofs-rebuff-hurricanes-collect-water-cool-homes/" target="_blank" rel="noopener noreferrer" class="url-link">99pi article on Bermuda rooftops designed to withstand hurricanes and collect fresh rainwater,</a> and how they’re now being imported into other storm-prone areas. Listened to more of <a href="javascript:;" id="sound-link-2212021" onclick="showSound(event, 2212021)" class="sound-link">Rising: Chapter 2 on Isle de Jean Charles, Louisiana</a> &#8212;stories of people who stay behind, who hold on fiercely to the place they’ve lived in their entire lives.
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="video-link-2212021" onclick="showVideo(event, 2212021)" class="video-link">A tractor trailer flipped over the side of a freeway guardrail and crashed down on top of wreckage from an earlier collision in rainy conditions in Santa Clarita, California.</a> <button id="add2212024" class="plus">+</button>
+        *Daily weather news alerts*<br><a href="javascript:;" id="video-link-2212021" onclick="showVideo(event, 2212021)" class="video-link">A tractor trailer flipped over the side of a freeway guardrail and crashed down on top of wreckage from an earlier collision in rainy conditions in Santa Clarita, California.</a>
         <br><br>
-        <a href="javascript:;" id="video-link-2212022" onclick="showVideo(event, 2212022)" class="video-link">Blebs of liquid rock spew from Mauna Loa in Hawaii.</a> <button id="add2212025" class="plus">+</button>
+        <a href="javascript:;" id="video-link-2212022" onclick="showVideo(event, 2212022)" class="video-link">Blebs of liquid rock spew from Mauna Loa in Hawaii.</a>
         <br><br>
-        Daily bird alerts:<br>Tracy Chi, Milwaukee County, WI&#8212;There is a female <a href="javascript:;" id="sound-link-2212022" onclick="showSound(event, 2212022)" class="sound-link">Red-breasted Merganser</a> <button id="add2212026" class="plus">+</button> in distress at the boat launch at McKinley Marina. She has something blue (scrunchy??) badly stuck around base of bill, bottom 1/3 of bill is broke & hanging, & she is frantically preening her left side (suspect something is wrong there also).
+        *Daily bird alerts*<br>Tracy Chi, Milwaukee County, WI&#8212;There is a female <a href="javascript:;" id="sound-link-2212022" onclick="showSound(event, 2212022)" class="sound-link">Red-breasted Merganser</a> in distress at the boat launch at McKinley Marina. She has something blue (scrunchy??) badly stuck around base of bill, bottom 1/3 of bill is broke & hanging, & she is frantically preening her left side (suspect something is wrong there also).
       </div>
       <br>
       <image onclick="showImage(event, 2212021)" class="weather-image" id="weather-image-2212021" src="https://drive.google.com/uc?export=view&id=1niYAwk8mVMN3Q9lV_k7XBajCCFj2oSE8"/>
@@ -282,14 +408,14 @@
 
       <button class="button weather-button" onclick="showWeather(221201)">12.1.22&#8212;Mostly cloudy, 35&deg;F</button>
       <div class="ital weather-data" id="weather-data-221201">
-        <a href="javascript:;" id="image-link-2212011" onclick="showImage(event, 2212011)" class="image-link">Riverwest, Milwaukee, WI&#8212;3:44PM.</a> <button id="add2212011" class="plus">+</button> Downloaded an audiobook version of Rising: Dispatches from the New American Shore, which E had recommended. Chapter one talked about <a href="javascript:;" id="sound-link-2212011" onclick="showSound(event, 2212011)" class="sound-link">the disappearance of the black tupelo tree:</a> <button id="add2212012" class="plus">+</button> “I see them and know that the erosion of species, of land, and, if we are not careful, of the very words we use to name the plants and animals that are disappearing is not a political lever or a fever dream. I see them and remember that those who live on the margins of our society are the most vulnerable, and that the story of species vanishing is repeating itself in nearly every borderland...And if we do not call them by their names we will lose not only the trees themselves but also all trace of their having ever been.”
+        <a href="javascript:;" id="image-link-2212011" onclick="showImage(event, 2212011)" class="image-link">Riverwest, Milwaukee, WI&#8212;3:44PM.</a> Downloaded an audiobook version of Rising: Dispatches from the New American Shore, which E had recommended. Chapter one talked about <a href="javascript:;" id="sound-link-2212011" onclick="showSound(event, 2212011)" class="sound-link">the disappearance of the black tupelo tree:</a> “I see them and know that the erosion of species, of land, and, if we are not careful, of the very words we use to name the plants and animals that are disappearing is not a political lever or a fever dream. I see them and remember that those who live on the margins of our society are the most vulnerable, and that the story of species vanishing is repeating itself in nearly every borderland...And if we do not call them by their names we will lose not only the trees themselves but also all trace of their having ever been.”
         <br><br>
-        Daily weather news alerts:<br>
-        A winter weather phenomenon called <a href="javascript:;" id="video-link-2212011" onclick="showVideo(event, 2212011)" class="video-link">sea smoke on Lake Superior in Duluth, Minnesota</a> <button id="add2212013" class="plus">+</button> this morning.
+        *Daily weather news alerts*<br>
+        A winter weather phenomenon called <a href="javascript:;" id="video-link-2212011" onclick="showVideo(event, 2212011)" class="video-link">sea smoke on Lake Superior in Duluth, Minnesota</a>
         <br><br>
-        <a href="javascript:;" id="video-link-2212012" onclick="showVideo(event, 2212012)" class="video-link">Key West residents celebrated the end of the 2022 season by setting Hurricane flags on fire.</a> <button id="add2212014" class="plus">+</button>
+        <a href="javascript:;" id="video-link-2212012" onclick="showVideo(event, 2212012)" class="video-link">Key West residents celebrated the end of the 2022 season by setting Hurricane flags on fire.</a>
         <br><br>
-        Daily bird alerts:<br>Dennis Casper, Milwaukee, WI&#8212;<a href="https://calendar.urbanecologycenter.org" target="_blank" rel="noopener noreferrer" class="url-link"/>Urban Ecology Center bird walk</a> <button id="add2212015" class="plus">+</button> / 20 degrees / Mostly sunny / 6 birders / Total Species: 15.
+        *Daily bird alerts*<br>Dennis Casper, Milwaukee, WI&#8212;<a href="https://calendar.urbanecologycenter.org" target="_blank" rel="noopener noreferrer" class="url-link"/>Urban Ecology Center bird walk</a> / 20 degrees / Mostly sunny / 6 birders / Total Species: 15.
       </div>
       <br>
       <image onclick="showImage(event, 2212011)" class="weather-image" id="weather-image-2212011" src="https://drive.google.com/uc?export=view&id=1ADUrlXacM5NxtczKi_avIVMrE2etqBWG" alt="sky" />
@@ -300,17 +426,17 @@
 
       <button class="button weather-button" onclick="showWeather(221101)">11.1.22&#8212;Sunny, 61&deg;F</button>
       <div class="ital weather-data" id="weather-data-221101">
-        <a href="javascript:;" id="image-link-2211011" onclick="showImage(event, 2211011)" class="image-link">Riverwest, Milwaukee, WI&#8212;3:32PM.</a> <button id="add2211011" class="plus">+</button> A lovely email from C this morning recommending the <a href="http://www.freelists.org/list/wisbirdn" target="_blank" rel="noopener noreferrer" class="url-link">Wisconsin Birding Network listserv</a> <button id="add2211012" class="plus">+</button> for up-to-date bird leads. He calls them “the Oracles.”
+        <a href="javascript:;" id="image-link-2211011" onclick="showImage(event, 2211011)" class="image-link">Riverwest, Milwaukee, WI&#8212;3:32PM.</a> A lovely email from C this morning recommending the <a href="http://www.freelists.org/list/wisbirdn" target="_blank" rel="noopener noreferrer" class="url-link">Wisconsin Birding Network listserv</a> for up-to-date bird leads. He calls them “the Oracles.”
         <br><br>
-        Daily weather news alerts:<br><a href="javascript:;" id="image-link-2211012" onclick="showImage(event, 2211012)" class="image-link">Tropical Storm Martin intensifies as post-tropical storm but poses no threat to land.</a> <button id="add2211013" class="plus">+</button> Martin formed in the North Atlantic Ocean on Tuesday morning. The National Hurricane Center said the storm is located about 550 miles east-northeast of Bermuda, moving east at 12 mph, and is expected to weaken over the next few days. 
+        *Daily weather news alerts*<br><a href="javascript:;" id="image-link-2211012" onclick="showImage(event, 2211012)" class="image-link">Tropical Storm Martin intensifies as post-tropical storm but poses no threat to land.</a> Martin formed in the North Atlantic Ocean on Tuesday morning. The National Hurricane Center said the storm is located about 550 miles east-northeast of Bermuda, moving east at 12 mph, and is expected to weaken over the next few days. 
         <br><br>
-        <a href="javascript:;" id="video-link-2211012" onclick="showVideo(event, 2211012)" class="video-link">New extreme weather pattern emerging: A wintry West and record-warm East.</a> <button id="add2211014" class="plus">+</button> Stormy weather is predicted for the middle of the nation, with severe thunderstorms and tornadoes possible later this week.
+        <a href="javascript:;" id="video-link-2211012" onclick="showVideo(event, 2211012)" class="video-link">New extreme weather pattern emerging: A wintry West and record-warm East.</a> Stormy weather is predicted for the middle of the nation, with severe thunderstorms and tornadoes possible later this week.
         <br><br>
-        <a href="javascript:;" id="video-link-2211011" onclick="showVideo(event, 2211011)" class="video-link">SpaceX launched the world’s most powerful rocket at 9:41AM</a> <button id="add2211015" class="plus">+</button> using more than 5 million pounds of thrust to rise above thick blanket of morning fog.
+        <a href="javascript:;" id="video-link-2211011" onclick="showVideo(event, 2211011)" class="video-link">SpaceX launched the world’s most powerful rocket at 9:41AM</a> using more than 5 million pounds of thrust to rise above thick blanket of morning fog.
         <br><br>
-        Daily bird alerts:<br>Hakim Barrett, Sauk County, WI&#8212;Blackbird migration has been pretty steady this fall at Long Lake near Lone Rock. I've been seeing flocks of up to 50. I can hope for even more to show up as we get into November. Good birding!
+        *Daily bird alerts*<br>Hakim Barrett, Sauk County, WI&#8212;Blackbird migration has been pretty steady this fall at Long Lake near Lone Rock. I've been seeing flocks of up to 50. I can hope for even more to show up as we get into November. Good birding!
         <br><br>
-        John Kivikoski, Rural Iowa County, WI&#8212;I’ve been seeing a few thousand a day for the past couple of weeks in south-central Iowa County, mostly <a href="javascript:;" id="sound-link-2211011" onclick="showSound(event, 2211011)" class="sound-link">COMMON GRACKLES</a> <button id="add2211016" class="plus">+</button> with a few <a href="javascript:;" id="sound-link-2211012" onclick="showSound(event, 2211012)" class="sound-link">RED-WINGED BLACKBIRDS</a> <button id="add2211017" class="plus">+</button> in the mix. Tonight I took a cell phone video of a group of a couple thousand in one flock. I had just submitted an eBird checklist with 1,500 Grackles and then the next flock flew over, so I’d say I had 4,000+ tonight. The acorn crop is decent this year, and there’s plenty of corn and soybean stubble to pick through, so until we get some harsh weather, I expect them to stick around.
+        John Kivikoski, Rural Iowa County, WI&#8212;I’ve been seeing a few thousand a day for the past couple of weeks in south-central Iowa County, mostly <a href="javascript:;" id="sound-link-2211011" onclick="showSound(event, 2211011)" class="sound-link">COMMON GRACKLES</a> with a few <a href="javascript:;" id="sound-link-2211012" onclick="showSound(event, 2211012)" class="sound-link">RED-WINGED BLACKBIRDS</a> in the mix. Tonight I took a cell phone video of a group of a couple thousand in one flock. I had just submitted an eBird checklist with 1,500 Grackles and then the next flock flew over, so I’d say I had 4,000+ tonight. The acorn crop is decent this year, and there’s plenty of corn and soybean stubble to pick through, so until we get some harsh weather, I expect them to stick around.
         <br><br>
         Judy Ettenhofer, Spring Green, WI&#8212;I've been seeing them at least by the hundreds, if not more, over our house in Spring Green too. A bunch paused briefly in our tall white pines, then took off again. Quite the sight in the sky.
       </div>
@@ -322,51 +448,346 @@
       <audio controls onclick="showSound(event, 2211011)" class="weather-sound" id="weather-sound-2211011"><source src="https://drive.google.com/uc?export=view&id=108pbFPpN49oxU9VNyX1IIGhj4zNR8e37" type="audio/wav"></audio>
       <audio controls onclick="showSound(event, 2211012)" class="weather-sound" id="weather-sound-2211012"><source src="https://drive.google.com/uc?export=view&id=1fV8ufr4xy6h3DKXhakKvjvx5BIJBJ4em" type="audio/wav"></audio>
 
+
+      <button class="button weather-button" onclick="showWeather(220804)">8.4.22&#8212;Sunny, 103&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220804">
+        <a href="javascript:;" id="image-link-2208041" onclick="showImage(event, 2208041)" class="image-link">Crisp blue sky that turned a bit milky by the late afternoon.</a> Something resembling a thin fog covered the entire sky. The radio host on the local NPR station mentioned a chance of rain this weekend but even he didn't seem to believe it.
+        <br><br>
+        Saw that Kate Bush was topping music charts again and took a deep dive on YouTube. Watched her music video for Cloudbusting, inspired by Wilhelm Reich's devices that he claimed could produce rain by manipulating "orgone energy" present in the atmosphere. He believed orgone was a universal life force, coalescing to form organisms, clouds, galaxies.
+      <image onclick="showImage(event, 2208041)" class="weather-image" id="weather-image-2208041" src="https://drive.google.com/uc?export=view&id=1olyd35yNrXrExI5vzfPJCkHqXI2V_yQj" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2208041)" class="weather-video" id="weather-video-2208041"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2208041)" class="weather-sound" id="weather-sound-2208041"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
       <br>
+
+      <button class="button weather-button" onclick="showWeather(220803)">8.3.22&#8212;Mostly sunny, 104&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220803">
+        <a href="javascript:;" id="image-link-2208031" onclick="showImage(event, 2208031)" class="image-link">Soft groups of clouds neatly distributed across the sky.</a>
+        <br><br>
+        Came across the ecosex manifesto. "We are aquaphiles, teraphiles, pyrophiles and aerophiles. We shamelessly hug trees, massage the Earth with our feet and talk erotically to plants. We are skinny dippers, sun worshippers and stargazers. We caress rocks, are pleasured by waterfalls and admire the Earth's curves often. We make love with the Earth through our senses. We celebrate our E-spots. We are very dirty."
+        <br><br>
+        Watched a short film in the evening called The Nest that reminded me a lot of Stephen Gill's The Pillar (a favorite I come back to time and again). Thinking about the single frame, letting landscape hold space and time.
+      <image onclick="showImage(event, 2208031)" class="weather-image" id="weather-image-2208031" src="https://drive.google.com/uc?export=view&id=1aSi1Jxp0RyW7AzP-uQ4jHmbFzvAt6mOw" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2208031)" class="weather-video" id="weather-video-2208031"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2208031)" class="weather-sound" id="weather-sound-2208031"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
       <br>
+
+      <button class="button weather-button" onclick="showWeather(220802)">8.2.22&#8212;Mostly sunny, 103&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220802">
+        <a href="javascript:;" id="image-link-2208021" onclick="showImage(event, 2208021)" class="image-link">Clear sky with a few small wisps of clouds scattered about.</a>
+        <br><br>
+        Bit of an insomniac these days. Listened to the chapter in Rising about Oakwood trying to fall asleep last night. A lot of things I had experienced in person during my visits but also heart-rending descriptions of the aftermath of Sandy and the demoliton of the houses.
+        <br><br>
+        Reports of more rainstorms in Kentucky, chances of more flash flooding in the coming days.
+        <br><br>
+        Starting to do some research into the water systems around Milwaukee and came across an interesting NYT piece about Chicago’s changing relationship to Lake Michigan.
+      <image onclick="showImage(event, 2208021)" class="weather-image" id="weather-image-2208021" src="https://drive.google.com/uc?export=view&id=1VN9r3cE8ZAmknuhcWsbqhq2v4UE54G30" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2208021)" class="weather-video" id="weather-video-2208021"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2208021)" class="weather-sound" id="weather-sound-2208021"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220801)">8.1.22&#8212;Partly cloudy, 99&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220801">
+        <a href="javascript:;" id="image-link-2208011" onclick="showImage(event, 2208011)" class="image-link">Larger, denser clouds today compared to the past few days.</a> Consistent heat in the three digits.
+        <br><br>
+        Read a 99pi article on Bermuda rooftops designed to withstand hurricanes and collect fresh rainwater, and how they’re now being imported into other storm-prone areas. Listened to more of Rising—a section on Isle de Jean Charles, Louisiana which loosely inspired Beasts of the Southern Wild. Stories of people who stay behind, who hold on fiercely to the place they’ve lived in their whole lives. Reminders of the families who chose to stay in Bayou Oaks after three consecutive floods in In Too Deep: Class and Motherhood in a Flooded Community.
+        <br><br>
+        Practiced parallel parking with dad in the evening, getting ready for driving in New York and the unknown streets of Milwaukee.
+      <image onclick="showImage(event, 2208011)" class="weather-image" id="weather-image-2208011" src="https://drive.google.com/uc?export=view&id=1bcSGqf1b5W2xg_Rm6ifnQiBmoTKT4sXU" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2208011)" class="weather-video" id="weather-video-2208011"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2208011)" class="weather-sound" id="weather-sound-2208011"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220731)">7.31.22&#8212;Mostly sunny, 96&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220731">
+        <a href="javascript:;" id="image-link-2207311" onclick="showImage(event, 2207311)" class="image-link">Scattered clouds, still no rain in sight.</a> Waited until sunset to get a nice photo of the sky but the color wasn’t as vibrant as the day before.
+        <br><br>
+        Listened to an episode of 99 pi on water today. Descriptions of disembodiment in water, losing one’s body to melt into a collective body.
+        <br><br>
+        Downloaded an audiobook version of Rising: Dispatches from the New American Shore, which E had recommended. Chapter one talks about the disappearance of the black tupelo tree.
+        <br><br>
+        “I see them and know that the erosion of species, of land, and, if we are not careful, of the very words we use to name the plants and animals that are disappearing is not a political lever or a fever dream. I see them and remember that those who live on the margins of our society are the most vulnerable, and that the story of species vanishing is repeating itself in nearly every borderland…And if we do not call them by their names we will lose not only the trees themselves but also all trace of their having ever been.”
+        <br><br>
+        “…learn the names now, and you will at least be able to preserve what is being threatened in our collective memory, if not in the physical world.”
+      <image onclick="showImage(event, 2207311)" class="weather-image" id="weather-image-2207311" src="https://drive.google.com/uc?export=view&id=1pgte86mOsewWPojbtObK-ay9-D-n7HNR" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207311)" class="weather-video" id="weather-video-2207311"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207311)" class="weather-sound" id="weather-sound-2207311"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220730)">7.30.22&#8212;Sunny, 101&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220730">
+        <a href="javascript:;" id="image-link-2207301" onclick="showImage(event, 2207301)" class="image-link">Almost cloudless skies in the afternoon.</a> The day felt brighter than usual but it may have been due to a mix of me being cooped up inside for two days and the excitement of picking up the new car today.
+        <br><br>
+        Drove down to San Marcos to finalize the paperwork on the car. Feels surreal finally having a car of my own after so many years. A whole new world of possibilities open to me, but also the new burden of upkeep costs and responsibilities.
+        <br><br>
+        Sent an article that popped up in my newsfeed about New York transforming back into an “aquapolis” to N. Wildlife returning to New York waters and more people being drawn to the shoreline.
+        <br><br>
+      <image onclick="showImage(event, 2207301)" class="weather-image" id="weather-image-2207301" src="https://drive.google.com/uc?export=view&id=1CSWaRBKeoNXxbVDkB6G7yHGlVDHg6jnk" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207301)" class="weather-video" id="weather-video-2207301"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207301)" class="weather-sound" id="weather-sound-2207301"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220729)">7.29.22&#8212;Mostly sunny, 97&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220729">
+        <a href="javascript:;" id="image-link-2207291" onclick="showImage(event, 2207291)" class="image-link">Mostly clear skies today, a nice, neat pair of clouds</a> when I went out to take a snapshot in the afternoon. Still cooped up resting, but it was nice to step outside for a brief moment and feel the heat of the sun.
+        <br><br>
+        Couldn’t use my eyes much all day, caught up on podcasts I haven’t heard in a long time. Highlight was an Audio Long Read episode on wild rice and the rights of nature.
+        <br><br>
+        News alert about deadly flash flooding in Kentucky yesterday.
+      <image onclick="showImage(event, 2207291)" class="weather-image" id="weather-image-2207291" src="https://drive.google.com/uc?export=view&id=13LCVm2QJtHzrdyaUh6Am2HgXwwEiK1tZ" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207291)" class="weather-video" id="weather-video-2207291"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207291)" class="weather-sound" id="weather-sound-2207291"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220728)">7.28.22&#8212;Partly cloudy, 97&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220728">
+        Day of surgery today, spent all afternoon and evening with an ice pack over my eyes. Asked B to take a <a href="javascript:;" id="image-link-2207281" onclick="showImage(event, 2207281)" class="image-link">picture of the sky</a>, curious to see how it looks. He said it was quite cloudy and mentioned that he included a bit of the trees in the photo. He suggested that I frame more of the context in my documentation of the sky.
+      <image onclick="showImage(event, 2207281)" class="weather-image" id="weather-image-2207281" src="https://drive.google.com/uc?export=view&id=13LCVm2QJtHzrdyaUh6Am2HgXwwEiK1tZ" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207281)" class="weather-video" id="weather-video-2207281"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207281)" class="weather-sound" id="weather-sound-2207281"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220727)">7.27.22&#8212;Mostly sunny, 100&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220727">
+        <a href="javascript:;" id="image-link-2207271" onclick="showImage(event, 2207271)" class="image-link">A few small clouds in the sky.</a> Another hot dry day, high of 102, with no end in sight. Another news alert today about heatwave along the Eastern seaboard. 
+        <br><br>
+        B said he was worried about the lawn, and I mentioned watching something about lawn alternatives in the wake of the drought on the West coast.
+      <image onclick="showImage(event, 2207271)" class="weather-image" id="weather-image-2207271" src="https://drive.google.com/uc?export=view&id=1-6T3-Eh2rZ8Abi7YTWLFqzHfUpyCehMP" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207271)" class="weather-video" id="weather-video-2207271"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207271)" class="weather-sound" id="weather-sound-2207271"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220726)">7.26.22&#8212;Sunny, 97&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220726">
+        Flight home to Austin this morning. <a href="javascript:;" id="image-link-2207261" onclick="showImage(event, 2207261)" class="image-link">Clear skies overhead, a few low clouds close to the horizon.</a> Temperatures in the three digits in Austin. Saw a news alert that the Pacific Northwest is also getting record temperatures in the three digits.
+        <br><br>
+        Reports of flashing flooding in St. Louis. Concerns over growing threat of serious drought just days before and then record rainfall. Scientists warn that as climate continues to warm, flash floods will be more dangerous and destructive.
+      <image onclick="showImage(event, 2207261)" class="weather-image" id="weather-image-2207261" src="https://drive.google.com/uc?export=view&id=1P9psjkYDwJ5evKum6p7OpYYl53Z91h8x" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207261)" class="weather-video" id="weather-video-2207261"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207261)" class="weather-sound" id="weather-sound-2207261"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220725)">7.25.22&#8212;Scattered thunderstorms, 81&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220725">
+        <a href="javascript:;" id="image-link-2207251" onclick="showImage(event, 2207251)" class="image-link">Rainy with heavy clouds</a> for most of the day. Much cooler than the past few days. The sun finally emerged around 6p and the summer heat returned.
+        <br><br>
+        Went to the Sculpture Center and PS1 with K. Watched a long video piece that made me think of representing modes of production on screen. Saw a piece that was a collection of water samples taken from all around New York City. Found a sample from Great Kills in Staten Island, close to Oakwood.
+        <br><br>
+        A vibrant Deana Lawson show at PS1, a blend of staged and chanced life. Intentional omissions and confusions.
+        <br><br>
+        Stopped by D’s to look at footage from our last shoot together. Some beautiful results from D’s tests shooting through a glass container of water.
+        <br><br>
+        Late night packing for 6am flight tomorrow. Sleep will have to wait.
+      <image onclick="showImage(event, 2207251)" class="weather-image" id="weather-image-2207251" src="https://drive.google.com/uc?export=view&id=1ehc3oMx8gkevOCLm8zyT_k2Yz3hFIezo" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207251)" class="weather-video" id="weather-video-2207251"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207251)" class="weather-sound" id="weather-sound-2207251"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220724)">7.24.22&#8212;Partly cloudy, 93&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220724">
+        <a href="javascript:;" id="image-link-2207241" onclick="showImage(event, 2207241)" class="image-link">Unbearably hot day with faint wisps of clouds in the sky.</a> Seemed like the air conditioning was off everywhere I went. M said it reminded her of Europe and I thought of summers in China, getting by with nothing but a fan.
+        <br><br>
+        Met up with A and E in the afternoon, poor E on crutches, and M and C later on for dinner. Bittersweet last days in New York, seeing everyone for what feels like the last time in a long time. But two year isn’t so long, is it?
+      <image onclick="showImage(event, 2207241)" class="weather-image" id="weather-image-2207241" src="https://drive.google.com/uc?export=view&id=1fshVVpU9meVRdTkFYi30Moqd9DiTuenl" alt="sky" />
+      <video autoplay loop muted controls onclick="showVideo(event, 2207241)" class="weather-video" id="weather-video-2207241"><source src="https://drive.google.com/uc?export=view&id=1h1TAB2vJAY8VmuSJ6PRDF_bd_lL7ChZ5" type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207241)" class="weather-sound" id="weather-sound-2207241"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220723)">7.23.22&#8212;Sunny, 89&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220723">
+        <a href="javascript:;" id="image-link-2207221" onclick="showImage(event, 2207231)" class="image-link">Clear skies</a> at the beach with B. A noticeable shift in temperature coming back to Sunset Park at night. 
+        <br><br>
+        B and I took half a tab of acid each which hit us at some point on the ferry ride to Rockaway. Was completely entranced by the water ripples coming off the back of the boat, layers of water moving over other water only to merge into one water again. Thought of Roni Horn’s descriptions of water in Another Water.
+      <image onclick="showImage(event, 2207231)" class="weather-image" id="weather-image-2207231" src="https://drive.google.com/uc?export=view&id=1vDicoRV0DjrkOSMVWVxAnN-RsGfytZgJ" alt="sky" />
+      <video autoplay loop muted controls onclick="showVideo(event, 2207231)" class="weather-video" id="weather-video-2207231"><source src="https://drive.google.com/uc?export=view&id=1h1TAB2vJAY8VmuSJ6PRDF_bd_lL7ChZ5" type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207231)" class="weather-sound" id="weather-sound-2207231"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220722)">7.22.22&#8212;Sunny, 93&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220722">
+        <a href="javascript:;" id="image-link-2207221" onclick="showImage(event, 2207221)" class="image-link">Mostly clear skies</a> with a medium breeze. Blazing hot sun that was hard to bear without a little shade.
+        <br><br>
+        Finished listening to <a href="javascript:;" id="sound-link-2207221" onclick="showSound(event, 2207221)" class="sound-link">the Audio Long Read episode on flood resilience.</a> Slow water that lingers and gives life, local water. Indigenous beliefs that water and natural entities are living beings entitled to rights. Makes me think of a <a href="https://www.nationalgeographic.com/travel/article/these-rivers-are-now-considered-people-what-does-that-mean-for-travelers" target="_blank" rel="noopener noreferrer" class="url-link">National Geographic article</a> I read about a Canadian river being granted legal personhood. These Indigenous-led conservation tactics are part of a global <a href="https://www.garn.org/" target="_blank" rel="noopener noreferrer" class="url-link">rights of nature movement</a>. If corporations are people, why not rivers?
+        <br><br>
+        “We need to see that as humans we are not above the water or the animals. We are part of a whole. When we heal the earth, we heal ourselves, too.”
+      <image onclick="showImage(event, 2207221)" class="weather-image" id="weather-image-2207221" src="https://drive.google.com/uc?export=view&id=1695ErY9flcpf0U3zRzCxg-j2EvV9uaFQ" alt="sky" />
+      <video autoplay loop muted controls onclick="showVideo(event, 2207221)" class="weather-video" id="weather-video-2207221"><source src="https://drive.google.com/uc?export=view&id=1h1TAB2vJAY8VmuSJ6PRDF_bd_lL7ChZ5" type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207221)" class="weather-sound" id="weather-sound-2207221"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220721)">7.21.22&#8212;Mostly cloudy, 85&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220721">
+        <a href="javascript:;" id="image-link-2207211" onclick="showImage(event, 2207211)" class="image-link">Bright afternoon sun with dense patches of clouds.</a> A real vertical depth to the sky. The clouds sat in delineated layers high into the atmosphere. Some unsettling sounds of thunder in the mid afternoon.
+        <br><br>
+        Finally watched <a href="javascript:;" id="video-link-2207211" onclick="showVideo(event, 2207211)" class="video-link">Terrence Malick’s Tree of Life</a> today. A lesson in camera work and editing. Fluid camera movements, wide-angle close-ups, upward angles, quick cuts between moving shots. Slippage between different spans of time. Glory in the indifference of nature.
+        <br><br>
+        Saw a <a href="javascript:;" id="video-link-2207211" onclick="showVideo(event, 2207212)" class="video-link">terrifying video of a sinkhole in the Bronx</a> that emerged during the rain storm a few days ago. Natural disasters and crumbling infrastructure. Thoughts of pothole-ridden Fox Lane on Staten Island.
+      <image onclick="showImage(event, 2207211)" class="weather-image" id="weather-image-2207211" src="https://drive.google.com/uc?export=view&id=1RTHSUp5wBon5NLiD2ngVzCHs66Z1mLmB" alt="sky" />
+      <video autoplay loop muted controls onclick="showVideo(event, 2207211)" class="weather-video" id="weather-video-2207211"><source src="https://drive.google.com/uc?export=view&id=1OQj_UDYWdicaP_1ns9xeNc1i2tMgTlXp" type="video/mp4">Your browser does not support the video element.</video>
+      <video autoplay loop muted controls onclick="showVideo(event, 2207212)" class="weather-video" id="weather-video-2207212"><source src="https://drive.google.com/uc?export=view&id=1f9Iy6styX3ATf21Q9itAMo7hD54ocEIH" type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207211)" class="weather-sound" id="weather-sound-2207211"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220720)">7.20.22&#8212;Partly cloudy, 91&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220720">
+        <a href="javascript:;" id="image-link-2207201" onclick="showImage(event, 2207201)" class="image-link">Slowly shifting cloud formations that the sun peeked through</a> turned into clear skies by the early evening. Hot day but the kind of dry heat I love.
+        <br><br>
+        Watched a short by Lucretia Martel that began with a <a href="javascript:;" id="video-link-2207201" onclick="showVideo(event, 2207201)" class="video-link">long time-lapse of a pastoral Argentinian landscape</a>. Thought of geologic time, different scales of time and perspectives, and how to represent these on film. Time-lapse could be a good device to play with, maybe a jarring juxtaposition, quick cuts between time-lapse and slow-motion.
+        <br><br>
+        Went to the last house class with C at night, bittersweet and touching. We talked about the oral histories of the dance, the gatekeepers, and the passing on of the culture. He advised me to think of my body as an instrument in the music, to take my time with everything, to not be afraid of being late. Dance lessons and life lessons. Embodiment, service, and patience.
+      <image onclick="showImage(event, 2207201)" class="weather-image" id="weather-image-2207201" src="https://drive.google.com/uc?export=view&id=1d8BQqusQGAMAbrIKjvY2W2H8n7lLH5mT" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207201)" class="weather-video" id="weather-video-2207201"><source src="https://drive.google.com/uc?export=view&id=1XiESTE_zwAbe7U1Y_IZGHoPnBT9GRpEF" type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207201)" class="weather-sound" id="weather-sound-2207201"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220719)">7.19.22&#8212;Mostly sunny, 91&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220719">
+        <a href="javascript:;" id="image-link-2207191" onclick="showImage(event, 2207191)" class="image-link">Mostly clear skies with wisps of clouds hanging about.</a> A cooling breeze. Watched Fire of Love with A. Wasn’t a fan of the stylistic flourishes but absolutely astounding footage from the two volcanologists Katia and Maurice Krafft. So steadfast and absolutely in their joint pursuit of the volcanoes they love. The pursuit of scientific knowledge but also some unnameable feeling beyond the rational. 
+        <br><br>
+        It’s something of the same compulsion that drives storm chasers I think. A compulsion I’m feeling more and more as I dive deeper into this work. An itch to travel, to document natural forces so much greater than oneself. Stepping away from humanity to get closer to humanity.
+      <image onclick="showImage(event, 2207191)" class="weather-image" id="weather-image-2207191" src="https://drive.google.com/uc?export=view&id=1F2StsxXyBW3DFKXglyX_JcKpKhW2MYck" alt="sky" />
+      <video autoplay loop muted onclick="showVideo(event, 2207191)" class="weather-video" id="weather-video-2207191"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+      <audio controls onclick="showSound(event, 2207191)" class="weather-sound" id="weather-sound-2207191"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220718)">7.18.22&#8212;Mostly cloudy with thunder, 89&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220718">
+        <a href="javascript:;" id="image-link-2207181" onclick="showImage(event, 2207181)" class="image-link">Cloudy, overcast day.</a> Extremely humid, worse than yesterday. The air felt like hot molasses. Body heavy and sluggish, but managed to make the trip to Staten Island to pick up my trail camera. The local geese had wandered all the way out to the post office, the farthest I've seen them. I’ve grown quite fond of them over the weeks. Felt a twinge of sadness leaving them for the last time.
+        <br><br>
+        Read about cloud classification on the bus ride there and back. Studied the illustrations of cumulus clouds from Thomas Forster’s book and looked up to see low hanging nimbus clouds outside the bus windows. Later received a blog link from A that showed the illustrations in color.
+        <image onclick="showImage(event, 2207181)" class="weather-image" id="weather-image-2207181" src="https://drive.google.com/uc?export=view&id=12Jxpg5hvACUd1hskagOcFNYT3V0uuaMn" alt="sky" />
+        <video autoplay loop muted onclick="showVideo(event, 2207181)" class="weather-video" id="weather-video-2207181"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+        <audio controls onclick="showSound(event, 2207181)" class="weather-sound" id="weather-sound-2207181"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220717)">7.17.22&#8212;Mostly cloudy, 82&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220717">
+        <a href="javascript:;" id="image-link-2207171" onclick="showImage(event, 2207171)" class="image-link">Cloudy, balmy day.</a> Classic summertime New York humidity. The air temperature 82&deg; but the "feels like" temperature had to be at least 10&deg; higher.
+        <br><br>
+        16mm workshop with S tonight. First time at Mono No Aware. Warm and generous space, wished I'd visited earlier. Shot on my Bolex for the first time and realized I need a wider lens for it. I told S that I was moving to Milwaukee soon for an experimental film program, and he mentioned that the school has great facilities for 16mm and a lot of mutual contacts. Left feeling lifted in spirit and better about leaving the city for now. 
+        <br><br>
+        N sent me Instagram videos of the rainstorm yesterday. <a href="javascript:;" id="video-link-2207171" onclick="showVideo(event, 2207171)" class="video-link">The stairs of a city park looked like an immense waterfall.</a> Much more torrential than the rain I experienced between Sunset Park and Lincoln Center.
+        <image onclick="showImage(event, 2207171)" class="weather-image" id="weather-image-2207171" src="https://drive.google.com/uc?export=view&id=1DEF7pt1R1DHippmUjC8jWCesvfT2jN_8" alt="sky" />
+        <video autoplay loop muted controls onclick="showVideo(event, 2207171)" class="weather-video" id="weather-video-2207171"><source src="https://drive.google.com/uc?export=view&id=1OQj_UDYWdicaP_1ns9xeNc1i2tMgTlXp" type="video/mp4">Your browser does not support the video element.</video>
+        <audio controls onclick="showSound(event, 2207171)" class="weather-sound" id="weather-sound-2207171"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      </div>
+      <br>
+      
+      <button class="button weather-button" onclick="showWeather(220716)">7.16.22&#8212;Light rain with thunder, 80&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220716">
+        Surprised by sudden rain in the early afternoon. <a href="javascript:;" id="image-link-2207161" onclick="showImage(event, 2207161)" class="image-link">Overcast skies for the rest of the day.</a> The overwhelming humidity of the morning broke instantly. A jarring shift in atmospheric sensation that felt a bit like teleportation.
+        <br><br>
+        Met I to watch a Taiwanese film her godfather directed. Not much to note plot-wise but appreciated the aquatic shots and sounds. The bright orange color of the main character’s fish shop uniform popped against the environment. Orange:blue, orange:water, orange:wet, orange:melodrama, orange:loneliness—a synesthesic complementary color theory.
+        <image onclick="showImage(event, 2207161)" class="weather-image" id="weather-image-2207161" src="https://drive.google.com/uc?export=view&id=1_3eEpePizFaRweTv4PadzbriJJdEK5qI" alt="sky" />
+      </div>
+      <br>
+
+      <button class="button weather-button" onclick="showWeather(220715)">7.15.22&#8212;Partly cloudy, 83&deg;F</button>
+      <div class="ital weather-data" id="weather-data-220715">
+        <a href="javascript:;" id="image-link-2207151" onclick="showImage(event, 2207151)" class="image-link">Mostly clear skies with a few clumps of clouds scattered about.</a> Thought about going to Staten Island to pick up the trail cam but decided to wait for potential rain this weekend. Impromptu gallery visit and long chat with A after. 
+        <br><br>
+        Read a passage in The Weather Experiment about John Constable and the importance of the sky and clouds in his paintings. He especially liked cumulus clouds for their chiaroscuro effect on the landscape. Many parallels to film where light is everything. “Madam, I never saw an ugly thing in my life, but light, shade, or perspective would always make it beautiful.”
+        <br><br>
+         Makes me think of the famous John Cage quote, “If something is boring after two minutes, try it for four. If still boring, then eight. Then sixteen. Then thirty-two. Eventually one discovers that it is not boring at all.” 
+         <br><br>
+         Duration and close-looking.
+        <image onclick="showImage(event, 2207151)" class="weather-image" id="weather-image-2207151" src="https://drive.google.com/uc?export=view&id=1isZi-0uMIryH6Lh849alqMviDJqluKFg" alt="sky" />
+      </div>
+      <br><br>
+
+
+      <!-- <button class="button weather-button" onclick="showWeather(0)">X.XX.XX&#8212;Sunny, XX&deg;F</button>
+      <div class="ital weather-data" id="weather-data-0">
+        <a href="javascript:;" id="image-link-0" onclick="showImage(event, 0)" class="image-link">Clear skies this morning.</a> The city finally feels like it’s officially in spring—flowers in bloom, trees budding, and pigeons marching about. Dom and I took a walk to the promenade and had lunch facing the water. We had just looked through <a href="http://rinkokawauchi.com/en/works/194/" target="_blank" rel="noopener noreferrer" class="url-link">Rinko Kawauchi’s Illuminance</a> and the soft light bouncing off the surface of the water brought to my mind her photo of three pigeons suspended against a backdrop of illuminated water.
+        <br><br>
+        Since <a href="javascript:;" id="video-link-0" onclick="showVideo(event, 0)" class="video-link">birds</a> are built to detect the slightest changes in air pressure, they make quite reliable storm forecasters. In New York, storms will often push <a href="javascript:;" id="sound-link-0" onclick="showSound(event, 0)" class="sound-link">rare migratory birds</a> to fly inland so birders have learned to anticipate storms.</div>
+        <image onclick="showImage(event, 0)" class="weather-image" id="weather-image-0" src="https://drive.google.com/uc?export=view&id=..." alt="sky" />
+        <video autoplay loop muted onclick="showVideo(event, 0)" class="weather-video" id="weather-video-0"><source src="https://drive.google.com/uc?export=view&id=..." type="video/mp4">Your browser does not support the video element.</video>
+        <audio controls onclick="showSound(event, 0)" class="weather-sound" id="weather-sound-0"><source src="https://drive.google.com/uc?export=view&id=..." type="audio/wav">Your browser does not support the audio element.</audio>
+      <br>
+      5.22.22&#8212;Sunny, 89&deg;F<br>
+      5.21.22&#8212;Sunny, 88&deg;F<br>
+      5.20.22&#8212;Mostly cloudy, 68&deg;F<br>
+      5.19.22&#8212;Cloudy, 59&deg;F<br>
+      5.18.22&#8212;Mostly sunny, 59&deg;F<br>
+      5.17.22&#8212;Partly cloudy, 78&deg;F<br>
+      5.16.22&#8212;Mostly cloudy, 70&deg;F<br>
+      5.15.22&#8212;Mostly cloudy, 66&deg;F<br>
+      5.14.22&#8212;Partly cloudy, 71&deg;F<br>
+      5.13.22&#8212;Cloudy, 68&deg;F<br>
+      5.12.22&#8212;Cloudy, 62&deg;F<br>
+      5.11.22&#8212;Mostly cloudy, 70&deg;F<br>
+      5.10.22&#8212;Mostly cloudy, 92&deg;F<br>
+      5.9.22&#8212;Partly cloudy, 92&deg;F<br>
+      5.8.22&#8212;Sunny, 93&deg;F<br>
+      5.7.22&#8212;Partly cloudy, 88&deg;F<br>
+      5.6.22&#8212;Sunny, 91&deg;F<br>
+      5.5.22&#8212;Cloudy, 80&deg;F<br>
+      5.4.22&#8212;Cloudy, 82&deg;F<br>
+      5.3.22&#8212;Mostly cloudy, 85&deg;F<br>
+      5.2.22&#8212;Cloudy, 80&deg;F<br>
+      5.1.22&#8212;Mostly cloudy, 86&deg;F<br>
+      4.30.22&#8212;Partly cloudy, 89&deg;F<br>
+      4.29.22&#8212;Cloudy, 85&deg;F<br>
+      4.28.22&#8212;Mostly cloudy, 82&deg;F<br>
+      4.27.22&#8212;Partly cloudy, 70&deg;F<br>
+      4.26.22&#8212;Mostly cloudy, 72&deg;F<br>
+      4.25.22&#8212;Cloudy, 52&deg;F<br>
+      4.24.22&#8212;Partly cloudy, 58&deg;F<br>
+      4.23.22&#8212;Cloudy, 58&deg;F<br>
+      4.22.22&#8212;Mostly sunny, 65&deg;F<br>
+      4.21.22&#8212;Mostly cloudy, 53&deg;F<br>
+      4.20.22&#8212;Partly cloudy, 45&deg;F<br>
+      4.19.22&#8212;Mostly cloudy, 49&deg;F<br>
+      4.18.22&#8212;Mostly sunny, 51&deg;F<br>
+      4.17.22&#8212;Sunny, 46&deg;F<br>
+      4.16.22&#8212;Partly cloudy, 60&deg;F<br>
+      4.15.22&#8212;Mostly sunny, 64&deg;F<br>
+      4.14.22&#8212;Scattered thunderstorms, 68&deg;F<br>
+      4.13.22&#8212;Partly sunny, 65&deg;F<br> -->
+      <br>
+    </div>
+
+    <div class="text scrollbar size3 work-column" id="right">
+      [Video Diary]<br> 
+      <div>
+      #1<br>
+      <div style="padding:177.78% 0 12px 0;position:relative;"><iframe src="https://player.vimeo.com/video/793612694?h=64b4205886&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="376c99ccd41b4d1ebabb2d34aa2d1664_1"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <br>
+      #2<br>
+      <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/793698852?h=12c303cdbb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="be8916108159427187ec44b4edbd0802 2"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <br>
+      #3
+      <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/793698922?h=baedd6ea6e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="3229e6b1961b44bebef74dd5b887fcbb"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <br>
+      #4
+      <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/793698968?h=d2dcfac187&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="d62bb686739443ca97c988091438a38f"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <br>
+      #5
+      <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/793699000?h=4d0bddf026&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="c02b088b9528452fa09f5743be8a7844"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <br>
+      #6
+      <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/793699019?h=6676dbb26e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="d5d26c6e60f94210bf6951a56181b067"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
       <br><br><br>
-    </div>
-
-    <div id="rightside" class="scrollbar">
-
-    <!-- <div id="printside"> -->
-      <div id="pdf" class="text size3 notes-column">
-        [Reading Notes]<br>
-      </div>
-      <div class="comments"></div>
-    <!-- </div> -->
-
-    <div class="inputsection">
-      <textarea type="text" id="input" placeholder="..." v-model="newItem" @keyup.enter="addItem()"></textarea>
-      <br>
-      <button v-on:click="addItem()" id="addNote" class='primaryContained float-right' type="submit">Add note</button>
-      <!-- <input type="button" value="Print" onclick="printDiv()" /> -->
-      <button id="uploadNotes" class='primaryContained float-right'>Submit</button>
-    </div>
-
-    <br>
-    <div id="submissions">
-    <button class="button weather-button" onclick="showNotes(221216)">12.16.22&#8212;1:32PM&#8212;Milwaukee, WI</button>
-      <div class="notes-data text" id="notes-data-221216">
-        New extreme weather pattern emerging: A wintry West and record-warm East <button class="button weather-button" onclick="showWeather(221101)">11.1.22</button> <a href="javascript:;" id="video-linkS-2211012" onclick="showVideoS(event, 2211012)" class="video-link">video</a>) <span class="ital">[My co-worker Dan did the four-day drive across Canada from Toronto, ON to Vancouver, BC around this time. The seasons had just turned. He sent photo dispatches from his drive, alliteratively captioned: Moody Manitoba, Snowy Saskatchewan (sp?) ... re: wintry West]</span> The disappearance of the black tupelo tree (<button class="button weather-button" onclick="showWeather(221201)">12.1.22</button> <a href="javascript:;" id="sound-linkS-2212011" onclick="showSoundS(event, 2212011)" class="sound-link">sound</a>) <span class="ital">[For any parties that take place over winter, D. carries in his toaster oven (cord dragging) in his car and a bag of chestnuts for roasting. At a party this December, we cut crosses into the chestnuts, toasted them, and opened them by where on the crosses they started to peel. Native chestnuts used to grow all over North America before they largely disappeared. These chestnuts were from Italy. ]</span> Sea smoke on Lake Superior in Duluth, Minnesota (<button class="button weather-button" onclick="showWeather(221201)">12.1.22</button> <a href="javascript:;" id="video-linkS-2212011" onclick="showVideoS(event, 2212011)" class="video-link">video</a>) Key West residents celebrated the end of the 2022 season by setting Hurricane flags on fire (<button class="button weather-button" onclick="showWeather(221201)">12.1.22</button> <a href="javascript:;" id="video-linkS-2212012" onclick="showVideoS(event, 2212012)" class="video-link">video</a>) <span class="ital">[The bridge across the Keys I remember as being so long. Does the (hurricane) season change what people think about on that drive? Does the weather? ]</span> Blebs of liquid rock spew from Mauna Loa in Hawaii (<button class="button weather-button" onclick="showWeather(221202)">12.2.22</button> <a href="javascript:;" id="video-linkS-2212022" onclick="showVideoS(event, 2212022)" class="video-link">video</a>) <span class="ital">[Blebs is a new word for me. Someone I know has a phobia of what she calls bloobliness -- she saw jugs of komboucha mother and said that was her nightmare. Makes me think of the textures of... weather? Of climate?]</span> A buck in Colorado crashed through a window and landed in a Colorado Springs basement office (<button class="button weather-button" onclick="showWeather(221203)">12.3.22</button> <a href="javascript:;" id="image-linkS-2212032" onclick="showImageS(event, 2212032)" class="image-link">image</a>) <span class="ital">[My uncle a neurosurgeon performed brain surgery on someone whose car crashed into a buck and he had antlers in his head. They'd left the antlers in -- that's apparently what saved him?]</span> Lightning flashes inside the erupting Stromboli Volcano's ash plume (<button class="button weather-button" onclick="showWeather(221204)">12.4.22</button> <a href="javascript:;" id="video-linkS-2212041" onclick="showVideoS(event, 2212041)" class="video-link">video</a>) <span class="ital">[Naples is sitting on a crater ... a friend said it's the largest city so close to an active volcanic site? The person who said it is an Irish architecture professor who took his students to Naples on a study visit. They all left uneasy.]</span> Images that pointed skyward (<button class="button weather-button" onclick="showWeather(221204)">12.4.22</button> <a href="javascript:;" id="image-linkS-2212043" onclick="showImageS(event, 2212043)" class="image-link">image</a>) <span class="ital">[In a magazine I worked for in high school I started to notice a pattern in submissions ending in the word sky]</span> A rogue wave slammed into a cruise ship in the Drake Passage (<button class="button weather-button" onclick="showWeather(221207)">12.7.22</button> <a href="javascript:;" id="video-linkS-221273" onclick="showVideoS(event, 2212073)" class="video-link">video</a>) <span class="ital">[Reminds me of the image of a rogue salmon with its head above the surface in a Milwaukee river. Rogueness -- the idea that something can be seperated from whatever it is a member of and move alone in the world. Makes it clear how collectivity is otherwise so natural to everything (waves, salmon) and us]</span> Montana community rescues horses trapped in deep, icy pond (<button class="button weather-button" onclick="showWeather(221209)">12.9.22</button> <a href="javascript:;" id="video-linkS-2212092" onclick="showVideoS(event, 2212092)" class="video-link">video</a>) <span class="ital">[There's a short story we read in high school about the rescue effort for a girl trapped from a mudslide -- And of Clay We Are Created I remember is the title]</span> Artist friend who goes to document Lake Michigan everyday (<button class="button weather-button" onclick="showWeather(221213)">12.13.22</button> <a href="http://www.melanieariens.com/" target="_blank" rel="noopener noreferrer" class="url-link"/>url</a>) <span class="ital">[My great aunt used to take a picture of Lake Michigan everyday too -- the blues. They should exchange]<span class="ital"> Underwater video filmed through a glass (<button class="button weather-button" onclick="showWeather(221215)">12.15.22</button> <a href="javascript:;" id="video-linkS-2212151" onclick="showVideoS(event, 2212151)" class="video-link">video</a>) 
-        <br><br><br><br><br><br><br>
-        <video autoplay loop muted onclick="showVideoS(event, 2211012)" class="notes-video" id="weather-videoS-2211012"><source src="https://drive.google.com/uc?export=view&id=1SJbdKC_qo57w0gSfI4FSwIAAAth_jR5Z" type="video/mp4"></video>
-        <audio controls onclick="showSoundS(event, 2212011)" class="notes-sound" id="weather-soundS-2212011"><source src="https://drive.google.com/uc?export=view&id=1C0_V8QfsyHD3ftETZQWItSJhEcCRkSJ0" type="audio/wav"></audio>
-        <video autoplay loop muted onclick="showVideoS(event, 2212011)" class="notes-video" id="weather-videoS-2212011"><source src="https://drive.google.com/uc?export=view&id=1kKSEi24-jXEy2SU9arsNUVZvSUxNW2XC" type="video/mp4"></video>
-        <video autoplay loop muted onclick="showVideoS(event, 2212012)" class="notes-video" id="weather-videoS-2212012"><source src="https://drive.google.com/uc?export=view&id=1UMEiXrjC5o_ZxM4_HcyazG7ESJY0IsWy" type="video/mp4"></video>
-        <video autoplay loop muted onclick="showVideoS(event, 2212022)" class="notes-video" id="weather-videoS-2212022"><source src="https://drive.google.com/uc?export=view&id=1-WSGopeInnppJGZ9_6584WxyAl19ATJx" type="video/mp4"></video>
-        <image onclick="showImageS(event, 2212032)" class="notes-image" id="weather-imageS-2212032" src="https://drive.google.com/uc?export=view&id=1CiLVIVgwBzVDLUnLfXXFwS8XC8a4vQF5"/>
-        <video autoplay loop muted onclick="showVideoS(event, 2212041)" class="notes-video" id="weather-videoS-2212041"><source src="https://drive.google.com/uc?export=view&id=1gqrqAyG9aIXr2by1FwxfyHHkaP_dE_ge" type="video/mp4"></video>
-        <image onclick="showImageS(event, 2212043)" class="notes-image" id="weather-imageS-2212043" src="https://drive.google.com/uc?export=view&id=1BpwHZyK8m6wny-dwXRusbrYDbeXelgiV"/>
-        <video autoplay loop muted onclick="showVideoS(event, 2212073)" class="notes-video" id="weather-videoS-2212073"><source src="https://drive.google.com/uc?export=view&id=1_mv_0zfSFdzy1c3fJhVbCpLtHbLEjTlv" type="video/mp4"></video>
-        <video autoplay loop muted onclick="showVideoS(event, 2212092)" class="notes-video" id="weather-videoS-2212092"><source src="https://drive.google.com/uc?export=view&id=1CvHkIMQfJg2Zw-vIgvhzkM_emNsXBHe1" type="video/mp4"></video>
-        <video autoplay loop muted onclick="showVideoS(event, 2212151)" class="notes-video" id="weather-videoS-2212151"><source src="https://drive.google.com/uc?export=view&id=1_zazk-5cWGcAOSCiRt-dZT0mkp63zYDW" type="video/mp4"></video>
-      </div>
-    </div>
-    <br><br>
-
-</div>
-
-<script src="index2.js"></script>
+     </div>
+   </div>
+  </div>
 </body>
 </html>
