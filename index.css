@@ -224,11 +224,11 @@ body {
   }
   .text {
     font-family: Times;
-    font-size: 18.5px;
+    font-size: 18px;
     color: black;
   }
   .button {
-    font-size: 18.5px;
+    font-size: 18px;
   }
 
   /*.weather-image {
