@@ -152,6 +152,18 @@ a:visited {
   margin-bottom: calc(30px - 1vw);
 }
 
+.postersize1 {
+/*  width: calc(14vw + 280px);*/
+  width: calc((69vw - 24px)/2);
+  margin-bottom: calc(30px - 1vw);
+}
+
+.postersize2 {
+  height: calc((2*((69vw - 24px)/2))*720/1125);
+/*  width: calc(14vw + 280px);*/
+  margin-bottom: calc(30px - 1vw);
+}
+
 /*--------------------------------------------------*/
 
 .content {
