@@ -297,7 +297,7 @@
       <div id="slider_box16" class="sliderbox">
         <div id="slider_images16" class="sliderimg">
           <img src="images/17/1.webp">
-          <img loading="lazy" src="images/17/2.webp">
+          <img src="images/17/2.webp">
         </div>
         <div id="left16" class="endless_slider_left"></div>
         <div id="right16" class="endless_slider_right"></div>
@@ -440,6 +440,14 @@
             $(".tvideoweb").css('display', 'block');
       };
     };
+
+    document.addEventListener('touchstart', function(e) {
+        console.log('touchstart');
+
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        e.stopPropagation();
+    });
   </script>
 
 </body>
