@@ -117,6 +117,17 @@ a:visited {
 /*  background-color: lightsalmon;*/
 }
 
+.titlegif {
+  position: absolute;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  top: 117px;
+  min-height: 100vh;
+  max-width: 100%;
+/*  background-color: lightsalmon;*/
+}
+
 .break {
   word-break: break-word;
 }
