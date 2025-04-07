@@ -2,15 +2,15 @@ const sequences = [
   { folder: '01', frameCount: 100, title: 'WORK<br>SAMPLE', 
     projTitle: 'Film Work Samples', projDate: '2019&mdash;2025',
     text: "A mix of exhibited works and works in progress, this compilation showcases my camera, sound, and editing sensibilities. In my film work, I approach each project with a spirit of experimentation, seeking out new forms and structures that booster each story.",
-    vimeoId: '1070697754?h=a6344b3634', imgPresence: 'none', imgOpac: '1'},
+    vimeoId1: '1070697754?h=a6344b3634', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1'},
   { folder: '02', frameCount: 140, title: 'ROSIE&apos;S<br>SONG', 
     projTitle: 'Rosie&apos;s Song', projDate: '2025, video',
     text: "A robin, a blind dog, a woman, her two grandchildren, guinea pigs, and doves share a home in the country. Following perspectival threads that weave in and out of each other, a cacophonous portrait of life together emerges.",
-    vimeoId: '941357815?h=4badf5007a', imgPresence: 'none', imgOpac: '1'},
+    vimeoId1: '941357815?h=4badf5007a', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1'},
   { folder: '03', frameCount: 147, title: 'THE QUESTION<br>OF GRIEF', 
     projTitle: 'The Question of Grief', projDate: '2024, video performance',
     text: "Can grief be generous? Is it inherently self-pitying? Can it strike you down? Can it treat you well? Is it possible to change the past? Do you get a choice? Can you mourn an ineffable loss? Can you anticipate a place that can’t be known until you reach it? Who is changed and who is dead?<br><br>This performance begins as a desktop lecture exploring different facets of grief before exploding out into a light-sound-olfactory ritual space that asks us to sit together with loss in an embodied way. An assemblage of found and original image and audio blends references from history, science, folk traditions, and mythology along with diaristic accounts of my own encounters with grief.<br><br>Exhibited at the 602 Club, Underscore Gallery, HF Johnson Gallery, and Onion City Experimental Film Festival.",
-    vimeoId: '918546679?h=f8fd9c243b', imgPresence: 'flex', imgOpac: '1',
+    vimeoId1: '918546679?h=f8fd9c243b', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1',
     projPhoto1: 'images/scroll/03/1.gif', projPhotoSize1: '1',  
     projPhoto2: 'images/scroll/03/2.gif', projPhotoSize2: '1',  
     projPhoto3: 'images/scroll/03/3.webp', projPhotoSize3: '2', imgPresence3: 'block',
@@ -22,7 +22,7 @@ const sequences = [
   { folder: '04', frameCount: 105, title: 'A FEW ATTEMPTS<br>TO UNDERSTAND<br>THE SKY', 
     projTitle: 'A Few Attempts to Understand the Sky', projDate: '2023, video',
     text: "The film weaves together a history of sky auguries, meteorological forecasting technologies, extreme weather events, ghosts of extinction, and signs of speciary adaptation. These stories are interspersed with participatory interludes in a constellation united by two overarching concerns: the problem of representation when it comes to climate change—how can we understand and feel climate change in a sustained and embodied way?—and questions around how we can best live together with other species under ecological precarity. The interludes include both filmed and live exercises that engage the audience's voices and body movements in attempts to become bird and sense weather phenomena in our own bodies. The film is a collaborative, pedagogical experiment in attention and collectivity, asking us to acknowledge our shared implication in a climate reality filled with both grief and wonder, and, together, to imagine richer futures for our world.<br><br>Screened at Film Diary NYC and Winnipeg Underground Film Festival",
-    vimeoId: '879264204?h=901391ce3f', imgPresence: 'flex', imgOpac: '1',
+    vimeoId1: '879264204?h=901391ce3f', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1',
     projPhoto1: 'images/scroll/04/1.gif', projPhotoSize1: '1a',  
     projPhoto2: 'images/scroll/04/2.gif', projPhotoSize2: '3',
     projPhoto3: '', projPhotoSize3: '', imgPresence3: 'none',
@@ -34,11 +34,11 @@ const sequences = [
   { folder: '05', frameCount: 150, title: 'WEATHER<br>DIARY', 
     projTitle: 'Weather Diary', projDate: '2023, website',
     text: "I spent two years collecting weather observations&mdash;daily polaroids of the sky, personal notes, extreme weather news alerts, local birding listserv updates, photos and videos sent by friends. To help archive and organize this growing collection, I built a website that allowed the media to be accessed and configured in relation to one another, fostering moments of formal and conceptual serendipity. These materials would later become the building blocks for my short film 'A Few Attempts to Understand the Sky.'",
-    vimeoId: '1069808134?h=b9bc301ed5', imgPresence: 'none', imgOpac: '.5',},
-  { folder: '06', frameCount: 53, title: 'VERIZON<br>DEVICE<br>SHOWCASE', 
+    vimeoId1: '1069808134?h=b9bc301ed5', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '.5',},
+  { folder: '06', frameCount: 44, title: 'VERIZON<br>DEVICE<br>SHOWCASE', 
     projTitle: 'Verizon Retail Device Showcase Design', projDate: '2020&mdash;2022, digital',
     text: "As a designer on Verizon's Creative Marketing Group retail design team, I worked on short videos, UX interfaces, and typographic animations that lived on devices in stores across the nation.",
-    vimeoId: '1068725189?h=bc27bec48f', imgPresence: 'flex', imgOpac: '1',
+    vimeoId1: '1068727368?h=579d53f080', vimeoId2: '1068725189?h=bc27bec48f',vimeoId3: '1068731018?h=dbb4d5ba62', imgPresence: 'flex', imgOpac: '1',
     projPhoto1: 'images/scroll/06/5.gif', projPhotoSize1: '4',  
     projPhoto2: 'images/scroll/06/1.webp', projPhotoSize2: '4',
     projPhoto3: 'images/scroll/06/2.webp', projPhotoSize3: '4', imgPresence3: 'block',
@@ -59,9 +59,21 @@ sequences.forEach((seq, i) => {
   const canvasId = `canvas${i + 1}`;
   const textId = `text${i + 1}`;
 
-  const vimeoEmbed = seq.vimeoId
+  const vimeoEmbed1 = seq.vimeoId1
     ? `<div class="vimeo-wrapper">
-         <iframe src="https://player.vimeo.com/video/${seq.vimeoId}&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+         <iframe src="https://player.vimeo.com/video/${seq.vimeoId1}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+       </div>`
+    : '';
+
+  const vimeoEmbed2 = seq.vimeoId2
+    ? `<div class="vimeo-wrapper">
+         <iframe src="https://player.vimeo.com/video/${seq.vimeoId2}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+       </div>`
+    : '';
+
+  const vimeoEmbed3 = seq.vimeoId3
+    ? `<div class="vimeo-wrapper">
+         <iframe src="https://player.vimeo.com/video/${seq.vimeoId3}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
        </div>`
     : '';
 
@@ -75,7 +87,9 @@ sequences.forEach((seq, i) => {
       <div class="spacer"></div>
     </div>
     <div class="text-section" id="${textId}">
-      ${vimeoEmbed}
+      ${vimeoEmbed1}
+      <div style="margin-top: -50px;">${vimeoEmbed2}</div>
+      <div style="margin-top: -75px;">${vimeoEmbed3}</div>
       <div id="picture-container" style="display: ${seq.imgPresence};">
         <div class="picture-item${seq.projPhotoSize1}">
           <img src="${seq.projPhoto1}">
