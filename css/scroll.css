@@ -197,6 +197,17 @@ canvas {
   width: calc(25% - 10px);
 }
 
+.picture-item1a {
+  flex: 0 0 auto;
+  width: calc(25% - 10px);
+}
+
+.picture-item1a img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .picture-item1 img {
   width: 100%;
   height: auto;
@@ -215,6 +226,11 @@ canvas {
   display: block;
 }
 
+.picture-item4 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 /*--------------------------------------------------*/
 
 .vimeo-wrapper {
@@ -449,9 +465,9 @@ canvas {
     width: calc(100%);
   }
 
-  .picture-item3 {
+ /* .picture-item3 {
     width: calc(100%);
-  }
+  }*/
 }
 
 @media only screen and (max-width: 800px) {
