@@ -385,7 +385,7 @@ a:visited {
 
 /*--------------------------------------------------*/
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1350px) {
 /*  body {
     background-color: chartreuse;
   }*/
@@ -440,13 +440,18 @@ a:visited {
     width: calc((100vw - 262px - 130px)*.5);
     overflow: hidden;
   }
-
 }
 
-@media only screen and (max-width: 992px) {
-  body {
-    background-color: magenta;
+@media (min-width:900px) and (max-width:1080px) {
+    body {
+    background-color: chartreuse;
   }
+}
+
+@media only screen and (max-width: 1080px) {
+/*  body {
+    background-color: lightyellow;
+  }*/
 
   .tile {
 /*    background-color: yellowgreen;*/
@@ -479,10 +484,6 @@ a:visited {
 }
 
 @media only screen and (max-width: 800px) {
-  body {
-    background-color: yellow;
-  } 
-
   .sidenav {
     height: 100%;
     width: 100vw;;
@@ -542,10 +543,10 @@ a:visited {
 
 }
 
-@media only screen and (max-width: 576px) {
-  body {
+@media only screen and (max-width: 645px) {
+/*  body {
     background-color: cyan;
-  } 
+  } */
 
   .count {
     margin-top: 13px;
@@ -594,11 +595,5 @@ a:visited {
     height: calc(9/16*(100vw - 230px + 10px));
     width: calc(100vw - 230px + 10px);
     overflow: hidden;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  body {
-    background-color: red;
   }
 }
