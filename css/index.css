@@ -385,7 +385,7 @@ a:visited {
 
 /*--------------------------------------------------*/
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1440px) {
 /*  body {
     background-color: chartreuse;
   }*/
@@ -443,7 +443,7 @@ a:visited {
 
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 992px) {
 /*  body {
     background-color: lightyellow;
   }*/
@@ -539,7 +539,7 @@ a:visited {
 
 }
 
-@media only screen and (max-width: 645px) {
+@media only screen and (max-width: 576px) {
 /*  body {
     background-color: cyan;
   } */
@@ -591,5 +591,11 @@ a:visited {
     height: calc(9/16*(100vw - 230px + 10px));
     width: calc(100vw - 230px + 10px);
     overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: red;
   }
 }
