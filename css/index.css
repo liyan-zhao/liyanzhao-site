@@ -540,9 +540,9 @@ a:visited {
 }
 
 @media only screen and (max-width: 576px) {
-/*  body {
+  body {
     background-color: cyan;
-  } */
+  } 
 
   .count {
     margin-top: 13px;
