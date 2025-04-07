@@ -399,12 +399,7 @@ a:visited {
     margin-top: 15px;
   }  
 
-
-
   .tagcontainer {
-    top: 245px;
-    position: fixed;
-    width: 227px;
     font-size: 25.2px;
   }
 
@@ -431,16 +426,6 @@ a:visited {
     height: calc(9/16*(100vw - 262px - 130px)*.5);
     width: calc((100vw - 262px - 130px)*.5);
     overflow: hidden;
-  }
-}
-
-@media (min-width:950px) and (max-width:999px) {
-    body {
-    background-color: chartreuse;
-  }
-
-  .tile {
-    font-size: 3vw;
   }
 }
 
@@ -478,6 +463,10 @@ a:visited {
 /*    background-color: yellowgreen;*/
   }
 
+  .tagcontainer {
+    width: 227px;
+  }
+
   #tag2 {
     top: calc(10px + 7.5vw);
     border-bottom: 0px solid black;
@@ -495,9 +484,9 @@ a:visited {
 }
 
 @media (min-width:950px) and (max-width:999px) {
-    body {
+/*    body {
     background-color: chartreuse;
-  }
+  }*/
 
   .tile {
     font-size: 3.1vw;
