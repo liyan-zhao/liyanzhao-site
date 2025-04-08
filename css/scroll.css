@@ -173,7 +173,7 @@ canvas {
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: -30px;
+/*  margin-top: 0px;*/
   margin-bottom: 90px;
 }
 
@@ -184,7 +184,7 @@ canvas {
 
 .picture-item3 {
   flex: 0 0 auto;
-  width: calc(75% - 20px);
+  width: calc(75% - 15px);
 }
 
 .picture-item2 {
@@ -199,7 +199,7 @@ canvas {
 
 .picture-item1a {
   flex: 0 0 auto;
-  width: calc(25% - 10px);
+  width: calc(25% - 5px);
 }
 
 .picture-item1a img {

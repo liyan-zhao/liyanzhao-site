@@ -1,16 +1,16 @@
 const sequences = [
   { folder: '01', frameCount: 100, title: 'WORK<br>SAMPLE', 
     projTitle: 'Film Work Samples', projDate: '2019&mdash;2025',
-    text: "A mix of exhibited works and works in progress, this compilation showcases my camera, sound, and editing sensibilities. In my film work, I approach each project with a spirit of experimentation, seeking out new forms and structures that booster each story.",
-    vimeoId1: '1070697754?h=a6344b3634', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1'},
+    text: "A mix of exhibited works and works in progress, this compilation showcases my camera, sound, and editing sensibilities. In my film work, I approach each project with a spirit of experimentation, seeking out new forms and structures that bolster each story.",
+    vimeoId1: '1070697754?h=a6344b3634', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
   { folder: '02', frameCount: 140, title: 'ROSIE&apos;S<br>SONG', 
     projTitle: 'Rosie&apos;s Song', projDate: '2025, video',
     text: "A robin, a blind dog, a woman, her two grandchildren, guinea pigs, and doves share a home in the country. Following perspectival threads that weave in and out of each other, a cacophonous portrait of life together emerges.",
-    vimeoId1: '941357815?h=4badf5007a', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1'},
+    vimeoId1: '941357815?h=4badf5007a', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
   { folder: '03', frameCount: 147, title: 'THE QUESTION<br>OF GRIEF', 
     projTitle: 'The Question of Grief', projDate: '2024, video performance',
     text: "Can grief be generous? Is it inherently self-pitying? Can it strike you down? Can it treat you well? Is it possible to change the past? Do you get a choice? Can you mourn an ineffable loss? Can you anticipate a place that can’t be known until you reach it? Who is changed and who is dead?<br><br>This performance begins as a desktop lecture exploring different facets of grief before exploding out into a light-sound-olfactory ritual space that asks us to sit together with loss in an embodied way. An assemblage of found and original image and audio blends references from history, science, folk traditions, and mythology along with diaristic accounts of my own encounters with grief.<br><br>Exhibited at the 602 Club, Underscore Gallery, HF Johnson Gallery, and Onion City Experimental Film Festival.",
-    vimeoId1: '918546679?h=f8fd9c243b', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1',
+    vimeoId1: '918546679?h=f8fd9c243b', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1', topMargin: '50',
     projPhoto1: 'images/scroll/03/1.gif', projPhotoSize1: '1',  
     projPhoto2: 'images/scroll/03/2.gif', projPhotoSize2: '1',  
     projPhoto3: 'images/scroll/03/3.webp', projPhotoSize3: '2', imgPresence3: 'block',
@@ -22,7 +22,7 @@ const sequences = [
   { folder: '04', frameCount: 105, title: 'A FEW ATTEMPTS<br>TO UNDERSTAND<br>THE SKY', 
     projTitle: 'A Few Attempts to Understand the Sky', projDate: '2023, video',
     text: "The film weaves together a history of sky auguries, meteorological forecasting technologies, extreme weather events, ghosts of extinction, and signs of speciary adaptation. These stories are interspersed with participatory interludes in a constellation united by two overarching concerns: the problem of representation when it comes to climate change—how can we understand and feel climate change in a sustained and embodied way?—and questions around how we can best live together with other species under ecological precarity. The interludes include both filmed and live exercises that engage the audience's voices and body movements in attempts to become bird and sense weather phenomena in our own bodies. The film is a collaborative, pedagogical experiment in attention and collectivity, asking us to acknowledge our shared implication in a climate reality filled with both grief and wonder, and, together, to imagine richer futures for our world.<br><br>Screened at Film Diary NYC and Winnipeg Underground Film Festival",
-    vimeoId1: '879264204?h=901391ce3f', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1',
+    vimeoId1: '879264204?h=901391ce3f', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1', topMargin: '50',
     projPhoto1: 'images/scroll/04/1.gif', projPhotoSize1: '1a',  
     projPhoto2: 'images/scroll/04/2.gif', projPhotoSize2: '3',
     projPhoto3: '', projPhotoSize3: '', imgPresence3: 'none',
@@ -34,11 +34,11 @@ const sequences = [
   { folder: '05', frameCount: 150, title: 'WEATHER<br>DIARY', 
     projTitle: 'Weather Diary', projDate: '2023, website',
     text: "I spent two years collecting weather observations&mdash;daily polaroids of the sky, personal notes, extreme weather news alerts, local birding listserv updates, photos and videos sent by friends. To help archive and organize this growing collection, I built a website that allowed the media to be accessed and configured in relation to one another, fostering moments of formal and conceptual serendipity. These materials would later become the building blocks for my short film 'A Few Attempts to Understand the Sky.'",
-    vimeoId1: '1069808134?h=b9bc301ed5', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '.5',},
+    vimeoId1: '1069808134?h=b9bc301ed5', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '.5', topMargin: '0'},
   { folder: '06', frameCount: 44, title: 'VERIZON<br>DEVICE<br>SHOWCASE', 
     projTitle: 'Verizon Retail Device Showcase Design', projDate: '2020&mdash;2022, digital',
     text: "As a designer on Verizon's Creative Marketing Group retail design team, I worked on short videos, UX interfaces, and typographic animations that lived on devices in stores across the nation.",
-    vimeoId1: '1068727368?h=579d53f080', vimeoId2: '1068725189?h=bc27bec48f',vimeoId3: '1068731018?h=dbb4d5ba62', imgPresence: 'flex', imgOpac: '1',
+    vimeoId1: '1068727368?h=579d53f080', vimeoId2: '1068725189?h=bc27bec48f',vimeoId3: '1068731018?h=dbb4d5ba62', imgPresence: 'flex', imgOpac: '1', topMargin: '-30',
     projPhoto1: 'images/scroll/06/5.gif', projPhotoSize1: '4',  
     projPhoto2: 'images/scroll/06/1.webp', projPhotoSize2: '4',
     projPhoto3: 'images/scroll/06/2.webp', projPhotoSize3: '4', imgPresence3: 'block',
@@ -47,6 +47,30 @@ const sequences = [
     projPhoto6: '', projPhotoSize6: '', imgPresence6: 'none',
     projPhoto7: '', projPhotoSize7: '', imgPresence7: 'none',
     projPhoto8: '', projPhotoSize8: '', imgPresence8: 'none',},
+  { folder: '07', frameCount: 120, title: 'THE<br>VISITORS', 
+    projTitle: 'The Visitors', projDate: '2021, video',
+    text: "A close mapping of beings sharing the same small Brooklyn apartment during the pandemic. Sound waves and small creatures emerge in turn, assembling a portrait of shared life under precarity.<br><br>Screened at Onion City Experimental Film Festival, CROSSROADS, and One Room Gallery.",
+    vimeoId1: '447597973?h=68c002924d', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '08', frameCount: 115, title: 'DISABILITY<br>X<br>MATERNITY', 
+    projTitle: 'Disability X Maternity', projDate: '2020, video',
+    text: "What would it be like to design for help&mdash;not with a medical model but a social one? And how can design help caregivers in need of care themselves? A recently developed manual for young mothers with acquired disabilities, Disability x Maternity considers these questions offering guidelines for using space.<br><br>I produced a video accompaniment to Frani O'Toole's printed guide using overlayed home videos, photos, illustrations, and text to demonstrate home-based design and accessibility strategies.<br><br>Exhibited at Center of Architecture, Gates Foundation Discovery Center, and Kosovo Architecture Festival.",
+    vimeoId1: '1069778511?h=93f27878d9', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '09', frameCount: 150, title: "A HOUSE OF<br>ONE'S OWN", 
+    projTitle: "A House of One's Own", projDate: '2019, video',
+    text: "This experimental documentary tells the story of my parents' move to America, and how their dreams and aspirations have been channeled through the space of their suburban house. The film explores rituals of assimilation and alienation and the lines between real and imagined.<br><br>Screened at New Haven International Film Festival and New Haven Documentary Film Festival.",
+    vimeoId1: '328568165', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '10', frameCount: 107, title: 'YALE EVENT<br>POSTERS', 
+    projTitle: 'Yale Event Poster Designs', projDate: '2016&mdash;2019, digital & print',
+    text: "Posters designed for Yale School of Art and Yale University Art Gallery events.",
+    vimeoId1: '', vimeoId2: '',vimeoId3: '', imgPresence: 'flex', imgOpac: '.9', topMargin: '100',
+    projPhoto1: 'images/scroll/10/1.webp', projPhotoSize1: '2',  
+    projPhoto2: 'images/scroll/10/3.gif', projPhotoSize2: '2',
+    projPhoto3: 'images/scroll/10/4.webp', projPhotoSize3: '2', imgPresence3: 'block',
+    projPhoto4: 'images/scroll/10/5.webp', projPhotoSize4: '2', imgPresence4: 'block',
+    projPhoto5: 'images/scroll/10/6.gif', projPhotoSize5: '2', imgPresence5: 'block',
+    projPhoto6: 'images/scroll/10/7.gif', projPhotoSize6: '2', imgPresence6: 'block',
+    projPhoto7: 'images/scroll/10/8.gif', projPhotoSize7: '2', imgPresence7: 'block',
+    projPhoto8: 'images/scroll/10/9.webp', projPhotoSize8: '2', imgPresence8: 'block',},
   // Add more sequences as needed...
 ];
 
@@ -90,7 +114,7 @@ sequences.forEach((seq, i) => {
       ${vimeoEmbed1}
       <div style="margin-top: -50px;">${vimeoEmbed2}</div>
       <div style="margin-top: -75px;">${vimeoEmbed3}</div>
-      <div id="picture-container" style="display: ${seq.imgPresence};">
+      <div id="picture-container" style="display: ${seq.imgPresence}; margin-top: ${seq.topMargin}px;">
         <div class="picture-item${seq.projPhotoSize1}">
           <img src="${seq.projPhoto1}">
         </div>
