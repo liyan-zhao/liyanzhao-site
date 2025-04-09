@@ -71,6 +71,46 @@ const sequences = [
     projPhoto6: 'images/scroll/10/7.gif', projPhotoSize6: '2', imgPresence6: 'block',
     projPhoto7: 'images/scroll/10/8.gif', projPhotoSize7: '2', imgPresence7: 'block',
     projPhoto8: 'images/scroll/10/9.webp', projPhotoSize8: '2', imgPresence8: 'block',},
+  { folder: '11', frameCount: 56, title: "JOHN<br>ASHBERY'S<br>NEST", 
+    projTitle: "John Ashbery's Nest", projDate: '2018, video',
+    text: "Online archive of poet John Ashbery's home I worked on as a UX design fellow at the Yale Digital Humanities Lab. The site utilizes architectural virtual tour technology in its navegation. Objects around the home can be clicked to reveal additional information and narration.",
+    vimeoId1: '356763567?h=6954d742eb', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '12', frameCount: 150, title: "MY NAME<br>IS JUAN", 
+    projTitle: "My Name is Juan", projDate: '2018, print',
+    text: "This book documents the story of an undocumented teen named Juan living next to the US-Mexican border, told in his own words. The transcript from Juan's audio diary runs alongside satellite images of the Rio Grande River. As Juan's story unfolds, the river slowly winds from El Paso until it finally reaches the Gulf of Mexico. As an object, the book's large size is meant to serve as a kind of physical anchor as Juan goes through a period of extreme instability.",
+    vimeoId1: '347675618', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '13', frameCount: 150, title: "YOU'VE<br>ARRIVED", 
+    projTitle: "You've Arrived", projDate: '2018, print',
+    text: "This book documents a visit to Holy Land USA, an abandoned religious theme park in Waterbury, CT. The book presents a sequence of video stills taken on location. The filtered images, paired with a piece of stream-of-conscious writing about memory tucked into the insides of the french folds, capture a dream-like journey through an eerie liminal space that crosses time and geography.",
+    vimeoId1: '347764474?h=b9965c27c0', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '14', frameCount: 150, title: "THE RADICAL<br>OTHER", 
+    projTitle: "the radical Other", projDate: '2018, print',
+    text: "After writing a speculative text about the subversive power of otherness inspired both by personal experience and the critical essays I was reading at the time, I set the excerpts taken from my readings into my writing in order to create a polyvocal reading experience.",
+    vimeoId1: '347759118', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '15', frameCount: 150, title: "SHADOW<br>PUPPET<br>ARCHIVE", 
+    projTitle: "Peabody Museum Shadow Puppet Archive", projDate: '2018, web',
+    text: "This site is a digital archive of the Yale Peabody Museum of Natural History's collection of Chinese shadow puppets. Users can browse through detailed views of the puppets or go into play mode where they can animate their own shadow puppet show.<br><br>In digitizing the shadow puppets, I considered strategies towards creating a living archive, one that allows users to interact with the puppets in dynamic ways despite their relative inaccess to the actual physical objects.",
+    vimeoId1: '266742914', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '16', frameCount: 150, title: "UNREADING<br>TEXT", 
+    projTitle: "Unreading Text", projDate: '2017, web',
+    text: "This site transforms text from legible information to ornamental pattern. Users input their custom text, which is then converted into an ornamental typeface. Users can change the colors of the type and the background and toggle between two modes of readability.<br><br>This project was conceptualized as a tactic to deal with the deluge of digital information I was bombarded with on a daily basis. In thinking about how to lessen the anxiety of living in today's mediascape, I sought comfort in disruption and illegibility.",
+    vimeoId1: '212525243', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
+  { folder: '17', frameCount: 49, title: "CIVIL<br>DISOBEDIENCE<br>GUIDES", 
+    projTitle: "ACT UP Civil Disobedience Guides", projDate: '2017, print',
+    text: "These participatory booklets are a redesign of ACT UP's Civil Disobedience Training Guide. The original 55-page text document is reformatted and reprinted as pocket-sized guides, easy to carry and conceal. The original document credits sections to The War Resister's League's </span><span class='italic'>Handbook for Nonviolent Action</span><span>, and these booklets continue the tradition of disseminating open-sourced knowledge to the public.",
+    vimeoId1: '', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1', topMargin: '100',
+    projPhoto1: 'images/17/1.webp', projPhotoSize1: '4',  
+    projPhoto2: 'images/17/2.webp', projPhotoSize2: '4',
+    projPhoto3: '', projPhotoSize3: '', imgPresence3: 'none',
+    projPhoto4: '', projPhotoSize4: '', imgPresence4: 'none',
+    projPhoto5: '', projPhotoSize5: '', imgPresence5: 'none',
+    projPhoto6: '', projPhotoSize6: '', imgPresence6: 'none',
+    projPhoto7: '', projPhotoSize7: '', imgPresence7: 'none',
+    projPhoto8: '', projPhotoSize8: '', imgPresence8: 'none',},
+  { folder: '18', frameCount: 150, title: "O-14<br>MONOGRAPH", 
+    projTitle: "O-14: Projection and Reception", projDate: '2016, print',
+    text: "This book is a monograph of RUR Architecture's O-14 building in Dubai. Meant to serve as tool for architecture students, the book contains diagrams and writings illuminating O-14's unique design principles. As the designer, I worked on page layouts as well as illustrating diagrams that explain the design of the building.",
+    vimeoId1: '347772502', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'}, 
   // Add more sequences as needed...
 ];
 
@@ -143,8 +183,9 @@ sequences.forEach((seq, i) => {
       <div class="description">
         <div class="semibolditalic">${seq.projTitle}</div>
         <div class="italic">${seq.projDate}</div>
-      <div class="linespace"><br></div>
+        <div class="linespace"><br></div>
         <div class="light">${seq.text || ''}</div>
+        <div class="linespace"><br></div>
       </div>
     </div>
   `);
