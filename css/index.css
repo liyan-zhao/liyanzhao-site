@@ -69,14 +69,14 @@ a:visited {
   /*text-shadow: .5px .5px 1px white;*/
 }
 
-.menu a:hover {
+/*.menu a:hover {
   color: black;
   background-color: transparent;
   background-image: none;
   border-bottom: 2px solid black;
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 .about {
   float: left;
@@ -99,6 +99,48 @@ a:visited {
 #select {
   border-bottom: 2px solid black;
   text-decoration: none;
+}
+
+.dotted-underline-menu {
+  text-decoration: none;
+  background-image: radial-gradient(circle, currentColor 1.25px, transparent 1.25px);
+  background-repeat: repeat-x;
+  background-size: 14px 4px;
+  background-position: -5px calc(100%);
+  padding-bottom: 3px;
+  display: inline-block;
+  border-bottom: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.dotted-underline-menu:hover::after {
+  background-image: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px; /* match where the dotted line is */
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.rotating {
+  font-size: 3rem;
+  height:2.5rem;
+  display:inline-block;
+}
+@keyframes rotate {
+  from {transform:rotate(0deg); }
+  to {transform:rotate(360deg); }
+}
+
+.rotating {
+  transform-origin: center center;
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 /*--------------------------------------------------*/
@@ -287,7 +329,7 @@ a:visited {
   text-decoration: none;
   background-image: radial-gradient(circle, currentColor 1.25px, transparent 1.25px);
   background-repeat: repeat-x;
-  background-size: 7px 4px;
+  background-size: 7.11px 4px;
   background-position: -2px calc(100%);
   padding-bottom: 9px;
   display: inline-block;
@@ -425,10 +467,6 @@ a:visited {
     background-color: chartreuse;
   }*/
 
-  .tile {
-    font-size: 19px;
-  }  
-
   .count {
     margin-top: 15px;
   }  
@@ -461,6 +499,12 @@ a:visited {
     width: calc((100vw - 262px - 130px)*.5);
     overflow: hidden;
   }
+
+  .dotted-underline {
+    background-size: 0.61vw 4px;
+    padding-bottom: 0.6vw;
+/*    padding-bottom: 9px;*/
+  }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -480,6 +524,13 @@ a:visited {
     letter-spacing: .5px;
     line-height: 10px;
    }
+
+   .dotted-underline {
+    background-size: .76vw 4px;
+    padding-bottom: 1.15vw;
+    background-position: -2px calc(100%);
+/*    padding-bottom: 9px;*/
+  }
 
   .sliderbox {
     position: relative;
@@ -518,16 +569,34 @@ a:visited {
 }
 
 @media only screen and (max-width:999px) {
-/*    body {
-    background-color: chartreuse;
+/*  body {
+    background-color: cyan;
   }*/
 
   .tile {
     font-size: 2.4vw;
   }
+
+  .dotted-underline {
+    background-size: .81vw 4px;
+    padding-bottom: 1.13vw;
+    background-position: -2px calc(100%);
+/*    padding-bottom: 9px;*/
+  }
 }
 
 @media only screen and (max-width: 800px) {
+/*  body {
+    background-color: lightcoral;
+  }*/
+
+  .dotted-underline {
+    background-size: .92vw 4px;
+    padding-bottom: 1.1vw;
+    background-position: -2px calc(100%);
+/*    padding-bottom: 9px;*/
+  }
+
   .sidenav {
     height: 100%;
     width: 100vw;;
@@ -589,7 +658,7 @@ a:visited {
 
 @media only screen and (max-width: 645px) {
 /*  body {
-    background-color: cyan;
+    background-color: lightsalmon;
   } */
 
   .count {
@@ -634,6 +703,13 @@ a:visited {
     letter-spacing: .5px;
     line-height: 10px;
    }
+
+  .dotted-underline {
+    background-size: 1.13vw 4px;
+    padding-bottom: 1.1vw;
+    background-position: -2px calc(100%);
+/*    padding-bottom: 9px;*/
+  }
 
   .sliderbox {
     position: relative;
