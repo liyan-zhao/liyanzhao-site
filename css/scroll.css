@@ -416,7 +416,7 @@ canvas {
 
 .rotating {
   font-size: 3rem;
-  height:2.5rem;
+  height:2.6rem;
   display:inline-block;
 }
 @keyframes rotate {
