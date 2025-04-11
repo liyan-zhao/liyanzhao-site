@@ -414,22 +414,28 @@ canvas {
   text-decoration: none;
 }
 
-.rotating {
-  font-size: 3rem;
-  height:2.6rem;
-  display:inline-block;
-}
-@keyframes rotate {
-  from {transform:rotate(0deg); }
-  to {transform:rotate(360deg); }
+.asterisk-wrapper {
+  display: inline-block;
+  line-height: 0;
 }
 
-.rotating {
-  transform-origin: center center;
-  animation-name: rotate;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+.asterisk {
+  display: inline-block;
+  font-size: 30px;
+/*  background-color: magenta;*/
+  line-height: 1;
+  transform-origin: 50% 30%;
+  animation: spin 2s linear infinite;
+}
+
+/* Animation: rotate with offset */
+@keyframes spin {
+  from {
+    transform: translateY(-2px) rotate(0deg);
+  }
+  to {
+    transform: translateY(-2px) rotate(360deg);
+  }
 }
 
 /*--------------------------------------------------*/
@@ -578,6 +584,20 @@ canvas {
     font-size: 21px;
     font-weight: bold;
   }
+
+  .asterisk {
+    font-size: 21px;
+  }
+
+  @keyframes spin {
+    from {
+      transform: translateY(0px) rotate(0deg);
+    }
+    to {
+      transform: translateY(0px) rotate(360deg);
+    }
+  }
+
 }
 
 
