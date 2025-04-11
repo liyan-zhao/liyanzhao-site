@@ -309,6 +309,40 @@ function onScroll() {
     const windowBottom = window.scrollY + window.innerHeight;
     section.classList.toggle('visible', windowBottom >= top );
   });
+
+
+  let currentIndex = 0;
+  let minDistance = Infinity;
+
+  sequences.forEach((_, i) => {
+    const canvasSection = document.getElementById(`sequence${i + 1}`);
+    const textSection = document.getElementById(`text${i + 1}`);
+
+    const canvasTop = canvasSection.getBoundingClientRect().top;
+    const textTop = textSection.getBoundingClientRect().top;
+
+    // Choose the closest section ABOVE the center of the viewport
+    const canvasDistance = Math.abs(canvasTop - window.innerHeight * 0.25);
+    const textDistance = Math.abs(textTop - window.innerHeight * 0.25);
+
+    if (canvasTop < window.innerHeight * 0.5 && canvasDistance < minDistance) {
+      currentIndex = i;
+      minDistance = canvasDistance;
+    }
+
+    if (textTop < window.innerHeight * 0.5 && textDistance < minDistance) {
+      currentIndex = i;
+      minDistance = textDistance;
+    }
+  });
+
+  // Reset all first
+  $('.proj').css('color', 'white');
+  $('.proj').css('border-bottom', '2px solid white');
+
+  // Highlight the current section
+  $('#t' + (currentIndex + 1)).css('color', 'black');
+  $('#t' + (currentIndex + 1)).css('border-bottom', '2px solid black');
 }
 
 window.addEventListener('scroll', onScroll);
