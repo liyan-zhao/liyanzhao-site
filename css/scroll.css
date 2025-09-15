@@ -519,7 +519,7 @@ canvas {
     width: calc(100% - 55px);
     color: black;
     font-family: 'Suisse Intl Regular', Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     letter-spacing: .5px;
     line-height: 28px;
   }
