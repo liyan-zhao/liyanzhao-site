@@ -397,14 +397,14 @@ a:visited {
   color: black;
   /*background-color: yellow;*/
   font-family: 'Suisse Intl Regular', Helvetica, sans-serif;
-  font-size: 23px;
+  font-size: 21px;
   letter-spacing: .5px;
   line-height: 35px;
 }
 
 .sidenav .semi {
   font-family: 'Suisse Intl SemiBold', Helvetica, sans-serif;
-  font-size: 23px;
+  font-size: 21px;
   letter-spacing: 1.5px;
   line-height: 35px;
 }
@@ -412,7 +412,7 @@ a:visited {
 .sidenav a {
   color: black;
   font-family: 'Suisse Intl Regular Italic', Helvetica, sans-serif;
-  font-size: 23px;
+  font-size: 21px;
   letter-spacing: 1px;
   line-height: 35px;
 }
@@ -447,7 +447,7 @@ a:visited {
   bottom: 50px;
   left: 32px;
   font-family: 'Suisse Intl Regular', Helvetica, sans-serif;
-  font-size: 23px;
+  font-size: 21px;
   letter-spacing: .5px;
   line-height: 35px;
 }
