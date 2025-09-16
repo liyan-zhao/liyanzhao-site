@@ -391,7 +391,7 @@ a:visited {
 
 .sidenav .bio {
   position: absolute;
-  top: 230px;
+  top: 250px;
   left: 32px;
   width: calc(100% - 64px);
   color: black;
@@ -619,7 +619,7 @@ a:visited {
 
   .sidenav .bio {
     position: absolute;
-    top: 230px;
+    top: 250px;
     left: 32px;
     width: calc(100% - 55px);
     color: black;
