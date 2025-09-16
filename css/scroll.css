@@ -296,7 +296,7 @@ canvas {
   position: absolute;
   top: 250px;
   left: 32px;
-  width: calc(100% - 64px);
+  width: calc(100% - 100px);
   color: black;
   /*background-color: yellow;*/
   font-family: 'Suisse Intl Regular', Helvetica, sans-serif;
