@@ -1,5 +1,5 @@
 const sequences = [
-  { folder: '01', frameCount: 100, title: 'WORK<br>SAMPLE', 
+  { folder: '01', frameCount: 84, title: 'WORK<br>SAMPLE', 
     projTitle: 'Film Work Reel', projDate: '2019&mdash;2025',
     text: "A mix of exhibited works and works in progress, this compilation showcases my camera, sound, and editing sensibilities. In my film work, I approach each project with a spirit of experimentation, seeking out new forms and structures that bolster each story.",
     vimeoId1: '1114423388?h=0b43079790', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
