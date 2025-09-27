@@ -470,6 +470,10 @@ canvas {
   cursor: pointer;
 }
 
+/*.scroll-container > div[id] {
+  scroll-margin-top: 100vh;
+}*/
+
 /*--------------------------------------------------*/
 
 @media only screen and (max-width: 1350px) {

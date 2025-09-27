@@ -439,4 +439,17 @@ $( document ).ready(function() {
     // title.css('border-bottom-color', 'black');
 });
 
+window.addEventListener('load', () => {
+  const hash = window.location.hash;
+  if (hash) {
+    // Small timeout ensures the DOM and sequences have initialized
+    setTimeout(() => {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'auto' }); // 'smooth' might cause stutter
+      }
+    }, 100); // Adjust if needed — 100-300ms usually works
+  }
+});
+
 
