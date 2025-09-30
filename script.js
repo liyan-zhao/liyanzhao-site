@@ -240,18 +240,25 @@ function drawCoverImage(canvas, context, image) {
 function loadSequenceImages(seq) {
   const { folder, frameCount } = seq;
 
-  for (let i = 1; i <= frameCount; i++) {
-    const img = new Image();
-    img.src = `frames/${folder}/${String(i).padStart(5, '0')}.webp`;
-    seq.images.push(img);
+  // Load only first frame immediately
+  const firstFrame = new Image();
+  firstFrame.src = `frames/${folder}/00001.webp`;
+  seq.images.push(firstFrame);
 
-    // Draw first frame immediately after it's loaded
-    if (i === 1) {
-      img.onload = () => drawCoverImage(seq.canvas, seq.context, img);
-    }
-  }
+  firstFrame.onload = () => {
+    drawCoverImage(seq.canvas, seq.context, firstFrame);
+  };
 
   seq.loaded = true;
+
+  // Defer loading the rest
+  requestIdleCallback(() => {
+    for (let i = 2; i <= frameCount; i++) {
+      const img = new Image();
+      img.src = `frames/${folder}/${String(i).padStart(5, '0')}.webp`;
+      seq.images.push(img);
+    }
+  });
 }
 
 // Observe when a scroll-container is near viewport
