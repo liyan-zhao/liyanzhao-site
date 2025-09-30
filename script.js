@@ -428,28 +428,24 @@ function titleHover() {
     $('#t18').mouseleave( function() { $('#t18').text('\xa0 \xa0 \xa0'); } );
   }
 
-$( document ).ready(function() {
+$(document).ready(function () {
     titleHover();
-    var hash = window.location.hash.substring(1);
-    var count = Math.ceil(hash/2);
-    title = $('#' + 't' + count);
+
     $('.proj').css('border-bottom-color', 'white');
     $('.proj').css('color', 'white');
-    // title.css('color', 'black');
-    // title.css('border-bottom-color', 'black');
+
+    // Smooth scroll to hash after dynamic content is rendered
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        // Wait for the dynamic content (like #18) to be inserted
+        setTimeout(() => {
+            const target = document.getElementById(hash);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 500); // Adjust delay if needed
+    }
 });
 
-window.addEventListener('load', () => {
-  const hash = window.location.hash;
-  if (hash) {
-    // Small timeout ensures the DOM and sequences have initialized
-    setTimeout(() => {
-      const target = document.querySelector(hash);
-      if (target) {
-        target.scrollIntoView({ behavior: 'auto' }); // 'smooth' might cause stutter
-      }
-    }, 100); // Adjust if needed — 100-300ms usually works
-  }
-});
 
 
