@@ -71,6 +71,11 @@ a:visited {
   src: url("../fonts/SuisseIntl-ThinItalic.otf");
 }
 
+@font-face {
+  font-family: "Standard Book";
+  src: url("../fonts/standard-book.otf");
+}
+
 /*--------------------------------------------------*/
 
 /* Container that scrolls while keeping canvas fixed */
@@ -103,7 +108,7 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  font-family: 'Suisse Intl Regular', Helvetica, sans-serif;
+  font-family: 'Standard Book', Helvetica, sans-serif;
   font-size: 78px;
   pointer-events: none; /* Let scroll pass through */
   cursor: s-resize;
@@ -138,7 +143,7 @@ canvas {
 }
 
 .semibolditalic {
-  font-family: 'Suisse Intl SemiBold Italic', Helvetica, sans-serif;
+  font-family: 'Suisse Intl SemiBold', Helvetica, sans-serif;
 }
 
 .light {
@@ -470,6 +475,36 @@ canvas {
   cursor: pointer;
 }
 
+.vimeo-placeholder {
+  position: relative;
+  padding-bottom: 39.25%; /* 16:9 aspect ratio */
+  height: 0;
+  width: 70%;
+  margin: 40px auto;
+  background-color: black;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.vimeo-thumb {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.vimeo-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
 /*--------------------------------------------------*/
 
 @media only screen and (max-width: 1350px) {
@@ -601,5 +636,6 @@ canvas {
   }
 
 }
+
 
 
