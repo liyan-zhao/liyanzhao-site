@@ -72,8 +72,8 @@ a:visited {
 }
 
 @font-face {
-  font-family: "Standard Book";
-  src: url("../fonts/standard-book.otf");
+  font-family: "Mallory Regular";
+  src: url("../fonts/MalloryMPBook-Regular.ttf");
 }
 
 /*--------------------------------------------------*/
@@ -108,7 +108,7 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  font-family: 'Standard Book', Helvetica, sans-serif;
+  font-family: 'Mallory Regular', Helvetica, sans-serif;
   font-size: 78px;
   pointer-events: none; /* Let scroll pass through */
   cursor: s-resize;
