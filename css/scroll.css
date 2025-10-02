@@ -72,8 +72,8 @@ a:visited {
 }
 
 @font-face {
-  font-family: "Mallory Regular";
-  src: url("../fonts/MalloryMPBook-Regular.ttf");
+  font-family: "Maison Neue Book";
+  src: url("../fonts/MaisonNeue-Book.ttf");
 }
 
 /*--------------------------------------------------*/
@@ -108,7 +108,7 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  font-family: 'Mallory Regular', Helvetica, sans-serif;
+  font-family: 'Maison Neue Book', Helvetica, sans-serif;
   font-size: 78px;
   pointer-events: none; /* Let scroll pass through */
   cursor: s-resize;
