@@ -73,7 +73,7 @@ const sequences = [
     projPhoto8: 'images/scroll/10/9.webp', projPhotoSize8: '2', imgPresence8: 'block',},
   { folder: '11', frameCount: 56, title: "JOHN<br>ASHBERY'S<br>NEST", 
     projTitle: "John Ashbery's Nest", projDate: '2018, video',
-    text: "Online archive of poet John Ashbery's home I worked on as a UX design fellow at the Yale Digital Humanities Lab. The site utilizes architectural virtual tour technology in its navegation. Objects around the home can be clicked to reveal additional information and narration.",
+    text: "Online archive of poet John Ashbery's home I worked on as a UX design fellow at the Yale Digital Humanities Lab. The site utilizes architectural virtual tour technology in its navigation. Objects around the home can be clicked to reveal additional information and narration.",
     vimeoId1: '356763567?h=6954d742eb', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
   { folder: '12', frameCount: 150, title: "MY NAME<br>IS JUAN", 
     projTitle: "My Name is Juan", projDate: '2018, print',
