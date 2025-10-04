@@ -57,7 +57,7 @@ const sequences = [
     vimeoId1: '1069778511?h=93f27878d9', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
   { folder: '09', frameCount: 20, title: "PROJECTS<br>AND THEIR<br>CONSEQUENCES", 
     projTitle: "RUR: Projects and Their Consequences", projDate: '2019, print',
-    text: "This book presents fifteen key projects from leading architectural thinkers Reiser + Umemoto. Projects and Their Consequences traces thirty years of innovative, multidisciplinary investigations of form, structure, technique, and planning.<br><br>I was in charge of the design concept, determining the book's structure and making major style and layout decisions.",
+    text: "This book presents fifteen key projects from leading architectural thinkers Reiser + Umemoto. Projects and Their Consequences traces thirty years of innovative, multidisciplinary investigations of form, structure, technique, and planning.<br><br>I was in charge of the design concept, determining the book's structure, image treatment, style, and layout.",
     vimeoId1: '', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1', topMargin: '100',
     projPhoto1: 'images/09/1.webp', projPhotoSize1: '4',  
     projPhoto2: 'images/09/2.webp', projPhotoSize2: '4',
