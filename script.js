@@ -55,11 +55,23 @@ const sequences = [
     projTitle: 'Disability X Maternity', projDate: '2020, video',
     text: "What would it be like to design for help&mdash;not with a medical model but a social one? And how can design help caregivers in need of care themselves? A recently developed manual for young mothers with acquired disabilities, Disability x Maternity considers these questions offering guidelines for using space.<br><br>I produced a video accompaniment to Frani O'Toole's printed guide using overlayed home videos, photos, illustrations, and text to demonstrate home-based design and accessibility strategies.<br><br>Exhibited at Center of Architecture, Gates Foundation Discovery Center, and Kosovo Architecture Festival.",
     vimeoId1: '1069778511?h=93f27878d9', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '09', frameCount: 29, title: "A HOUSE OF<br>ONE'S OWN", 
+  { folder: '09', frameCount: 20, title: "PROJECTS<br>AND THEIR<br>CONSEQUENCES", 
+    projTitle: "RUR: Projects and Their Consequences", projDate: '2019, print',
+    text: "This book presents fifteen key projects from leading architectural thinkers Reiser + Umemoto. Projects and Their Consequences traces thirty years of innovative, multidisciplinary investigations of form, structure, technique, and planning.<br><br>I was in charge of the design concept, determining the book's structure and making major style and layout decisions.",
+    vimeoId1: '', vimeoId2: '', vimeoId3: '', imgPresence: 'flex', imgOpac: '1', topMargin: '100',
+    projPhoto1: 'images/09/1.webp', projPhotoSize1: '4',  
+    projPhoto2: 'images/09/2.webp', projPhotoSize2: '4',
+    projPhoto3: 'images/09/3.webp', projPhotoSize3: '4',
+    projPhoto4: 'images/09/4.webp', projPhotoSize4: '4',
+    projPhoto5: '', projPhotoSize5: '', imgPresence5: 'none',
+    projPhoto6: '', projPhotoSize6: '', imgPresence6: 'none',
+    projPhoto7: '', projPhotoSize7: '', imgPresence7: 'none',
+    projPhoto8: '', projPhotoSize8: '', imgPresence8: 'none',},
+  { folder: '10', frameCount: 29, title: "A HOUSE OF<br>ONE'S OWN", 
     projTitle: "A House of One's Own", projDate: '2019, video',
     text: "This experimental documentary tells the story of my parents' move to America, and how their dreams and aspirations have been channeled through the space of their suburban house. The film explores rituals of assimilation and alienation and the lines between real and imagined.<br><br>Screened at New Haven International Film Festival and New Haven Documentary Film Festival.",
     vimeoId1: '328568165', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '10', frameCount: 22, title: 'YALE EVENT<br>POSTERS', 
+  { folder: '11', frameCount: 22, title: 'YALE EVENT<br>POSTERS', 
     projTitle: 'Yale Event Poster Designs', projDate: '2016&mdash;2019, digital & print',
     text: "Posters designed for Yale School of Art and Yale University Art Gallery events.",
     vimeoId1: '', vimeoId2: '',vimeoId3: '', imgPresence: 'flex', imgOpac: '.9', topMargin: '100',
@@ -71,30 +83,26 @@ const sequences = [
     projPhoto6: 'images/scroll/10/7.gif', projPhotoSize6: '2', imgPresence6: 'block',
     projPhoto7: 'images/scroll/10/8.gif', projPhotoSize7: '2', imgPresence7: 'block',
     projPhoto8: 'images/scroll/10/9.webp', projPhotoSize8: '2', imgPresence8: 'block',},
-  { folder: '11', frameCount: 28, title: "JOHN<br>ASHBERY'S<br>NEST", 
+  { folder: '12', frameCount: 28, title: "JOHN<br>ASHBERY'S<br>NEST", 
     projTitle: "John Ashbery's Nest", projDate: '2018, video',
     text: "Online archive of poet John Ashbery's home I worked on as a UX design fellow at the Yale Digital Humanities Lab. The site utilizes architectural virtual tour technology in its navigation. Objects around the home can be clicked to reveal additional information and narration.",
     vimeoId1: '356763567?h=6954d742eb', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '12', frameCount: 34, title: "MY NAME<br>IS JUAN", 
+  { folder: '13', frameCount: 34, title: "MY NAME<br>IS JUAN", 
     projTitle: "My Name is Juan", projDate: '2018, print',
     text: "This book documents the story of an undocumented teen named Juan living next to the US-Mexican border, told in his own words. The transcript from Juan's audio diary runs alongside satellite images of the Rio Grande River. As Juan's story unfolds, the river slowly winds from El Paso until it finally reaches the Gulf of Mexico. As an object, the book's large size is meant to serve as a kind of physical anchor as Juan goes through a period of extreme instability.",
     vimeoId1: '347675618', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '13', frameCount: 35, title: "YOU'VE<br>ARRIVED", 
+  { folder: '14', frameCount: 35, title: "YOU'VE<br>ARRIVED", 
     projTitle: "You've Arrived", projDate: '2018, print',
     text: "This book documents a visit to Holy Land USA, an abandoned religious theme park in Waterbury, CT. The book presents a sequence of video stills taken on location. The filtered images, paired with a piece of stream-of-conscious writing about memory tucked into the insides of the french folds, capture a dream-like journey through an eerie liminal space that crosses time and geography.",
     vimeoId1: '347764474?h=b9965c27c0', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '14', frameCount: 35, title: "THE RADICAL<br>OTHER", 
+  { folder: '15', frameCount: 35, title: "THE RADICAL<br>OTHER", 
     projTitle: "the radical Other", projDate: '2018, print',
     text: "After writing a speculative text about the subversive power of otherness inspired both by personal experience and the critical essays I was reading at the time, I set the excerpts taken from my readings into my writing in order to create a polyvocal reading experience.",
     vimeoId1: '347759118', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '15', frameCount: 33, title: "SHADOW<br>PUPPET<br>ARCHIVE", 
+  { folder: '16', frameCount: 33, title: "SHADOW<br>PUPPET<br>ARCHIVE", 
     projTitle: "Peabody Museum Shadow Puppet Archive", projDate: '2018, web',
     text: "This site is a digital archive of the Yale Peabody Museum of Natural History's collection of Chinese shadow puppets. Users can browse through detailed views of the puppets or go into play mode where they can animate their own shadow puppet show.<br><br>In digitizing the shadow puppets, I considered strategies towards creating a living archive, one that allows users to interact with the puppets in dynamic ways despite their relative inaccess to the actual physical objects.",
     vimeoId1: '266742914', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '16', frameCount: 35, title: "UNREADING<br>TEXT", 
-    projTitle: "Unreading Text", projDate: '2017, web',
-    text: "This site transforms text from legible information to ornamental pattern. Users input their custom text, which is then converted into an ornamental typeface. Users can change the colors of the type and the background and toggle between two modes of readability.<br><br>This project was conceptualized as a tactic to deal with the deluge of digital information I was bombarded with on a daily basis. In thinking about how to lessen the anxiety of living in today's mediascape, I sought comfort in disruption and illegibility.",
-    vimeoId1: '212525243', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
   { folder: '17', frameCount: 25, title: "CIVIL<br>DISOBEDIENCE<br>GUIDES", 
     projTitle: "ACT UP Civil Disobedience Guides", projDate: '2017, print',
     text: "These participatory booklets are a redesign of ACT UP's Civil Disobedience Training Guide. The original 55-page text document is reformatted and reprinted as pocket-sized guides, easy to carry and conceal. The original document credits sections to The War Resister's League's </span><span class='italic'>Handbook for Nonviolent Action</span><span>, and these booklets continue the tradition of disseminating open-sourced knowledge to the public.",
@@ -106,11 +114,11 @@ const sequences = [
     projPhoto5: '', projPhotoSize5: '', imgPresence5: 'none',
     projPhoto6: '', projPhotoSize6: '', imgPresence6: 'none',
     projPhoto7: '', projPhotoSize7: '', imgPresence7: 'none',
-    projPhoto8: '', projPhotoSize8: '', imgPresence8: 'none',},
+    projPhoto8: '', projPhotoSize8: '', imgPresence8: 'none'},
   { folder: '18', frameCount: 33, title: "O-14<br>MONOGRAPH", 
     projTitle: "O-14: Projection and Reception", projDate: '2016, print',
-    text: "This book is a monograph of RUR Architecture's O-14 building in Dubai. Meant to serve as tool for architecture students, the book contains diagrams and writings illuminating O-14's unique design principles. As the designer, I worked on page layouts as well as illustrating diagrams that explain the design of the building.",
-    vimeoId1: '347772502', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'}, 
+    text: "This book is a monograph of RUR Architecture's O-14 building in Dubai. Meant to serve as tool for architecture students, the book contains diagrams and writings illuminating O-14's unique design principles. As the designer, I was in charge of page layouts as well as illustrating diagrams that explain the design of the building.",
+    vimeoId1: '347772502', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'}
   // Add more sequences as needed...
 ];
 
@@ -404,28 +412,28 @@ function titleHover() {
     $('#t8').mouseenter( function() { $('#t8').text('disability x maternity'); $('#t8').css('cursor', 'pointer'); } );
     $('#t8').mouseleave( function() { $('#t8').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t9').mouseenter( function() { $('#t9').text('a house of one\'s own'); $('#t9').css('cursor', 'pointer'); } );
+    $('#t9').mouseenter( function() { $('#t9').text('projects and their consequences'); $('#t9').css('cursor', 'pointer'); } );
     $('#t9').mouseleave( function() { $('#t9').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t10').mouseenter( function() { $('#t10').text('yale event posters'); $('#t10').css('cursor', 'pointer'); } );
+    $('#t10').mouseenter( function() { $('#t10').text('a house of one\'s own'); $('#t10').css('cursor', 'pointer'); } );
     $('#t10').mouseleave( function() { $('#t10').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t11').mouseenter( function() { $('#t11').text('john ashbery\'s nest'); $('#t11').css('cursor', 'pointer'); } );
+    $('#t11').mouseenter( function() { $('#t11').text('yale event posters'); $('#t11').css('cursor', 'pointer'); } );
     $('#t11').mouseleave( function() { $('#t11').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t12').mouseenter( function() { $('#t12').text('my name is juan'); $('#t12').css('cursor', 'pointer'); } );
+    $('#t12').mouseenter( function() { $('#t12').text('john ashbery\'s nest'); $('#t12').css('cursor', 'pointer'); } );
     $('#t12').mouseleave( function() { $('#t12').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t13').mouseenter( function() { $('#t13').text('you\'ve arrived'); $('#t13').css('cursor', 'pointer'); } );
+    $('#t13').mouseenter( function() { $('#t13').text('my name is juan'); $('#t13').css('cursor', 'pointer'); } );
     $('#t13').mouseleave( function() { $('#t13').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t14').mouseenter( function() { $('#t14').text('the radical other'); $('#t14').css('cursor', 'pointer'); } );
+    $('#t14').mouseenter( function() { $('#t14').text('you\'ve arrived'); $('#t14').css('cursor', 'pointer'); } );
     $('#t14').mouseleave( function() { $('#t14').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t15').mouseenter( function() { $('#t15').text('shadow puppet archive'); $('#t15').css('cursor', 'pointer'); } );
+    $('#t15').mouseenter( function() { $('#t15').text('the radical other'); $('#t15').css('cursor', 'pointer'); } );
     $('#t15').mouseleave( function() { $('#t15').text('\xa0 \xa0 \xa0'); } );
 
-    $('#t16').mouseenter( function() { $('#t16').text('unreading text'); $('#t16').css('cursor', 'pointer'); } );
+    $('#t16').mouseenter( function() { $('#t16').text('shadow puppet archive'); $('#t16').css('cursor', 'pointer'); } );
     $('#t16').mouseleave( function() { $('#t16').text('\xa0 \xa0 \xa0'); } );
 
     $('#t17').mouseenter( function() { $('#t17').text('civil disobedience guides'); $('#t17').css('cursor', 'pointer'); } );
