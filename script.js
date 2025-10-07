@@ -67,7 +67,7 @@ const sequences = [
     projPhoto6: '', projPhotoSize6: '', imgPresence6: 'none',
     projPhoto7: '', projPhotoSize7: '', imgPresence7: 'none',
     projPhoto8: '', projPhotoSize8: '', imgPresence8: 'none',},
-  { folder: '10', frameCount: 29, title: "A HOUSE OF<br>ONE'S OWN", 
+  { folder: '10', frameCount: 30, title: "A HOUSE OF<br>ONE'S OWN", 
     projTitle: "A House of One's Own", projDate: '2019, video',
     text: "This experimental documentary tells the story of my parents' move to America, and how their dreams and aspirations have been channeled through the space of their suburban house. The film explores rituals of assimilation and alienation and the lines between real and imagined.<br><br>Screened at New Haven International Film Festival and New Haven Documentary Film Festival.",
     vimeoId1: '328568165', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
