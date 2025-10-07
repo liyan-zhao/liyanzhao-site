@@ -95,7 +95,7 @@ const sequences = [
     projTitle: "You've Arrived", projDate: '2018, print',
     text: "This book documents a visit to Holy Land USA, an abandoned religious theme park in Waterbury, CT. The book presents a sequence of video stills taken on location. The filtered images, paired with a piece of stream-of-conscious writing about memory tucked into the insides of the french folds, capture a dream-like journey through an eerie liminal space that crosses time and geography.",
     vimeoId1: '347764474?h=b9965c27c0', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
-  { folder: '15', frameCount: 35, title: "THE RADICAL<br>OTHER", 
+  { folder: '15', frameCount: 26, title: "THE RADICAL<br>OTHER", 
     projTitle: "the radical Other", projDate: '2018, print',
     text: "After writing a speculative text about the subversive power of otherness inspired both by personal experience and the critical essays I was reading at the time, I set the excerpts taken from my readings into my writing in order to create a polyvocal reading experience.",
     vimeoId1: '347759118', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
