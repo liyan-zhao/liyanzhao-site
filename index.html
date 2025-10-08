@@ -359,100 +359,40 @@
   <script src="js/slider.js"></script>
 
   <script type="text/javascript">
+      function setActiveTag(tagId) {
+      // remove active highlight from all tags
+      $(".tag").removeClass("active");
+      // add active highlight to the clicked tag
+      $("#" + tagId).addClass("active");
+    }
+
     function tagAll() {
-      $("#tag1").css('border-bottom-width', 2);
-      $("#tag2").css('border-bottom-width', 0);
-      $("#tag3").css('border-bottom-width', 0);
-      $("#tag4").css('border-bottom-width', 0);
-      if($(".tvideo").css('display') == "none"){
-            $(".tvideo").css('display', 'block');
-      };
-      if($(".tprint").css('display') == "none"){
-            $(".tprint").css('display', 'block');
-      };
-      if($(".tweb").css('display') == "none"){
-            $(".tweb").css('display', 'block');
-      };
-      if($(".twebprint").css('display') == "none"){
-            $(".twebprint").css('display', 'block');
-      };
-      if($(".tvideoweb").css('display') == "none"){
-            $(".tvideoweb").css('display', 'block');
-      };
-    };
+      setActiveTag("tag1");
+      $(".tile").show();
+    }
 
     function tagVideo() {
-      $("#tag1").css('border-bottom-width', 0);
-      $("#tag2").css('border-bottom-width', 2);
-      $("#tag3").css('border-bottom-width', 0);
-      $("#tag4").css('border-bottom-width', 0);
-      if($(".tvideo").css('display') == "none"){
-            $(".tvideo").css('display', 'block');
-      };
-      if($(".tprint").css('display') == "block"){
-            $(".tprint").css('display', 'none');
-      };
-      if($(".tweb").css('display') == "block"){
-            $(".tweb").css('display', 'none');
-      };
-      if($(".twebprint").css('display') == "block"){
-            $(".twebprint").css('display', 'none');
-      };
-      if($(".tvideoweb").css('display') == "none"){
-            $(".tvideoweb").css('display', 'block');
-      };
-    };
-
-    function tagPrint() {
-      $("#tag1").css('border-bottom-width', 0);
-      $("#tag2").css('border-bottom-width', 0);
-      $("#tag3").css('border-bottom-width', 0);
-      $("#tag4").css('border-bottom-width', 2);
-      if($(".tvideo").css('display') == "block"){
-            $(".tvideo").css('display', 'none');
-      };
-      if($(".tprint").css('display') == "none"){
-            $(".tprint").css('display', 'block');
-      };
-      if($(".tweb").css('display') == "block"){
-            $(".tweb").css('display', 'none');
-      };
-      if($(".twebprint").css('display') == "none"){
-            $(".twebprint").css('display', 'block');
-      };
-      if($(".tvideoweb").css('display') == "block"){
-            $(".tvideoweb").css('display', 'none');
-      };
-    };
+      setActiveTag("tag2");
+      $(".tile").hide();
+      $(".tvideo, .tvideoweb").show();
+    }
 
     function tagWeb() {
-      $("#tag1").css('border-bottom-width', 0);
-      $("#tag2").css('border-bottom-width', 0);
-      $("#tag3").css('border-bottom-width', 2);
-      $("#tag4").css('border-bottom-width', 0);
-      if($(".tvideo").css('display') == "block"){
-            $(".tvideo").css('display', 'none');
-      };
-      if($(".tprint").css('display') == "block"){
-            $(".tprint").css('display', 'none');
-      };
-      if($(".tweb").css('display') == "none"){
-            $(".tweb").css('display', 'block');
-      };
-      if($(".twebprint").css('display') == "none"){
-            $(".twebprint").css('display', 'block');
-      };
-      if($(".tvideoweb").css('display') == "none"){
-            $(".tvideoweb").css('display', 'block');
-      };
-    };
+      setActiveTag("tag3");
+      $(".tile").hide();
+      $(".tweb, .twebprint, .tvideoweb").show();
+    }
 
-    document.addEventListener('touchstart', function(e) {
-        console.log('touchstart');
+    function tagPrint() {
+      setActiveTag("tag4");
+      $(".tile").hide();
+      $(".tprint, .twebprint").show();
+    }
 
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        e.stopPropagation();
+    document.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      e.stopPropagation();
     });
   </script>
 

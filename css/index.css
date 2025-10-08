@@ -208,6 +208,10 @@ a:visited {
   border-bottom: 2px solid black;
 }
 
+.tag.active {
+  border-bottom: 2px solid black;
+}
+
 /*--------------------------------------------------*/
 
 #workcontainer {
