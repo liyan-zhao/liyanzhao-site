@@ -363,10 +363,13 @@
   <script src="js/slider.js"></script>
 
   <script type="text/javascript">
-      function setActiveTag(tagId) {
-      // remove active highlight from all tags
+
+    $(document).ready(function() {
+    $("#tag1").addClass("active");
+  });
+    
+    function setActiveTag(tagId) {
       $(".tag").removeClass("active");
-      // add active highlight to the clicked tag
       $("#" + tagId).addClass("active");
     }
 
@@ -392,13 +395,7 @@
       $(".tile").hide();
       $(".tprint, .twebprint").show();
     }
-
-    document.addEventListener("touchstart", function (e) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      e.stopPropagation();
-    });
-  </script>
+</script>
 
 </body>
 </html>

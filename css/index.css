@@ -166,51 +166,23 @@ a:visited {
 .tag {
   position: absolute;
   padding-bottom: 10px;
+  border-bottom: 0 solid transparent;
 }
 
-#tag1 {
-  top: 0px;
-  border-bottom: 2px solid black;
-}
+#tag1 { top: 0px; }
+#tag2 { top: calc(20px + 3vw); }
+#tag3 { top: calc(2*(20px + 3vw)); }
+#tag4 { top: calc(3*(20px + 3vw)); }
 
-#tag2 {
-  top: calc(20px + 3vw);
-  border-bottom: 0px solid black;
-}
-
-#tag3 {
-  top: calc(2*(20px + 3vw));
-  border-bottom: 0px solid black;
-}
-
-#tag4 {
-  top: calc(3*(20px + 3vw));
-  border-bottom: 0px solid black;
-}
-
-#tag1:hover {
-  cursor: pointer;
-  border-bottom: 2px solid black;
-}
-
-#tag2:hover {
-  cursor: pointer;
-  border-bottom: 2px solid black;
-}
-
-#tag3:hover {
-  cursor: pointer;
-  border-bottom: 2px solid black;
-}
-
-#tag4:hover {
+.tag:hover {
   cursor: pointer;
   border-bottom: 2px solid black;
 }
 
 .tag.active {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid black; /* stays on after click */
 }
+
 
 /*--------------------------------------------------*/
 
