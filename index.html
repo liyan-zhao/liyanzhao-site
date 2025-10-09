@@ -34,9 +34,9 @@
 
   <div class="tagcontainer">
     <div id="tag1" class="tag" onclick="tagAll()">all</div>
-    <div id="tag2" class="tag" onclick="tagVideo()">moving image</div>
-    <div id="tag3" class="tag" onclick="tagWeb()">web/digital</div>
-    <div id="tag4" class="tag" onclick="tagPrint()">print</div>
+    <div id="tag4" class="tag" onclick="tagVideo()">moving image</div>
+    <div id="tag2" class="tag" onclick="tagWeb()">web/digital</div>
+    <div id="tag3" class="tag" onclick="tagPrint()">print</div>
   </div>
 
   <div id="workcontainer">
@@ -367,7 +367,7 @@
     $(document).ready(function() {
     $("#tag1").addClass("active");
   });
-    
+
     function setActiveTag(tagId) {
       $(".tag").removeClass("active");
       $("#" + tagId).addClass("active");
@@ -379,19 +379,19 @@
     }
 
     function tagVideo() {
-      setActiveTag("tag2");
+      setActiveTag("tag4");
       $(".tile").hide();
       $(".tvideo, .tvideoweb").show();
     }
 
     function tagWeb() {
-      setActiveTag("tag3");
+      setActiveTag("tag2");
       $(".tile").hide();
       $(".tweb, .twebprint, .tvideoweb").show();
     }
 
     function tagPrint() {
-      setActiveTag("tag4");
+      setActiveTag("tag3");
       $(".tile").hide();
       $(".tprint, .twebprint").show();
     }
