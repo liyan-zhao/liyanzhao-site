@@ -37,7 +37,7 @@ const sequences = [
     vimeoId1: '1069808134?h=b9bc301ed5', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '.5', topMargin: '0'},
   { folder: '06', frameCount: 42, title: 'VERIZON<br>DEVICE<br>SHOWCASE', 
     projTitle: 'Verizon Retail Device Showcase Design', projDate: '2020&mdash;2022, digital',
-    text: "As a designer on Verizon's Creative Marketing Group retail design team, I worked on short videos, UX interfaces, and typographic animations that lived on devices in stores across the nation.",
+    text: "As a designer on Verizon's Creative Marketing Group retail design team, I worked on short videos, UX interfaces, and typographic animations that lived on devices in stores across the country. I created motion graphics, digital and print layouts, and visual assets for a company-wide retail rebrand.",
     vimeoId1: '1068727368?h=579d53f080', vimeoId2: '1068725189?h=bc27bec48f',vimeoId3: '1068731018?h=dbb4d5ba62', imgPresence: 'flex', imgOpac: '1', topMargin: '-30',
     projPhoto1: 'images/scroll/06/5.gif', projPhotoSize1: '4',  
     projPhoto2: 'images/scroll/06/1.webp', projPhotoSize2: '4',
