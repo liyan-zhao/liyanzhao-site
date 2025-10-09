@@ -49,7 +49,7 @@ const sequences = [
     projPhoto8: '', projPhotoSize8: '', imgPresence8: 'none',},
   { folder: '07', frameCount: 45, title: 'THE<br>VISITORS', 
     projTitle: 'The Visitors', projDate: '2021, video',
-    text: "A close mapping of beings sharing the same small Brooklyn apartment during the pandemic. Sound waves and small creatures emerge in turn, assembling a portrait of shared life under precarity.<br><br>Screened at Onion City Experimental Film Festival, CROSSROADS, and One Room Gallery.",
+    text: "A close mapping of beings sharing the same small Brooklyn apartment during the pandemic. Sound waves and small creatures emerge in turn, assembling a portrait of shared life under precarity.<br><br>Supported by UnionDocs and screened at Onion City Experimental Film Festival, CROSSROADS, and One Room Gallery.",
     vimeoId1: '447597973?h=68c002924d', vimeoId2: '', vimeoId3: '', imgPresence: 'none', imgOpac: '1', topMargin: '0'},
   { folder: '08', frameCount: 39, title: 'DISABILITY<br>X<br>MATERNITY', 
     projTitle: 'Disability X Maternity', projDate: '2020, video',
